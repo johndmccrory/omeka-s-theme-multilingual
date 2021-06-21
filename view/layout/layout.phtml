@@ -35,7 +35,7 @@ $this->trigger('view.layout');
             .results .result-title a {
                 color: <?php echo $accentColor; ?>
             }
-            
+
             p a,
             span a,
             .button,
@@ -69,6 +69,7 @@ $this->trigger('view.layout');
                 <?php endif; ?>
                 </a>
             </h1>
+            <?php if ($this->getHelperPluginManager()->has('languageSwitcher')) echo $this->languageSwitcher(); ?>
             <div id="search-container">
                 <?php echo $this->partial('common/search-form'); ?>
                 <button type="button" class="search-toggle" aria-label="Toggle search"></button>
