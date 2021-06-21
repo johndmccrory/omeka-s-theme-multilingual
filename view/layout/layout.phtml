@@ -69,7 +69,7 @@ $this->trigger('view.layout');
                 <?php endif; ?>
                 </a>
             </h1>
-            <?php if ($this->getHelperPluginManager()->has('languageSwitcher')) echo $this->languageSwitcher(); ?>
+            <?php if ($this->getHelperPluginManager()->has('languageSwitcher')) echo $this->languageSwitcher([ 'locale_as_code' => true ]); ?>
             <div id="search-container">
                 <?php echo $this->partial('common/search-form'); ?>
                 <button type="button" class="search-toggle" aria-label="Toggle search"></button>
