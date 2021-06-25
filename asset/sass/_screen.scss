@@ -313,6 +313,7 @@ ul.language-switcher {
     color: #FFF;
     text-transform: uppercase;
     margin: 0 10px 0 0;
+    flex-shrink: 0;
 }
 
 ul.language-switcher.locale-code li a {
