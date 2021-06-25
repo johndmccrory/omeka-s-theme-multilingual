@@ -75,7 +75,7 @@ ul {
         line-height: $base-line-height;
         height: 1.5 * $base-line-height;
         margin: 0;
-        border-radius: 0;
+        vertical-align: top;
     }
 
     select {
@@ -118,7 +118,8 @@ ul {
         appearance: none;
         padding: 0 $spacing-m;
         background-color: $primary-color;
-        border: 3px solid #000;
+        border: none;
+        border-radius: 3px;
         font-size: $base-font-size;
         line-height: 1.25 * $base-line-height;
         cursor: pointer;
@@ -1183,12 +1184,7 @@ footer {
 }
 
 .results > ul + a {
-  padding: $spacing-s $spacing-m;
-  background-color: $primary-color;
-  border: 3px solid #000;
-  font-family: $heading-font;
-  font-size: $base-font-size;
-  line-height: 1.25 * $base-line-height;
+  height: 1.5 * $base-line-height;
 }
 
 .pagination + .results {
