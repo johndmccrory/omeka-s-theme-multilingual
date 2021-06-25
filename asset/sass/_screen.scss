@@ -119,7 +119,6 @@ ul {
         padding: 0 $spacing-m;
         background-color: $primary-color;
         border: 3px solid #000;
-        font-family: $heading-font;
         font-size: $base-font-size;
         line-height: 1.25 * $base-line-height;
         cursor: pointer;
@@ -355,6 +354,7 @@ header > h1 {
 
 .site-title {
     font-family: $heading-font;
+    font-weight: 800;
     padding: $spacing-s 0;
 }
 
