@@ -52,6 +52,11 @@ $this->trigger('view.layout');
                 background-color: <?php echo $accentColor; ?>;
             }
             <?php endif; ?>
+            <?php if ($headerColor = $this->themeSetting('header_color')): ?>
+            header {
+                background-color: <?php echo $headerColor; ?>;
+            }
+            <?php endif; ?>
         </style>
     </head>
 
