@@ -57,6 +57,15 @@ $this->trigger('view.layout');
                 background-color: <?php echo $headerColor; ?>;
             }
             <?php endif; ?>
+
+            <?php if ($this->themeSetting('header_dark') == true): ?>
+            header a,
+            ul.language-switcher,
+            header nav .menu-toggle,
+            .search-toggle {
+                color: #000;
+            }
+            <?php endif; ?>
         </style>
     </head>
 
