@@ -85,7 +85,7 @@ ul {
         padding: $spacing-s (1.25 * $spacing-l) $spacing-s $spacing-m;
         font-family: $body-font;
         border: 1px solid #ccc;
-        border-radius: 3px;
+        border-radius: $rounding;
         background: #fff url('../img/select-arrow.svg') right $spacing-m center no-repeat;
         background-size: .5 * $base-font-size;
     }
@@ -119,7 +119,7 @@ ul {
         padding: 0 $spacing-m;
         background-color: $primary-color;
         border: none;
-        border-radius: 3px;
+        border-radius: $rounding;
         font-size: $base-font-size;
         line-height: 1.25 * $base-line-height;
         cursor: pointer;
@@ -258,7 +258,8 @@ nav li {
 }
 
 .pagination input[type="text"] {
-    border: 2px solid #000;
+    border: 1px solid #000;
+    border-radius: $rounding;
     width: 2 * $spacing-l;
     text-align: center;
     height: 1.25 * $spacing-l;
@@ -312,13 +313,13 @@ ul.language-switcher {
     font-size: initial !important;
     color: #FFF;
     text-transform: uppercase;
-    margin: 0 10px 0 0;
+    margin: 0 $spacing-m 0 0;
     flex-shrink: 0;
 }
 
 ul.language-switcher.locale-code li a {
     opacity: 0.5;
-    transition: opacity .2s ease-in-out;
+    transition: opacity $hover-easing;
 }
 
 ul.language-switcher.locale-code li a:hover {
@@ -578,7 +579,7 @@ div#featured {
     transform: translateY(-50%);
     z-index: -1;
     opacity: .4;
-    transition: opacity .2s ease-in-out;
+    transition: opacity $hover-easing;
 }
 
 #featured .record:hover img {
@@ -673,6 +674,14 @@ footer {
 .resource-list .resource img {
     max-width: 100%;
     height: auto;
+    padding: $spacing-m;
+    border: 1px solid #eee;
+    border-radius: $rounding;
+    transition: border-color $hover-easing;
+}
+
+.resource-list .resource img:hover {
+    border-color: #555;
 }
 
 .resource-list .date {
