@@ -721,9 +721,10 @@ footer {
     display: inline-block;
     background-color: rgba(0,0,0,.08);
     font-size: .75 * $base-font-size;
+    line-height: 1.5 * $base-font-size;
     padding: 0 $spacing-s;
-    margin: 0 $spacing-m (1.75 * $spacing-l);
-    vertical-align: bottom;
+    margin: ($spacing-m - 1px) $spacing-m (1.75 * $spacing-l);
+    vertical-align: top;
 }
 
 .lSSlideOuter {

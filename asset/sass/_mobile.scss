@@ -184,6 +184,14 @@ div#featured {
 /* @end */
 
 /* @group ----- Show ----- */
+.show #content h2:first-child {
+    display: block;
+    margin-bottom: 0;
+}
+
+.show #content h2:first-child + h3 {
+    margin-left: 0;
+}
 
 .property h4,
 .property .value,
