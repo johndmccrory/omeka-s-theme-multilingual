@@ -2,6 +2,8 @@
 $escape = $this->plugin('escapeHtml');
 $translate = $this->plugin('translate');
 
+$lang = explode('-', $this->lang())[0];
+
 $this->htmlElement('body')->appendAttribute('class', 'item resource browse');
 
 if (isset($itemSet)):
@@ -30,7 +32,7 @@ $sortHeadings = [
 
 <?php if (isset($itemSet)): ?>
     <div class="show-header">
-    <?php echo $this->pageTitle($itemSet->displayTitle(), 2); ?>
+    <?php echo $this->pageTitle($itemSet->displayTitle(null, $lang), 2); ?>
     <h3><?php echo $translate('Item Set'); ?></h3>
     </div>
     <div class="metadata">
@@ -55,7 +57,7 @@ $sortHeadings = [
         <?php if ($thumbnail = $this->thumbnail($item, 'medium')): ?>
         <?php echo $item->linkRaw($thumbnail); ?>
         <?php endif; ?>
-        <h4><?php echo $item->link($item->displayTitle()); ?></h4>
+        <h4><?php echo $item->link($item->displayTitle(null, $lang)); ?></h4>
         <?php if ($date = $item->value('dcterms:date')): ?>
         <div class="date"><?php echo $date; ?></div>
         <?php endif; ?>

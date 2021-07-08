@@ -14,6 +14,8 @@ if ($subjectValues) {
     $this->headScript()->prependFile($this->assetUrl('vendor/tablesaw/tablesaw.stackonly.jquery.js', 'Omeka'));
     $this->headLink()->prependStylesheet($this->assetUrl('vendor/tablesaw/tablesaw.stackonly.css', 'Omeka'));
 }
+
+$lang = $this->lang();
 ?>
 <?php foreach ($item->media() as $media): ?>
     <?php $mediaType = $media->mediaType(); ?>
@@ -25,7 +27,7 @@ if ($subjectValues) {
     <?php endif; ?>
 <?php endforeach; ?>
 
-<?php echo $this->pageTitle($item->displayTitle(), 2); ?>
+<?php echo $this->pageTitle($item->displayTitle(null, $lang), 2); ?>
 <h3><?php echo $this->translate('Item'); ?></h3>
 <?php $this->trigger('view.show.before'); ?>
 <?php if ($item->media()): ?>
@@ -57,7 +59,7 @@ if ($subjectValues) {
     <?php if (count($itemSets) > 0): ?>
     <h4><?php echo $this->translate('Item sets'); ?></h4>
     <?php foreach ($item->itemSets() as $itemSet): ?>
-    <div class="value"><a href="<?php echo $escape($itemSet->url()); ?>"><?php echo $itemSet->displayTitle(); ?></a></div>
+    <div class="value"><a href="<?php echo $escape($itemSet->url()); ?>"><?php echo $itemSet->displayTitle(null, $lang); ?></a></div>
     <?php endforeach; ?>
     <?php endif; ?>
 </div>
