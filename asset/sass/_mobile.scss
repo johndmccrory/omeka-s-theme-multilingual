@@ -102,7 +102,7 @@ header h1 {
 #top-nav>ul {
     display: block;
     overflow: scroll;
-    padding-bottom: 4 * $spacing-l;
+    padding: 4 * $spacing-l $spacing-l;
 }
 
 #top-nav ul ul ul li {
@@ -112,6 +112,18 @@ header h1 {
 
 #top-nav>ul>li {
     width: 100%;
+}
+
+#search-container {
+    display: none;
+    position: absolute;
+    top: 82px;
+    z-index: 99999;
+    width: calc(100% - 48px);
+}
+
+body.menu-open #search-container {
+    display: block;
 }
 
 /* @end */

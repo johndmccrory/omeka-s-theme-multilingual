@@ -311,10 +311,11 @@ nav li {
 
 ul.language-switcher {
     font-size: initial !important;
-    color: #FFF;
+    color: #fff;
     text-transform: uppercase;
-    margin: 0 $spacing-m 0 0;
-    flex-shrink: 0;
+    margin: 0 0 0 (1.25 * $spacing-l);
+    padding: 0;
+    flex-grow: 1;
 }
 
 ul.language-switcher.locale-code li a {
@@ -352,7 +353,8 @@ ul.language-switcher.locale-code li a:hover {
 }
 
 header > h1 {
-    margin: 0 auto 0 0;
+    margin: 0;
+    line-height: 0;
 }
 
 .site-title {
@@ -373,7 +375,7 @@ header > h1 {
 header {
     background-color: #000;
     vertical-align: top;
-    padding: $spacing-m (2 * $spacing-l);
+    padding: (.75 * $spacing-l) (2 * $spacing-l);
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -384,12 +386,12 @@ header a {
     color: #fff;
 }
 
-header nav .menu-toggle,
-.search-toggle {
+header nav .menu-toggle {
     background-color: initial;
     color: #fff;
     cursor: pointer;
     border: 0;
+    margin-left: $spacing-m;
 }
 
 header nav .menu-toggle:before {
@@ -397,12 +399,6 @@ header nav .menu-toggle:before {
     font-family: "Font Awesome 5 Free";
 }
 
-.search-toggle:before {
-    content: "\f002";
-    font-family: "Font Awesome 5 Free";
-}
-
-#search-form,
 header nav > ul {
     position: absolute;
     top: 100%;
@@ -468,23 +464,15 @@ header nav > ul {
 }
 
 #search-form {
+    background-color: #fff;
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
-    padding-top: 20vh;
+    border-radius: $rounding * 2;
+    padding: $spacing-s $spacing-m;
 }
 
 #search-form input[type="text"] {
     border: 0;
-    border-bottom: 3px solid #fff;
-    background-color: transparent;
-    color: #fff;
-    display: inline-block;
-    width: 50%;
-    margin-right: $spacing-m;
-    font-size: 2 * $base-font-size;
-    height: 2 * $base-line-height;
+    outline: none;
     padding: 0;
 }
 
@@ -494,16 +482,18 @@ header nav > ul {
 
 #search-form button[type="submit"] {
     background-color: transparent;
-    border: 3px solid #fff;
-    color: #fff;
-    display: inline-block;
-    cursor: pointer;
-    font-size: 2 * $base-font-size;
-    height: 2 * $base-line-height;
-    padding-left: $spacing-s;
-    padding-right: $spacing-s;
+    color: #000;
     margin: 0;
+    padding: 0 2px 0 0;
+    font-size: 0;
     line-height: 0;
+}
+
+#search-form button[type="submit"]:before {
+    content: "\f002";
+    font-family: "Font Awesome 5 Free";
+    font-size: initial;
+    line-height: 2em;
 }
 
 /* @end */
@@ -603,10 +593,6 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 2 * $base-line-height;
-}
-
-.browse h1 {
-    width: 100%;
 }
 
 .advanced-search {
