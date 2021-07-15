@@ -391,6 +391,7 @@ header nav .menu-toggle {
     color: #fff;
     cursor: pointer;
     border: 0;
+    width: 2.5em;
     margin-left: $spacing-m;
 }
 
@@ -399,17 +400,27 @@ header nav .menu-toggle:before {
     font-family: "Font Awesome 5 Free";
 }
 
+header nav.open .menu-toggle {
+    position: relative;
+    z-index: 99999;
+    color: #000;
+}
+
+header nav.open .menu-toggle:before {
+    content: "\f00d";
+}
+
 header nav > ul {
-    position: absolute;
-    top: 100%;
-    left: 0;
+    position: fixed;
+    top: 0;
     right: 0;
-    background-color: rgba(0,0,0,.9);
     z-index: 9999;
     margin: 0;
-    padding: (2 * $spacing-l);
+    padding: (1.5 * $spacing-l) (1.75 * $spacing-l);
     text-align: left;
-    height: calc(100vh - #{2 * $spacing-l});
+    height: 100vh;
+    width: 500px;
+    max-width: 100%;
     color: #fff;
     vertical-align: top;
 }
@@ -418,11 +429,16 @@ header nav > ul {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    transform: translateX(0);
+    transition: transform .4s cubic-bezier(0.8, 0, 0.2, 1);
 }
 
-#search-form.closed,
 #top-nav.closed > ul {
-    display: none;
+    transform: translateX(100%);
+}
+
+#user-bar + header > #top-nav > ul {
+    top: 38px;
 }
 
 #top-nav li {
@@ -430,13 +446,11 @@ header nav > ul {
 }
 
 #top-nav > ul > li {
-    font-family: $heading-font;
-    padding-bottom: $spacing-l;
-    width: 30%;
+    padding-bottom: $spacing-m;
 }
 
 #top-nav > ul > li > a {
-    color: $primary-color;
+    color: #000;
 }
 
 #top-nav > ul > li li {

@@ -100,9 +100,17 @@ header h1 {
 }
 
 #top-nav>ul {
-    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0 !important;
+    left: 0;
     overflow: scroll;
-    padding: 4 * $spacing-l $spacing-l;
+    padding: 5.5 * $spacing-l $spacing-l;
+    transition: none;
+}
+
+#top-nav.closed > ul {
+    display: none;
 }
 
 #top-nav ul ul ul li {
@@ -110,14 +118,10 @@ header h1 {
     line-height: $mobile-line-height;
 }
 
-#top-nav>ul>li {
-    width: 100%;
-}
-
 #search-container {
     display: none;
     position: absolute;
-    top: 82px;
+    top: 62px;
     z-index: 99999;
     width: calc(100% - 48px);
 }

@@ -25,10 +25,8 @@ $this->trigger('view.layout');
 
         <style>
             <?php if ($accentColor = $this->themeSetting('accent_color')): ?>
-            #top-nav > ul > li > a,
             #featured .record a,
             .site-page-pagination a,
-            #top-nav > ul > li > a,
             #featured .record a,
             .site-page-pagination a,
             .results .result-title a {
@@ -40,6 +38,7 @@ $this->trigger('view.layout');
             .button,
             button,
             input[type="submit"],
+            header nav > ul,
             .secondary-nav li a,
             .pagination a.button,
             .item-pagination a,
