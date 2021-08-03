@@ -6,19 +6,12 @@
             $('#top-nav a').first().focus();
         });
 
-        $('header').click(function(e){
+        $('html').click(function(e){
             $target = $(e.target);
-            if ($target.is("header")) {
+            if (!$target.is("#top-nav ul, #top-nav li a, .menu-toggle")) {
                 // close navigation
                 if ($('body').hasClass('menu-open')) {
-                    $('#top-nav').toggleClass('open').toggleClass('closed');
-                    $('body').removeClass('menu-open');
-                }
-            }
-            if ($target.is( "#top-nav ul, #top-nav li" )) {
-                // close navigation
-                if ($('body').hasClass('menu-open')) {
-                    $('#top-nav').toggleClass('open').toggleClass('closed');
+                    $('#top-nav').removeClass('open').addClass('closed');
                     $('body').removeClass('menu-open');
                 }
             }
