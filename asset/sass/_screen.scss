@@ -802,7 +802,7 @@ footer {
 .value:not(:first-of-type) {
     margin-top: $spacing-m;
     padding-top: $spacing-m - 1px;
-    border-top: 1px solid;
+    border-top: 1px solid #ddd;
 }
 
 .value > p:first-child {
