@@ -421,7 +421,6 @@ header nav > ul {
     height: 100vh;
     width: 500px;
     max-width: 100%;
-    color: #fff;
     vertical-align: top;
 }
 
@@ -451,7 +450,7 @@ header nav > ul {
     padding-bottom: $spacing-m;
 }
 
-#top-nav > ul > li > a {
+#top-nav ul a {
     color: #000;
 }
 
@@ -460,16 +459,19 @@ header nav > ul {
     display: block;
 
     &:not(:last-of-type) {
-        margin-bottom: $spacing-s;
+        margin-bottom: $spacing-m;
     }
 }
 
 #top-nav ul ul {
-    padding-left: 0;
     margin: $spacing-m 0 0;
 }
 
-#top-nav ul ul ul li {
+#top-nav ul ul ul {
+    padding-left: $spacing-m;
+}
+
+#top-nav ul ul li {
     font-size: .75 * $base-font-size;
     line-height: .75 * $base-line-height;
 
