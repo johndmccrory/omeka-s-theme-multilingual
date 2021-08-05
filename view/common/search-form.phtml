@@ -17,4 +17,5 @@ $searchValue = $this->escapeHtml($this->params()->fromQuery('fulltext_search', '
         placeholder="<?php echo $translate('Search'); ?>"
         aria-label="<?php echo $translate('Search'); ?>">
     <button type="submit"><?php echo $translate('Search'); ?></button>
+    <?php echo $this->hyperlink($translate('Advanced search'), $this->url('site', [], true) . "/item/search", ['class' => 'advanced-search']); ?>
 </form>

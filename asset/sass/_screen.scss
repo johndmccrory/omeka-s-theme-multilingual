@@ -498,7 +498,8 @@ header nav > ul {
     font-style: italic;
 }
 
-#search-form button[type="submit"] {
+#search-form button[type="submit"],
+#search-form .advanced-search {
     background-color: transparent;
     color: #000;
     margin: 0;
@@ -507,11 +508,23 @@ header nav > ul {
     line-height: 0;
 }
 
-#search-form button[type="submit"]:before {
-    content: "\f002";
+#search-form .advanced-search {
+    margin-left: .75 * $spacing-m;
+}
+
+#search-form button[type="submit"]:before,
+#search-form .advanced-search:before {
     font-family: "Font Awesome 5 Free";
     font-size: initial;
-    line-height: 2em;
+    line-height: $base-font-size * 2;
+}
+
+#search-form button[type="submit"]:before {
+    content: "\f002";
+}
+
+#search-form .advanced-search:before {
+    content: "\f141";
 }
 
 /* @end */
@@ -611,16 +624,6 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 2 * $base-line-height;
-}
-
-.advanced-search {
-    background-color: $primary-color;
-    font-family: $heading-font;
-    color: #000;
-    padding: 0 $spacing-m;
-    border: 3px solid #000;
-    height: 1.5 * $base-line-height;
-    line-height: 1.25 * $base-line-height;
 }
 
 .browse-controls {
