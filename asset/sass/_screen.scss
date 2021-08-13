@@ -262,7 +262,7 @@ nav li {
 }
 
 .pagination input[type="text"] {
-    border: 1px solid #000;
+    border: 1px solid #ccc;
     border-radius: $rounding;
     width: 2 * $spacing-l;
     text-align: center;
@@ -294,6 +294,15 @@ nav li {
 
 .pagination .row-count {
     margin-left: $base-line-height;
+}
+
+.pagination .row-count,
+.pagination .page-count {
+    vertical-align: middle;
+}
+
+.pagination .page-count {
+    margin-left: .5 * $spacing-s;
 }
 
 .item-pagination {
@@ -616,7 +625,7 @@ div#featured {
 /* @group ----- Footer ----- */
 
 footer {
-    padding: 0 (2 * $spacing-l) $spacing-l;
+    padding: $spacing-m (2 * $spacing-l) (2 * $spacing-l);
 }
 
 /* @end */
@@ -1268,7 +1277,7 @@ body.menu-open {
 }
 
 #content {
-    padding: $spacing-l (2 * $spacing-l) 0;
+    padding: (1.5 * $spacing-l) (2 * $spacing-l) 0;
 }
 
 #content > h2:first-child {
