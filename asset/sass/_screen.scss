@@ -171,6 +171,10 @@ ul {
         border-top: 0;
         padding-top: 0;
     }
+    
+    form .field > .inputs select + select {
+        margin-top: $spacing-m;
+    }
 
     form .field > input[type="checkbox"] + label {
         width: auto;
@@ -922,6 +926,11 @@ footer {
 
 /* @group ----- Advanced Item Search ----- */
 
+#advanced-search .field + .field {
+    border-top: 1px solid #eee;
+    padding-top: $spacing-l;
+}
+
 #advanced-search .value {
     display: flex;
     justify-content: space-between;
@@ -973,7 +982,7 @@ footer {
 .add-value.button {
     margin-top: .5 * $base-line-height;
     font-size: .75 * $base-font-size;
-    display: inline-block;
+    display: block;
 }
 
 /* @end */
