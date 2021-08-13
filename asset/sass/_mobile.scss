@@ -107,6 +107,7 @@ header h1 {
     overflow: scroll;
     padding: 5.5 * $spacing-l $spacing-l;
     transition: none;
+    box-shadow: none;
 }
 
 #top-nav.closed > ul {
