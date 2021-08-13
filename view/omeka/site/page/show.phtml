@@ -12,7 +12,7 @@ $activePage = $nav->findActive($container);
 ?>
 
 <?php if ($activePage): ?>
-    <?php if ($this->displayNavigation && $activePage['page']->hasPages()): ?>
+    <?php if ($this->displayNavigation && $this->themeSetting('show_submenu') && $activePage['page']->hasPages()): ?>
     <nav class="sub-menu"><?php echo $nav->menu()->renderSubMenu(); ?></nav>
     <?php endif; ?>
 <?php endif; ?>
