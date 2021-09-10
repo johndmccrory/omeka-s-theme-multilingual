@@ -1,5 +1,7 @@
 # Multilingual: Omeka S theme
 
+*[Leer en Español](README.es.md)*
+
 This Omeka S theme allows for end-user locale switching.
 
 ## Dependencies
