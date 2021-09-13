@@ -3,6 +3,7 @@ $translate = $this->plugin('translate');
 $escape = $this->plugin('escapeHtml');
 $labelInfo = $this->setting('property_label_information');
 
+$propertyTranslate = $this->siteSetting('property_translate', true);
 $showLocale = (bool) $this->siteSetting('show_locale_label', true);
 $filterLocale = $this->siteSetting('filter_locale_values');
 $lang = explode('-', $this->lang())[0];
@@ -11,7 +12,7 @@ $lang = explode('-', $this->lang())[0];
     <div class="property">
         <h4>
         <?php if ($propertyData['alternate_label']): ?>
-        <?php echo $escape($propertyData['alternate_label']); ?>
+        <?php echo $escape(($propertyTranslate) ? $translate($propertyData['alternate_label']) : $propertyData['alternate_label']); ?>
         <?php else: ?>
         <?php echo $escape($translate($propertyData['property']->label())); ?>
         <?php endif; ?>
