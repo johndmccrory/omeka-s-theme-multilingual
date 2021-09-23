@@ -17,9 +17,9 @@ body {
     width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
     font-family: $heading-font;
-    font-weight: normal;
+    font-weight: 600;
 }
 
 h1 {
@@ -32,6 +32,10 @@ h2 {
     font-size: 1.5 * $base-font-size;
     line-height: 2 * $base-line-height;
     margin: $spacing-l 0;
+}
+
+h3, h4, h5, h6 {
+    font-weight: 500;
 }
 
 h3 {
@@ -248,7 +252,6 @@ nav li {
 
 .pagination {
     font-size: .75 * $base-font-size;
-    font-family: $heading-font;
     margin: 0;
     padding: .25 * $base-line-height;
 }
@@ -267,13 +270,11 @@ nav li {
     width: 2 * $spacing-l;
     text-align: center;
     height: 1.25 * $spacing-l;
-    font-family: $heading-font;
     font-size: .75 * $base-font-size;
 }
 
 .pagination a.button {
     background-color: $primary-color;
-    font-family: $heading-font;
     color: #000;
     padding: $spacing-s $spacing-m;
     border: 0;
