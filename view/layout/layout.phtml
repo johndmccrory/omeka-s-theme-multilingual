@@ -1,9 +1,13 @@
 <?php
 $escape = $this->plugin('escapeHtml');
 $siteTitle = $this->themeSetting('title') ?? $site->title();
+$headerColor = $this->themeSetting('header_color');
+$userBar = $this->userBar();
+
 $this->htmlElement('html')->setAttribute('lang', $this->lang());
 $this->headMeta()->setCharset('utf-8');
 $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1');
+if (!$userBar) { $this->headMeta()->appendName('theme-color', $headerColor ?? "#000"); }
 $this->headTitle($siteTitle)->setSeparator(' · ');
 $this->headLink()->prependStylesheet($this->assetUrl('css/style.css'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/iconfonts.css', 'Omeka'));
@@ -11,7 +15,6 @@ $this->headLink()->prependStylesheet('//fonts.googleapis.com/css2?family=Montser
 $this->headScript()->prependFile($this->assetUrl('js/thedaily.js'));
 $this->headScript()->prependFile($this->assetUrl('js/global.js', 'Omeka'));
 $this->headScript()->prependFile($this->assetUrl('vendor/jquery/jquery.min.js', 'Omeka'));
-$userBar = $this->userBar();
 $this->trigger('view.layout');
 ?>
 <?php echo $this->doctype(); ?>
@@ -50,7 +53,7 @@ $this->trigger('view.layout');
                 background-color: <?php echo $accentColor; ?>;
             }
             <?php endif; ?>
-            <?php if ($headerColor = $this->themeSetting('header_color')): ?>
+            <?php if ($headerColor): ?>
             header {
                 background-color: <?php echo $headerColor; ?>;
             }
