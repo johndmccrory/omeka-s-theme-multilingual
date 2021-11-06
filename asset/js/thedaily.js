@@ -7,20 +7,25 @@
         });
         
         $('.search-toggle').click(function() {
-            $('#search-container').toggleClass('closed').focus();
+            $('#search-container').toggleClass('closed');
+            $('#search-container input').focus();
+        });
+        
+        $('#switcher-toggle').click(function() {
+            $('.language-switcher').toggleClass('closed');
         });
 
         $('html').click(function(e){
-            $target = $(e.target);
-            if (!$target.is("#top-nav ul, #top-nav li a, #search-form button, #search-form input, .menu-toggle, .search-toggle")) {
+            target = $(e.target);
+            if (!target.is("#top-nav ul, #top-nav li a, #search-form button, #search-form input, .language-switcher a, .menu-toggle, .search-toggle, #switcher-toggle")) {
                 // close navigation
                 if ($('body').hasClass('menu-open')) {
                     $('#top-nav').removeClass('open').addClass('closed');
                     $('body').removeClass('menu-open');
                 }
                 
-                // close search
-                $('#search-container').addClass('closed');
+                // close search and language switcher
+                $('#search-container, .language-switcher').addClass('closed');
             }
         });
     });

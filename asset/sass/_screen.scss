@@ -334,14 +334,12 @@ div.language-switcher {
     margin-left: $spacing-m;
 }
 
-#switcher-toggle:focus + ul,
-.language-switcher > ul:hover {
-    display: block;
+.language-switcher.closed > ul {
+    display: none;
 }
 
 .language-switcher > ul {
     position: absolute;
-    display: none;
     list-style: none;
     right: 0;
     line-height: 1.25 * $base-line-height;
@@ -529,6 +527,7 @@ header nav > ul {
     height: 100vh;
     inset: 0;
     background: rgba(128, 128, 128, 0.3);
+    z-index: 1;
 }
 
 #search-container.closed {

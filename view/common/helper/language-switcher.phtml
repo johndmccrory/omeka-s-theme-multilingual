@@ -11,7 +11,7 @@
 
 <?php if ($locales): ?>
     <?php $currentLocale = $this->siteSetting('locale') ?: 'en_US'; ?>
-    <div class="language-switcher">
+    <div class="language-switcher closed">
         <button id="switcher-toggle" aria-label="Toggle Language Switcher"></button>
         <ul>
             <?php foreach ($locales as $locale): ?>
