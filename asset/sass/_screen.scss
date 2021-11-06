@@ -770,7 +770,8 @@ footer {
     vertical-align: top;
 }
 
-.lSSlideOuter {
+.lSSlideOuter,
+.item.show .media-render {
     margin-bottom: $spacing-l;
 }
 
