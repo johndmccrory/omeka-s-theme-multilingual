@@ -422,7 +422,8 @@ header a {
     color: #fff;
 }
 
-header nav .menu-toggle {
+header nav .menu-toggle,
+.search-toggle {
     background-color: initial;
     color: #fff;
     cursor: pointer;
@@ -433,6 +434,11 @@ header nav .menu-toggle {
 
 header nav .menu-toggle:before {
     content: "\f0c9";
+    font-family: "Font Awesome 5 Free";
+}
+
+.search-toggle:before {
+    content: "\f002";
     font-family: "Font Awesome 5 Free";
 }
 
@@ -517,17 +523,36 @@ header nav > ul {
     }
 }
 
+#search-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    inset: 0;
+    background: rgba(128, 128, 128, 0.3);
+}
+
+#search-container.closed {
+    display: none;
+}
+
 #search-form {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 550px;
+    transform: translate(-50%, -50%);
     background-color: #fff;
     display: flex;
     border-radius: $rounding * 2;
-    padding: $spacing-s $spacing-m;
+    padding: $spacing-l $spacing-m;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 #search-form input[type="text"] {
     border: 0;
     outline: none;
     padding: 0;
+    font-size: $base-font-size * 1.5;
 }
 
 ::placeholder {
@@ -551,8 +576,8 @@ header nav > ul {
 #search-form button[type="submit"]:before,
 #search-form .advanced-search:before {
     font-family: "Font Awesome 5 Free";
-    font-size: initial;
-    line-height: $base-font-size * 2;
+    font-size: $base-font-size * 1.5;
+    line-height: 1em;
 }
 
 #search-form button[type="submit"]:before {
@@ -1295,7 +1320,6 @@ footer {
 
 /* @group ----- Containers ----- */
 
-body.search-open,
 body.menu-open {
     position: fixed;
 }

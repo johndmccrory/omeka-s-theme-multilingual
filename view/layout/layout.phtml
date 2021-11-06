@@ -62,6 +62,7 @@ $this->trigger('view.layout');
             <?php if ($this->themeSetting('header_dark') == true): ?>
             header a,
             ul.language-switcher,
+            .search-toggle,
             header nav .menu-toggle {
                 color: #000;
             }
@@ -81,8 +82,9 @@ $this->trigger('view.layout');
                     <?php echo $escape($siteTitle); ?>
                 <?php endif; ?>
                 </a>
-            </h1>            
-            <div id="search-container">
+            </h1>
+            <button type="button" class="search-toggle" aria-label="Toggle Search"></button>
+            <div id="search-container" class="closed">
                 <?php echo $this->partial('common/search-form'); ?>
             </div>
             <?php if ($this->getHelperPluginManager()->has('languageSwitcher')) echo $this->languageSwitcher(); ?>

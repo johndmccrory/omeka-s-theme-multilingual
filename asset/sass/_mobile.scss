@@ -99,7 +99,7 @@ header h1 {
     top: 0 !important;
     left: 0;
     overflow: scroll;
-    padding: 5.5 * $spacing-l $spacing-l;
+    padding: 3 * $spacing-l $spacing-l;
     transition: none;
     box-shadow: none;
 }
@@ -113,16 +113,16 @@ header h1 {
     line-height: $mobile-line-height;
 }
 
-#search-container {
-    display: none;
-    position: absolute;
-    top: 62px;
-    z-index: 99999;
+#search-form {
     width: calc(100% - 48px);
+    top: 5.5 * $spacing-l;
+    padding: $spacing-l * 0.75 $spacing-m;
 }
 
-body.menu-open #search-container {
-    display: block;
+#search-form input[type="text"],
+#search-form button[type="submit"]:before,
+#search-form .advanced-search:before {
+    font-size: $mobile-font-size * 1.5;
 }
 
 /* @end */
