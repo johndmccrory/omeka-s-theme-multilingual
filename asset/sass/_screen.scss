@@ -322,22 +322,43 @@ nav li {
 /* @end */
 
 /* @group ----- Language Switcher (override) ----- */
-
-ul.language-switcher {
-    font-size: initial !important;
-    color: #fff;
-    text-transform: uppercase;
-    margin: 0 0 0 (1.25 * $spacing-l);
-    padding: 0;
-    flex-grow: 1;
+div.language-switcher {
+    position: relative;
 }
 
-ul.language-switcher.locale-code li a {
+#switcher-toggle {
+    background: url('../img/translate.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: $spacing-m;
+}
+
+#switcher-toggle:focus + ul,
+.language-switcher > ul:hover {
+    display: block;
+}
+
+.language-switcher > ul {
+    position: absolute;
+    display: none;
+    list-style: none;
+    right: 0;
+    line-height: 1.25 * $base-line-height;
+    margin: $spacing-m 0 0;
+    padding: $spacing-m * 1.5 $spacing-l;
+    background: #fff;
+    border-radius: $rounding * 2;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.language-switcher li a {
     opacity: 0.5;
     transition: opacity $hover-easing;
 }
 
-ul.language-switcher.locale-code li a:hover {
+.language-switcher li a:hover,
+.language-switcher a.active {
     opacity: 1;
 }
 
@@ -369,6 +390,7 @@ ul.language-switcher.locale-code li a:hover {
 header > h1 {
     margin: 0;
     line-height: 0;
+    flex-grow: 1;
 }
 
 .site-title {

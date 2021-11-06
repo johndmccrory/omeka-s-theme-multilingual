@@ -81,11 +81,11 @@ $this->trigger('view.layout');
                     <?php echo $escape($siteTitle); ?>
                 <?php endif; ?>
                 </a>
-            </h1>
-            <?php if ($this->getHelperPluginManager()->has('languageSwitcher')) echo $this->languageSwitcher([ 'locale_as_code' => true ]); ?>
+            </h1>            
             <div id="search-container">
                 <?php echo $this->partial('common/search-form'); ?>
             </div>
+            <?php if ($this->getHelperPluginManager()->has('languageSwitcher')) echo $this->languageSwitcher(); ?>
             <nav id="top-nav" class="closed">
             <button type="button" class="menu-toggle" aria-label="Toggle Menu"></button>
             <?php
