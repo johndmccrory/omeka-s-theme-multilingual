@@ -179,10 +179,17 @@ div#featured {
     line-height: 1.5 * $mobile-line-height;
 }
 
+.resource-list {
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .resource-list .resource {
     font-size: $mobile-font-size;
     line-height: $mobile-line-height;
-    width: calc(50% - #{$spacing-l});
+    
+    &:nth-child(2n) {
+        margin-right: 0;
+    }
 }
 
 .browse-controls {
