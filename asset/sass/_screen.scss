@@ -351,6 +351,7 @@ div.language-switcher {
     background-size: contain;
     background-repeat: no-repeat;
     margin-left: $spacing-m;
+    filter: invert(1);
 }
 
 .language-switcher.closed > ul {
@@ -370,6 +371,7 @@ div.language-switcher {
 }
 
 .language-switcher li a {
+    color: #000;
     opacity: 0.65;
     transition: opacity $hover-easing;
     white-space: nowrap;
