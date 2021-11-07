@@ -50,8 +50,13 @@ $this->trigger('view.layout');
             .value a span,
             .sub-menu,
             .results li a,
-            .results > ul + a {
+            .results > ul + a,
+            .radio.checked::before {
                 background-color: <?php echo $accentColor; ?>;
+            }
+            
+            .radio {
+                border-color: <?php echo $accentColor; ?>;
             }
             <?php endif; ?>
             <?php if ($headerColor): ?>

@@ -18,9 +18,9 @@
                 <?php $label = ucwords(explode(" (", $locale['locale_label'])[0]); ?>
                 <li>
                     <?php if ($currentLocale == $locale['locale']): ?>
-                        <a class="active"><?= $label ?></a>
+                        <a class="active"><span class="radio checked"></span><?= $label ?></a>
                     <?php else: ?>
-                        <a href="<?= $locale['url'] ?>"><?= $label ?></a>
+                        <a href="<?= $locale['url'] ?>"><span class="radio"></span><?= $label ?></a>
                     <?php endif; ?>
                 </li>
             <?php endforeach; ?>

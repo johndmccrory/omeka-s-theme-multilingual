@@ -132,7 +132,26 @@ ul {
     [type="submit"] {
         margin: $spacing-l 0;
     }
-
+    
+    .radio {
+        width: 1.1em;
+        height: 1.1em;
+        border: 2px solid;
+        vertical-align: text-top;
+        border-radius: 50%;
+        margin-right: $spacing-m;
+        display: inline-block;
+    }
+    
+    .radio.checked::before {
+        content: '';
+        display: block;
+        width: 60%;
+        height: 60%;
+        position: relative;
+        inset: 20%;
+        border-radius: 50%;
+    }
 
     form .field {
         display: flex;
@@ -342,17 +361,18 @@ div.language-switcher {
     position: absolute;
     list-style: none;
     right: 0;
-    line-height: 1.25 * $base-line-height;
+    line-height: 1.5 * $base-line-height;
     margin: $spacing-m 0 0;
-    padding: $spacing-m * 1.5 $spacing-l;
+    padding: $spacing-m $spacing-m * 1.5;
     background: #fff;
     border-radius: $rounding * 2;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .language-switcher li a {
-    opacity: 0.5;
+    opacity: 0.65;
     transition: opacity $hover-easing;
+    white-space: nowrap;
 }
 
 .language-switcher li a:hover,
