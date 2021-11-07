@@ -534,6 +534,11 @@ header nav > ul {
     display: none;
 }
 
+#search-form-fields {
+    display: flex;
+    margin-bottom: $spacing-m;
+}
+
 #search-form {
     position: absolute;
     top: 45%;
@@ -541,7 +546,6 @@ header nav > ul {
     width: 550px;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    display: flex;
     border-radius: $rounding * 2;
     padding: $spacing-l $spacing-m;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -558,8 +562,7 @@ header nav > ul {
     font-style: italic;
 }
 
-#search-form button[type="submit"],
-#search-form .advanced-search {
+#search-form button[type="submit"] {
     background-color: transparent;
     color: #000;
     margin: 0;
@@ -568,23 +571,15 @@ header nav > ul {
     line-height: 0;
 }
 
-#search-form .advanced-search {
-    margin-left: .75 * $spacing-m;
-}
-
-#search-form button[type="submit"]:before,
-#search-form .advanced-search:before {
+#search-form button[type="submit"]:before {
     font-family: "Font Awesome 5 Free";
     font-size: $base-font-size * 1.5;
     line-height: 1em;
-}
-
-#search-form button[type="submit"]:before {
     content: "\f002";
 }
 
-#search-form .advanced-search:before {
-    content: "\f141";
+.advanced-search {
+    font-weight: 500;
 }
 
 /* @end */

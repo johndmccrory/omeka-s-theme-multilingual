@@ -113,6 +113,10 @@ header h1 {
     line-height: $mobile-line-height;
 }
 
+#search-form-fields {
+    margin-bottom: 0;
+}
+
 #search-form {
     width: calc(100% - 48px);
     top: 5.5 * $spacing-l;
@@ -120,9 +124,12 @@ header h1 {
 }
 
 #search-form input[type="text"],
-#search-form button[type="submit"]:before,
-#search-form .advanced-search:before {
+#search-form button[type="submit"]:before {
     font-size: $mobile-font-size * 1.5;
+}
+
+#search-form .advanced-search {
+    font-size: $mobile-font-size;
 }
 
 /* @end */
@@ -180,11 +187,6 @@ div#featured {
 
 .browse-controls {
     flex-direction: row;
-}
-
-.advanced-search {
-    margin-bottom: $spacing-m;
-    font-size: $mobile-font-size;
 }
 
 .pagination {
