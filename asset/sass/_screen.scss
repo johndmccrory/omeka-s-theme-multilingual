@@ -90,6 +90,7 @@ ul {
         font-family: $body-font;
         border: 1px solid #ccc;
         border-radius: $rounding;
+        color: #000;
         background: #fff url('../img/select-arrow.svg') right $spacing-m center no-repeat;
         background-size: .5 * $base-font-size;
     }
@@ -122,6 +123,7 @@ ul {
         appearance: none;
         padding: 0 $spacing-m;
         background-color: $primary-color;
+        color: #000;
         border: none;
         border-radius: $rounding;
         font-size: $base-font-size;
