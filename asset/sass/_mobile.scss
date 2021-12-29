@@ -186,10 +186,6 @@ div#featured {
 .resource-list .resource {
     font-size: $mobile-font-size;
     line-height: $mobile-line-height;
-    
-    &:nth-child(2n) {
-        margin-right: 0;
-    }
 }
 
 .browse-controls {

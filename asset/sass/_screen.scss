@@ -727,11 +727,12 @@ footer {
 .resource-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-gap: $spacing-l;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: flex-start;
     width: 100%;
-    margin: $spacing-l 0 0;
+    margin: $spacing-l 0;
     list-style: none;
     padding-left: 0;
 }
@@ -747,17 +748,13 @@ footer {
 }
 
 .resource-list .resource {
-    margin: 0 $spacing-l (2 * $spacing-l) 0;
     list-style-type: none;
-
-    &:nth-child(4n) {
-        margin-right: 0;
-    }
 }
 
 .resource-list .resource img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
     padding: $spacing-m;
     border: 1px solid #eee;
     border-radius: $rounding;
