@@ -1,6 +1,6 @@
 {
   "name": "thedaily",
-  "version": "1.6.0",
+  "version": "1.6.2",
   "description": "Sans serif theme for Omeka S featuring custom colors.",
   "main": "gulpfile.js",
   "scripts": {
@@ -24,11 +24,12 @@
     "autoprefixer": "^9.2.1",
     "gulp": "^4.0.2",
     "gulp-postcss": "^8.0.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^5.0.0",
     "susy": "^2.2.12"
   },
   "browserslist": [
     "> 5%",
     "> 1% in US"
-  ]
+  ],
+  "dependencies": {}
 }
