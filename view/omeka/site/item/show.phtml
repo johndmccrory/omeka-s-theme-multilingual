@@ -20,10 +20,10 @@ $lang = $this->lang();
 <?php foreach ($item->media() as $media): ?>
     <?php $mediaType = $media->mediaType(); ?>
     <?php $mediaRenderer = $media->renderer(); ?>
-    <?php if (!isset($videoMedia) && ($mediaRenderer == 'youtube' || $mediaRenderer == 'vimeo')): ?>
-        <?php $videoMedia = $media; ?>
-    <?php elseif (in_array($mediaType, $whitelist)): ?>
+    <?php if (in_array($mediaType, $whitelist)): ?>
         <?php $lightMedia[] = $media; ?>
+    <?php elseif (!isset($primaryMedia)): ?>
+        <?php $primaryMedia = $media; ?>
     <?php else: ?>
         <?php $otherMedia[] = $media; ?>
     <?php endif; ?>
@@ -33,8 +33,8 @@ $lang = $this->lang();
 <h3><?php echo $this->translate('Item'); ?></h3>
 <?php $this->trigger('view.show.before'); ?>
 
-<?php if (isset($videoMedia)): ?>
-    <?php echo $videoMedia->render(); ?>
+<?php if (isset($primaryMedia)): ?>
+    <?php echo $primaryMedia->render(); ?>
 <?php endif; ?>
 <?php if (!empty($lightMedia)): ?>
 <ul id="itemfiles" class="media-list">
