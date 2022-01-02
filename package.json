@@ -25,11 +25,11 @@
     "gulp": "^4.0.2",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^5.0.0",
+    "sass": "^1.45.2",
     "susy": "^2.2.12"
   },
   "browserslist": [
     "> 5%",
     "> 1% in US"
-  ],
-  "dependencies": {}
+  ]
 }
