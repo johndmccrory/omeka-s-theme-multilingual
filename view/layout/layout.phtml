@@ -50,12 +50,12 @@ $this->trigger('view.layout');
             .value a span,
             .sub-menu,
             .results li a,
-            .results > ul + a,
-            .radio.checked::before {
+            .results > ul + a {
                 background-color: <?php echo $accentColor; ?>;
             }
             
-            .radio {
+            .radio::before,
+            .radio::after {
                 border-color: <?php echo $accentColor; ?>;
             }
             <?php endif; ?>
@@ -93,13 +93,13 @@ $this->trigger('view.layout');
                 <?php endif; ?>
                 </a>
             </h1>
-            <button type="button" class="search-toggle" aria-label="Toggle Search"></button>
+            <button type="button" class="search-toggle" aria-label="Toggle search" aria-expanded="false"></button>
             <div id="search-container" class="closed">
                 <?php echo $this->partial('common/search-form'); ?>
             </div>
             <?php if ($this->getHelperPluginManager()->has('languageSwitcher')) echo $this->languageSwitcher(); ?>
             <nav id="top-nav" class="closed">
-            <button type="button" class="menu-toggle" aria-label="Toggle Menu"></button>
+            <button type="button" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"></button>
             <?php
             echo $site->publicNav()->menu()->renderMenu(null, [
                 'maxDepth' => $this->themeSetting('nav_depth') - 1

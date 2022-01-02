@@ -12,15 +12,18 @@
 <?php if ($locales): ?>
     <?php $currentLocale = $this->siteSetting('locale') ?: 'en_US'; ?>
     <div class="language-switcher closed">
-        <button id="switcher-toggle" aria-label="Toggle Language Switcher"></button>
-        <ul>
+        <button id="switcher-toggle" aria-label="Toggle language switcher" aria-expanded="false"></button>
+        <ul role="radiogroup">
             <?php foreach ($locales as $locale): ?>
-                <?php $label = ucwords(explode(" (", $locale['locale_label'])[0]); ?>
+                <?php
+                $label = ucwords(explode(" (", $locale['locale_label'])[0]);
+                $rfc5646 = str_replace("_", "-", $locale['locale']);
+                ?>
                 <li>
                     <?php if ($currentLocale == $locale['locale']): ?>
-                        <a class="active"><span class="radio checked"></span><?= $label ?></a>
+                        <a class="radio checked" role="radio" aria-checked="true"><?= $label ?></a>
                     <?php else: ?>
-                        <a href="<?= $locale['url'] ?>"><span class="radio"></span><?= $label ?></a>
+                        <a class="radio" role="radio" href="<?= $locale['url'] ?>" lang="<?= $rfc5646 ?>" hreflang="<?= $rfc5646 ?>"><?= $label ?></a>
                     <?php endif; ?>
                 </li>
             <?php endforeach; ?>

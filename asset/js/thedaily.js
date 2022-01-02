@@ -1,17 +1,24 @@
 (function($) {
     $(document).ready(function() {
+        const toggleAttr = (i, attr) => {
+            return attr == 'true' ? 'false' : 'true';
+        };
+        
         $('.menu-toggle').click(function() {
+            $(this).attr('aria-expanded', toggleAttr);
             $('#top-nav').toggleClass('closed').toggleClass('open');
             $('body').toggleClass('menu-open');
             $('#top-nav a').first().focus();
         });
         
         $('.search-toggle').click(function() {
+            $(this).attr('aria-expanded', toggleAttr);
             $('#search-container').toggleClass('closed');
             $('#search-container input').focus();
         });
         
         $('#switcher-toggle').click(function() {
+            $(this).attr('aria-expanded', toggleAttr);
             $('.language-switcher').toggleClass('closed');
         });
 
@@ -26,6 +33,7 @@
                 
                 // close search and language switcher
                 $('#search-container, .language-switcher').addClass('closed');
+                $('.search-toggle, #switcher-toggle').attr('aria-expanded', 'false');
             }
         });
     });
