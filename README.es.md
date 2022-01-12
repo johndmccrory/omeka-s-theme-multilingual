@@ -4,10 +4,18 @@
 
 Este tema de Omeka S permite a sus usuarios cambiar la lengua del sitio.
 
+## Vista previa
+
+![Una captura de pantalla del tema en acción](theme.jpg)
+
+## Instalación
+
+Por el momento, este tema no tiene lanzamientos o versiones oficiales. Los cambios se realizan de forma continua a través de git. Para instalar, simplemente clone el repositorio. Ocasionalmente, deberías actualizarlo con `git pull`.
+
 ## Dependencias
 
-El módulo [Daniel-KM/Omeka-S-module-Internationalization](https://github.com/Daniel-KM/Omeka-S-module-Internationalisation) debe ser instalado para permitir la funcionalidad completa. Se recomienda usar Omeka S versión 3.1.0 o posterior.
+El módulo [nternationalization](https://github.com/Daniel-KM/Omeka-S-module-Internationalisation) debe ser instalado y configurado para permitir la funcionalidad completa. Se recomienda usar Omeka S versión 3.1.0 o posterior.
 
 ## Licencia
 
-Este tema se basa en [omeka-s-themes/thedaily](https://github.com/omeka-s-themes/thedaily), heredando su [licencia GPLv3](LICENSE).
+Este tema se basa en [The Daily](https://github.com/omeka-s-themes/thedaily), heredando su [licencia GPLv3](LICENSE).
