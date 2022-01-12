@@ -371,6 +371,7 @@ div.language-switcher {
     background: #fff;
     border-radius: $rounding * 2;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    z-index: 99;
 }
 
 .language-switcher li a {
@@ -810,7 +811,7 @@ footer {
 }
 
 .lSSlideOuter,
-.item.show .media-render {
+.show #content > .media-render {
     margin-bottom: $spacing-l;
 }
 
