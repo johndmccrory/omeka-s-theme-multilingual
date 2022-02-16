@@ -10,7 +10,7 @@ This Omeka S theme allows for end-user locale switching.
 
 ## Installation
 
-For the time being, this theme doesn't have official releases or versions. Changes are made on a rolling basis through git. To install, simply clone the repository. You should occasionally update it with `git pull`.
+Use the zipped releases provided on GitHub for a standard install.
 
 ## Dependencies
 

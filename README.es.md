@@ -10,7 +10,7 @@ Este tema de Omeka S permite a sus usuarios cambiar la lengua del sitio.
 
 ## Instalación
 
-Por el momento, este tema no tiene lanzamientos o versiones oficiales. Los cambios se realizan de forma continua a través de git. Para instalar, simplemente clone el repositorio. Ocasionalmente, deberías actualizarlo con `git pull`.
+Use las versiones comprimidas que se proporcionan en GitHub para una instalación estándar.
 
 ## Dependencias
 
