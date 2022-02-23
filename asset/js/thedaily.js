@@ -12,9 +12,13 @@
         });
         
         $('.search-toggle').click(function() {
-            $(this).attr('aria-expanded', toggleAttr);
-            $('#search-container').toggleClass('closed');
-            $('#search-container input').focus();
+            if ($('.jumbotron-search').length > 0) {
+                $('.jumbotron-search input[type="text"]').focus();
+            } else {
+                $(this).attr('aria-expanded', toggleAttr);
+                $('#search-container').toggleClass('closed');
+                $('#search-container input').focus();
+            }
         });
         
         $('#switcher-toggle').click(function() {
