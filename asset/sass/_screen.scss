@@ -1171,31 +1171,30 @@ footer {
 /* @group ----- Search ----- */
 
 .search-filters {
-    border-bottom: 1px solid #000;
-    border-top: 3px solid #000;
-    padding: ($spacing-s - 3px) 0 ($spacing-s - 1px);
     width: 100%;
     margin-bottom: $spacing-l;
     font-size: .75 * $base-font-size;
+    line-height: $base-line-height;
     display: flex;
     flex-wrap: wrap;
+    gap: $spacing-s;
 }
 
 .search-filters .filter {
     display: flex;
-    font-family: "Archivo Black", sans-serif;
     margin: 0;
-
-    &:not(:last-child):after {
-        content: "\2022";
-        display: inline-block;
-        margin: 0 $spacing-l;
-    }
+    background: #eee;
+    border-radius: $spacing-s;
+    overflow: hidden;
 }
 
-.search-filters .filter-label:after {
-    content: ": ";
-    margin-right: $spacing-s;
+.search-filters .filter-label {
+    padding: .5 * $spacing-s $spacing-s;
+}
+
+.search-filters .filter-value:not(:empty) {
+    padding: .5 * $spacing-s $spacing-s;
+    background: #ddd;
 }
 
 #search-results img {
