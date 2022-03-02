@@ -63,6 +63,11 @@ ul {
     margin: $spacing-l 0;
 }
 
+.wrapper {
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
     /* @group ----- Form Elements ----- */
 
     fieldset {
@@ -411,7 +416,7 @@ div.language-switcher {
   }
 }
 
-header > h1 {
+header h1 {
     margin: 0;
     line-height: 0;
     flex-grow: 1;
@@ -432,8 +437,7 @@ header > h1 {
     margin: 0;
 }
 
-header {
-    background-color: #000;
+header > .wrapper {
     vertical-align: top;
     padding: (.75 * $spacing-l) (2 * $spacing-l);
     position: relative;
