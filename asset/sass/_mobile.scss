@@ -136,9 +136,8 @@ header h1 {
 
 /* @group ----- Footer ----- */
 
-footer {
-    padding: 0 $spacing-l $spacing-l;
-    clear: both;
+footer > .wrapper {
+    padding: (2 * $spacing-l) $spacing-l;
 }
 
 /* @end */

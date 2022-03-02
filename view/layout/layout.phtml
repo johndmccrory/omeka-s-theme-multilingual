@@ -112,12 +112,14 @@ $this->trigger('view.layout');
         <div id="content" class="wrapper" role="main">
             <?php echo $this->content; ?>
         </div>
-        <footer class="wrapper">
-            <?php if ($footerContent = $this->themeSetting('footer')): ?>
-            <?php echo $footerContent; ?>
-            <?php else: ?>
-                <?php echo $this->translate('Powered by Omeka S'); ?>
-            <?php endif; ?>
+        <footer>
+            <div class="wrapper">
+                <?php if ($footerContent = $this->themeSetting('footer')): ?>
+                <?php echo $footerContent; ?>
+                <?php else: ?>
+                    <?php echo $this->translate('Powered by Omeka S'); ?>
+                <?php endif; ?>
+            </div>
         </footer>
     </body>
 </html>
