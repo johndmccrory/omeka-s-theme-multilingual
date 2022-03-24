@@ -698,11 +698,35 @@ div#featured {
 footer {
     background: #eee;
     color: #444;
+    line-height: 1.5;
 }
 
 footer > .wrapper {
     padding: (2 * $spacing-l);
 }
+
+footer .footer-icons {
+    margin-bottom: $spacing-m;
+}
+
+.license-icon {
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    opacity: 0.7;
+}
+
+.license-icon.cc { background-image: url('../img/creative-commons.svg'); }
+.license-icon.cc-zero { background-image: url('../img/creative-commons-zero.svg'); }
+.license-icon.cc-by { background-image: url('../img/creative-commons-by.svg'); }
+.license-icon.cc-sa { background-image: url('../img/creative-commons-sa.svg'); }
+.license-icon.cc-nd { background-image: url('../img/creative-commons-nd.svg'); }
+.license-icon.cc-nc { background-image: url('../img/creative-commons-nc.svg'); }
+.license-icon.cc-nc-eu { background-image: url('../img/creative-commons-nc-eu.svg'); }
+.license-icon.cc-nc-jp { background-image: url('../img/creative-commons-nc-jp.svg'); }
+.license-icon.cc-pd { background-image: url('../img/creative-commons-pd.svg'); }
+.license-icon.cc-pd-alt { background-image: url('../img/creative-commons-pd-alt.svg'); }
 
 /* @end */
 

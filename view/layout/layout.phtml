@@ -114,11 +114,35 @@ $this->trigger('view.layout');
         </div>
         <footer>
             <div class="wrapper">
-                <?php if ($footerContent = $this->themeSetting('footer')): ?>
-                <?php echo $footerContent; ?>
-                <?php else: ?>
-                    <?php echo $this->translate('Powered by Omeka S'); ?>
+                <?php if ($footerLicense = $this->themeSetting('footer_license')): ?>
+                    <?php if ($footerLicense != 'none'): ?>
+                        <div class="footer-icons">
+                            <?php $footerIcons = explode('-', $footerLicense); ?>
+                            <?php if (in_array('nc', $footerIcons) || in_array('alt', $footerIcons)): ?>
+                                <?php $footerIconOptions = array_pop($footerIcons); ?>
+                            <?php endif; ?>
+                            
+                            <?php foreach ($footerIcons as $footerIcon): ?>
+                                <?php if (($footerIcon == 'nc' && $footerIconOptions != 'us') ||
+                                        ($footerIcon == 'pd' && isset($footerIconOptions))): ?>
+                                    <?php $footerIcon .= '-' . $footerIconOptions; ?>
+                                <?php endif; ?>
+                                <?php if ($footerIcon != 'cc'): ?>
+                                    <?php $footerIcon = 'cc-' . $footerIcon; ?>
+                                <?php endif; ?>
+                                <span class="license-icon <?= $footerIcon ?>"></span>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
                 <?php endif; ?>
+                
+                <div class="footer-content">
+                    <?php if ($footerContent = $this->themeSetting('footer')): ?>
+                        <?php echo $footerContent; ?>
+                    <?php else: ?>
+                        <?php echo $this->translate('Powered by Omeka S'); ?>
+                    <?php endif; ?>
+                </div>
             </div>
         </footer>
     </body>
