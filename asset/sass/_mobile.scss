@@ -80,6 +80,14 @@ h4 {
     font-size: $mobile-font-size;
 }
 
+#switcher-toggle {
+    background-size: 1rem;
+}
+
+.language-switcher + nav > .menu-toggle {
+    margin-left: 0;
+}
+
 
 /* @end */
 
