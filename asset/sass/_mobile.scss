@@ -88,6 +88,11 @@ h4 {
     margin-left: 0;
 }
 
+.language-switcher > ul {
+    font-size: $mobile-font-size;
+    line-height: 1.25 * $mobile-line-height;
+}
+
 
 /* @end */
 
