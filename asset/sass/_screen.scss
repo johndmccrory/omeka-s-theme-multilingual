@@ -1175,6 +1175,17 @@ footer .footer-icons {
     text-align: center;
 }
 
+.media-render > iframe[src*="youtube.com"] {
+    width: 100% !important;
+    height: 100% !important;
+    aspect-ratio: 16 / 9;
+}
+
+.media-render > video,
+.media-render > audio {
+    width: 100% !important;
+}
+
 .page .item-with-metadata .show.resource {
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
