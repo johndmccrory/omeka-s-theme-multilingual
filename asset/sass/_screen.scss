@@ -778,7 +778,7 @@ footer .footer-icons {
 
 .resource-list h4 {
     width: 100%;
-    margin: $spacing-s 0 0;
+    margin: $spacing-s 0;
 }
 
 .resource-list .resource {
@@ -1153,8 +1153,12 @@ footer .footer-icons {
     margin: (.5 * $base-line-height) 0 0;
 }
 
-.page #content .file {
-    border-color: #000;
+.page .item-showcase {
+    border: none !important;
+}
+
+.page .file {
+    border: none !important;
 }
 
 .lSSlideOuter .media-render {
