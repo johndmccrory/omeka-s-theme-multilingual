@@ -53,16 +53,7 @@ $sortHeadings = [
 <ul class="resource-list">
     <?php foreach ($items as $item): ?>
     <li class="item resource">
-        <?php if ($media = $item->media()): ?>
-            <?php $medium = $media[0]->thumbnailUrl('medium'); ?>
-            <?php $large = $media[0]->thumbnailUrl('large'); ?>
-            <?php if ($medium && $large): ?>
-                <?php $thumbnail = $this->thumbnail($item, 'medium', [
-                    'srcset' => $medium . ' 200w, ' . $large . ' 800w',
-                    'sizes' => '(max-width: 640px) 50vw, 25vw' ]); ?>
-                <?php echo $item->linkRaw($thumbnail); ?>
-            <?php endif; ?>
-        <?php endif; ?>
+        <?php echo $this->partial('common/helper/item-thumbnail', [ 'item' => $item ]); ?>
         <h4><?php echo $item->link($item->displayTitle(null, $lang)); ?></h4>
         <?php if ($date = $item->value('dcterms:date')): ?>
         <div class="date"><?php echo $date; ?></div>

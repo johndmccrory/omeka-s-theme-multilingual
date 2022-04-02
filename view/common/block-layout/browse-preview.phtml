@@ -26,12 +26,12 @@ $body = $bodyTerm ? $resource->value($bodyTerm) : $resource->displayDescription(
     <li class="<?php echo $this->resourceType; ?> resource">
         <?php
         if ($showThumbnail):
-            echo $resource->linkRaw($this->thumbnail($resource, 'medium', ['title' => $heading]));
-        endif;?>
+            echo $this->partial('common/helper/item-thumbnail', [ 'item' => $resource ]);
+        endif; ?>
         <?php
         if ($showHeading):
             echo '<h4>' . $resource->link($heading) . '</h4>';
-        endif;?>
+        endif; ?>
         <?php if ($showBody && $body): ?>
         <div class="description"><?php echo $escape($body); ?></div>
         <?php endif; ?>
