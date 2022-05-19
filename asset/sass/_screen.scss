@@ -1174,6 +1174,12 @@ footer .footer-icons {
     vertical-align: top;
 }
 
+.lSSlideOuter,
+.media-render {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
 .media.show .media-render {
     margin-bottom: $spacing-l;
     text-align: center;
