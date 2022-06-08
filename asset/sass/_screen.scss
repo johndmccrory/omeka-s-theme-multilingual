@@ -1186,6 +1186,7 @@ footer .footer-icons {
 }
 
 .media-render > iframe[src*="youtube.com"] {
+    display: block;
     width: 100% !important;
     height: 100% !important;
     aspect-ratio: 16 / 9;
