@@ -3,6 +3,7 @@ $escape = $this->plugin('escapeHtml');
 $siteTitle = $this->themeSetting('title') ?? $site->title();
 $headerColor = $this->themeSetting('header_color');
 $headerDark = $this->themeSetting('header_dark') ?? true;
+$accentColor = $this->themeSetting('accent_color');
 $userBar = $this->userBar();
 
 $this->htmlElement('html')->setAttribute('lang', $this->lang());
@@ -27,54 +28,14 @@ $this->trigger('view.layout');
         <?php echo $this->headScript(); ?>
 
         <style>
-            <?php if ($accentColor = $this->themeSetting('accent_color')): ?>
-            .advanced-search,
-            #featured .record a,
-            .site-page-pagination a,
-            #featured .record a,
-            .site-page-pagination a,
-            .results .result-title a {
-                color: <?php echo $accentColor; ?>
-            }
-
-            p a,
-            span a,
-            .button,
-            button,
-            input[type="submit"],
-            .secondary-nav li a,
-            .pagination a.button,
-            .item-pagination a,
-            #featured .featured-meta h3,
-            .value a span,
-            .sub-menu,
-            .results li a,
-            .results > ul + a {
-                background-color: <?php echo $accentColor; ?>;
-            }
-            
-            .radio::before,
-            .radio::after {
-                border-color: <?php echo $accentColor; ?>;
-            }
+            body {
+            <?php if ($accentColor): ?>
+                --accent-color: <?= $accentColor; ?>;
             <?php endif; ?>
             <?php if ($headerColor): ?>
-            #top-nav > ul > li > ul {
-                background-color: <?php echo $headerColor; ?>;
-            }
-            
-            #top-nav > ul > li > ul::before {
-                border-bottom-color: <?php echo $headerColor; ?>;
-            }
+                --header-color: <?= $headerColor; ?>;
             <?php endif; ?>
-
-            <?php if (!$headerDark): ?>
-            #top-nav ul ul a,
-            #top-nav ul ul li::before {
-                color: #fff;
-                opacity: 0.8;
             }
-            <?php endif; ?>
         </style>
     </head>
 
@@ -99,7 +60,7 @@ $this->trigger('view.layout');
             <button type="button" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"></button>
         </header>
         
-        <nav id="top-nav" class="wrapper closed">
+        <nav id="top-nav" class="wrapper closed<?php if (!$headerDark): ?> nav-light<?php endif; ?>">
             <?= $site->publicNav()->menu()->renderMenu(null, [
                 'maxDepth' => $this->themeSetting('nav_depth') - 1
             ]); ?>

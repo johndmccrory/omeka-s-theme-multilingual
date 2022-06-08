@@ -57,7 +57,7 @@ a {
 
 p a,
 span a {
-    background-color: $primary-color;
+    background-color: var(--accent-color, $primary-color);
 }
 
 p,
@@ -130,7 +130,7 @@ ul {
     input[type="submit"] {
         appearance: none;
         padding: 0 $spacing-m;
-        background-color: $primary-color;
+        background-color: var(--accent-color, $primary-color);
         color: #000;
         border: none;
         border-radius: $rounding;
@@ -152,7 +152,7 @@ ul {
         content: '';
         width: 1.1em;
         height: 1.1em;
-        border: 2px solid;
+        border: 2px solid var(--accent-color, $primary-color);
         vertical-align: text-top;
         border-radius: 50%;
         margin-right: $spacing-m;
@@ -273,7 +273,7 @@ nav li {
 }
 
 .secondary-nav li a {
-    background-color: $primary-color;
+    background-color: var(--accent-color, $primary-color);
     font-family: $heading-font;
     color: #000;
     padding: $spacing-s $spacing-m;
@@ -304,7 +304,7 @@ nav li {
 }
 
 .pagination a.button {
-    background-color: $primary-color;
+    background-color: var(--accent-color, $primary-color);
     color: #000;
     padding: $spacing-s $spacing-m;
     border: 0;
@@ -345,7 +345,7 @@ nav li {
 }
 
 .item-pagination a {
-    background-color: $primary-color;
+    background-color: var(--accent-color, $primary-color);
     padding: $spacing-s $spacing-m;
 }
 
@@ -501,7 +501,7 @@ header .menu-toggle.open:before {
 }
 
 #top-nav ul a:hover {
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 #top-nav li.active > a {
@@ -531,7 +531,7 @@ header .menu-toggle.open:before {
     position: absolute;
     height: 0;
     overflow: hidden;
-    background: $primary-color;
+    background: var(--header-color, $primary-color);
     margin-inline: -100vw;
     margin-bottom: $spacing-l * 0.75;
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
@@ -551,11 +551,17 @@ header .menu-toggle.open:before {
     top: -5px;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-bottom: 5px solid $primary-color;
+    border-bottom: 5px solid var(--header-color, $primary-color);
 }
 
 #top-nav ul ul {
     margin: $spacing-m 0 0;
+}
+
+#top-nav.nav-light ul ul a,
+#top-nav.nav-light ul ul li::before {
+    color: #fff;
+    opacity: 0.8;
 }
 
 #top-nav ul ul ul {
@@ -625,6 +631,7 @@ header .menu-toggle.open:before {
 }
 
 .advanced-search {
+    color: var(--accent-color, $primary-color);
     font-weight: 500;
 }
 
@@ -669,7 +676,7 @@ div#featured {
 }
 
 #featured .record a {
-    color: $primary-color;
+    color: var(--accent-color, $primary-color);
 }
 
 #featured .featured-meta {
@@ -685,7 +692,7 @@ div#featured {
 }
 
 #featured .featured-meta h3 {
-    background-color: $primary-color;
+    background-color: var(--accent-color, $primary-color);
 }
 
 #featured .featured-meta h3 a {
@@ -949,7 +956,7 @@ footer .footer-icons {
 }
 
 .value a span {
-    background-color: $primary-color;
+    background-color: var(--accent-color, $primary-color);
 }
 
 .value a.metadata-browse-link {
@@ -1114,7 +1121,7 @@ footer .footer-icons {
 /* @group ----- Pages ----- */
 
 .sub-menu {
-    background-color: $primary-color;
+    background-color: var(--accent-color, $primary-color);
     padding: $spacing-l;
     @include bleed($spacing-l (2 * $spacing-l) 0);
     margin-bottom: $spacing-l;
@@ -1157,7 +1164,7 @@ footer .footer-icons {
 
 .site-page-pagination a {
     padding: $spacing-s;
-    color: $primary-color;
+    color: var(--accent-color, $primary-color);
     display: inline-block;
 }
 
@@ -1327,13 +1334,13 @@ footer .footer-icons {
   color: #fff;
 
   a {
-    color: $primary-color;
+    color: var(--accent-color, $primary-color);
     background-color: transparent;
   }
 }
 
 .results li a {
-  background-color: $primary-color;
+  background-color: var(--accent-color, $primary-color);
 }
 
 .results ul ul {
@@ -1348,6 +1355,7 @@ footer .footer-icons {
 
 .results > ul + a {
   height: 1.5 * $base-line-height;
+  background-color: var(--accent-color, $primary-color);
 }
 
 .pagination + .results {

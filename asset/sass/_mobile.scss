@@ -146,10 +146,10 @@ header h1 {
     margin-right: $spacing-s;
 }
 
-#top-nav ul ul li::before,
-#top-nav ul ul a {
-    color: inherit !important;
-    opacity: 0.6 !important;
+#top-nav.nav-light ul ul li::before,
+#top-nav.nav-light ul ul a {
+    color: inherit;
+    opacity: 0.6;
 }
 
 #top-nav ul ul ul li {
