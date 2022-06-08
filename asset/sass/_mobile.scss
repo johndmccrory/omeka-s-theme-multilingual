@@ -66,7 +66,11 @@ h4 {
 /* @group ----- Containers ----- */
 
 #content {
-    padding: $spacing-l $spacing-l 0;
+    padding-block: $spacing-l 0;
+}
+
+.wrapper {
+    padding-inline: $spacing-l;
 }
 
 /* @end */
@@ -84,7 +88,11 @@ h4 {
     background-size: 1rem;
 }
 
-.language-switcher + nav > .menu-toggle {
+header .menu-toggle {
+    display: block;
+}
+
+header .language-switcher + .menu-toggle {
     margin-left: 0;
 }
 
@@ -98,27 +106,50 @@ h4 {
 
 /* @group ----- Header ----- */
 
-header > .wrapper {
-    padding: $spacing-m $spacing-l;
+header {
+    padding-block: $spacing-l $spacing-m;
 }
 
 header h1 {
     margin-bottom: 0;
 }
 
-#top-nav>ul {
-    position: absolute;
-    width: 100%;
-    top: 0 !important;
-    left: 0;
-    overflow: scroll;
-    padding: 3 * $spacing-l $spacing-l;
-    transition: none;
-    box-shadow: none;
+#top-nav > ul {
+    flex-direction: column;
+    gap: $spacing-s;
+    padding-block: $spacing-s $spacing-l;
 }
 
 #top-nav.closed > ul {
     display: none;
+}
+
+#top-nav > ul > li {
+    padding: ($spacing-s * 0.5) 0;
+}
+
+#top-nav > ul > li > ul {
+    position: initial;
+    background: none !important;
+    height: auto;
+    margin: $spacing-s 0 0;
+    padding: 0 0 0 ($spacing-m * 0.75) !important;
+    box-shadow: none;
+}
+
+#top-nav > ul > li > ul::before {
+    display: none;
+}
+
+#top-nav ul ul li::before {
+    content: "\2014";
+    margin-right: $spacing-s;
+}
+
+#top-nav ul ul li::before,
+#top-nav ul ul a {
+    color: inherit !important;
+    opacity: 0.6 !important;
 }
 
 #top-nav ul ul ul li {
@@ -149,8 +180,8 @@ header h1 {
 
 /* @group ----- Footer ----- */
 
-footer > .wrapper {
-    padding: (2 * $spacing-l) $spacing-l;
+footer {
+    padding-block: (2 * $spacing-l);
 }
 
 /* @end */

@@ -2,12 +2,12 @@
 $escape = $this->plugin('escapeHtml');
 $siteTitle = $this->themeSetting('title') ?? $site->title();
 $headerColor = $this->themeSetting('header_color');
+$headerDark = $this->themeSetting('header_dark') ?? true;
 $userBar = $this->userBar();
 
 $this->htmlElement('html')->setAttribute('lang', $this->lang());
 $this->headMeta()->setCharset('utf-8');
 $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1');
-if (!$userBar) { $this->headMeta()->appendName('theme-color', $headerColor ?? "#000"); }
 $this->headTitle($siteTitle)->setSeparator(' · ');
 $this->headLink()->prependStylesheet($this->assetUrl('css/style.css'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/iconfonts.css', 'Omeka'));
@@ -42,7 +42,6 @@ $this->trigger('view.layout');
             .button,
             button,
             input[type="submit"],
-            header nav > ul,
             .secondary-nav li a,
             .pagination a.button,
             .item-pagination a,
@@ -60,21 +59,20 @@ $this->trigger('view.layout');
             }
             <?php endif; ?>
             <?php if ($headerColor): ?>
-            header {
+            #top-nav > ul > li > ul {
                 background-color: <?php echo $headerColor; ?>;
+            }
+            
+            #top-nav > ul > li > ul::before {
+                border-bottom-color: <?php echo $headerColor; ?>;
             }
             <?php endif; ?>
 
-            <?php if ($this->themeSetting('header_dark') == true): ?>
-            header a,
-            ul.language-switcher,
-            .search-toggle,
-            header nav .menu-toggle {
-                color: #000;
-            }
-            
-            #switcher-toggle {
-                filter: unset;
+            <?php if (!$headerDark): ?>
+            #top-nav ul ul a,
+            #top-nav ul ul li::before {
+                color: #fff;
+                opacity: 0.8;
             }
             <?php endif; ?>
         </style>
@@ -83,37 +81,36 @@ $this->trigger('view.layout');
     <?php echo $this->htmlElement('body'); ?>
         <a id="skipnav" href="#content"><?php echo $this->translate('Skip to main content'); ?></a>
         <?php echo $userBar; ?>
-        <header>
-            <div class="wrapper">
-                <h1>
-                    <a href="<?php echo $site->url(); ?>" class="site-title">
-                    <?php if ($this->themeSetting('logo')): ?>
-                        <img src="<?php echo $this->themeSettingAssetUrl('logo'); ?>" alt="<?php echo $escape($siteTitle); ?>" />
-                    <?php else: ?>
-                        <?php echo $escape($siteTitle); ?>
-                    <?php endif; ?>
-                    </a>
-                </h1>
-                <button type="button" class="search-toggle" aria-label="Toggle search" aria-expanded="false"></button>
-                <div id="search-container" class="closed">
-                    <?php echo $this->partial('common/search-form'); ?>
-                </div>
-                <?php if ($this->getHelperPluginManager()->has('languageSwitcher')) echo $this->languageSwitcher(); ?>
-                <nav id="top-nav" class="closed">
-                <button type="button" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"></button>
-                <?php
-                echo $site->publicNav()->menu()->renderMenu(null, [
-                    'maxDepth' => $this->themeSetting('nav_depth') - 1
-                ]);
-                ?>
-                </nav>
+        <header class="wrapper">
+            <h1>
+                <a href="<?php echo $site->url(); ?>" class="site-title">
+                <?php if ($this->themeSetting('logo')): ?>
+                    <img src="<?php echo $this->themeSettingAssetUrl('logo'); ?>" alt="<?php echo $escape($siteTitle); ?>" />
+                <?php else: ?>
+                    <?php echo $escape($siteTitle); ?>
+                <?php endif; ?>
+                </a>
+            </h1>
+            <button type="button" class="search-toggle" aria-label="Toggle search" aria-expanded="false"></button>
+            <div id="search-container" class="closed">
+                <?php echo $this->partial('common/search-form'); ?>
             </div>
+            <?php if ($this->getHelperPluginManager()->has('languageSwitcher')) echo $this->languageSwitcher(); ?>
+            <button type="button" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"></button>
         </header>
+        
+        <nav id="top-nav" class="wrapper closed">
+            <?= $site->publicNav()->menu()->renderMenu(null, [
+                'maxDepth' => $this->themeSetting('nav_depth') - 1
+            ]); ?>
+        </nav>
+        
         <div id="content" class="wrapper" role="main">
             <?php echo $this->content; ?>
         </div>
-        <footer>
-            <div class="wrapper">
+        
+        <footer class="wrapper">
+            <div class="wrapper-inner">
                 <?php if ($footerLicense = $this->themeSetting('footer_license')): ?>
                     <?php if ($footerLicense != 'none'): ?>
                         <div class="footer-icons">

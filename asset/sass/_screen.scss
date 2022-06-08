@@ -15,6 +15,8 @@ html {
 
 body {
     width: 100%;
+    color: #222;
+    background-color: #f4f4f4;
 }
 
 h1, h2 {
@@ -66,6 +68,7 @@ ul {
 .wrapper {
     max-width: 1350px;
     margin: 0 auto;
+    padding-inline: (2 * $spacing-l);
 }
 
     /* @group ----- Form Elements ----- */
@@ -358,7 +361,6 @@ div.language-switcher {
     background-position: center;
     background-repeat: no-repeat;
     margin-left: $spacing-m;
-    filter: invert(1);
 }
 
 .language-switcher.closed > ul {
@@ -374,7 +376,7 @@ div.language-switcher {
     padding: $spacing-m $spacing-m * 1.5;
     background: #fff;
     border-radius: $rounding * 2;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
     z-index: 99;
 }
 
@@ -436,9 +438,9 @@ header h1 {
     margin: 0;
 }
 
-header > .wrapper {
+header {
     vertical-align: top;
-    padding: (.75 * $spacing-l) (2 * $spacing-l);
+    padding-block: (2 * $spacing-l) (.75 * $spacing-l);
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -446,21 +448,25 @@ header > .wrapper {
 }
 
 header a {
-    color: #fff;
+    color: #000;
 }
 
-header nav .menu-toggle,
+header .menu-toggle,
 .search-toggle,
 #switcher-toggle {
     background-color: initial;
-    color: #fff;
+    color: #000;
     cursor: pointer;
     border: 0;
     width: 2.5em;
     margin-left: $spacing-s;
 }
 
-header nav .menu-toggle:before {
+header .menu-toggle {
+    display: none;
+}
+
+header .menu-toggle:before {
     content: "\f0c9";
     font-family: "Font Awesome 5 Free";
 }
@@ -470,58 +476,46 @@ header nav .menu-toggle:before {
     font-family: "Font Awesome 5 Free";
 }
 
-header nav.open .menu-toggle {
-    position: relative;
-    z-index: 99999;
-    color: #000;
-}
-
-header nav.open .menu-toggle:before {
+header .menu-toggle.open:before {
     content: "\f00d";
-}
-
-header nav > ul {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 9999;
-    margin: 0;
-    padding: (1.5 * $spacing-l) (1.75 * $spacing-l);
-    text-align: left;
-    height: 100vh;
-    width: 500px;
-    max-width: 100%;
-    vertical-align: top;
 }
 
 #top-nav > ul {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
-    transform: translateX(0);
-    transition: transform .4s cubic-bezier(0.8, 0, 0.2, 1), box-shadow .4s ease;
-}
-
-#top-nav.closed > ul {
-    transform: translateX(100%);
-    box-shadow: 0 0 50px transparent;
-}
-
-#user-bar + header > #top-nav > ul {
-    top: 38px;
+    margin: 0;
+    padding-bottom: $spacing-m;
+    border-bottom: 1px solid $primary-separator-color;
 }
 
 #top-nav li {
+    font-size: $base-font-size - 2px;
     list-style-type: none;
-}
-
-#top-nav > ul > li {
-    padding-bottom: $spacing-m;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 #top-nav ul a {
-    color: #000;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+#top-nav ul a:hover {
+    opacity: 1;
+}
+
+#top-nav li.active > a {
+    opacity: 1;
+    font-weight: 500;
+}
+
+#top-nav > ul > li {
+    padding-inline: $spacing-m * 0.75;
+    padding-bottom: $spacing-l * 0.75;
+}
+
+#top-nav > ul > li:first-child {
+    padding-left: 0;
 }
 
 #top-nav > ul > li li {
@@ -533,6 +527,33 @@ header nav > ul {
     }
 }
 
+#top-nav > ul > li > ul {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    background: $primary-color;
+    margin-inline: -100vw;
+    margin-bottom: $spacing-l * 0.75;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
+#top-nav > ul > li:hover > ul,
+#top-nav > ul > li > ul:focus-within {
+    height: auto;
+    overflow: visible;
+    padding: $spacing-l 100vw;
+}
+
+#top-nav > ul > li > ul::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid $primary-color;
+}
+
 #top-nav ul ul {
     margin: $spacing-m 0 0;
 }
@@ -541,14 +562,10 @@ header nav > ul {
     padding-left: $spacing-m;
 }
 
-#top-nav ul ul li {
-    font-size: .75 * $base-font-size;
-    line-height: .75 * $base-line-height;
-
-    &:before {
-        content: "\2014";
-        margin-right: $spacing-s;
-    }
+#top-nav ul ul ul li::before {
+    content: "\2014";
+    margin-right: $spacing-s;
+    opacity: 0.6;
 }
 
 #search-container {
@@ -696,13 +713,13 @@ div#featured {
 /* @group ----- Footer ----- */
 
 footer {
-    background: #eee;
-    color: #444;
+    color: #777;
     line-height: 1.5;
 }
 
-footer > .wrapper {
-    padding: (2 * $spacing-l);
+footer > .wrapper-inner {
+    padding-block: (2 * $spacing-l);
+    border-top: 1px solid $primary-separator-color;
 }
 
 footer .footer-icons {
@@ -714,7 +731,7 @@ footer .footer-icons {
     display: inline-block;
     width: 34px;
     height: 34px;
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 .license-icon.cc { background-image: url('../img/creative-commons.svg'); }
@@ -790,7 +807,7 @@ footer .footer-icons {
     aspect-ratio: 5 / 4;
     object-fit: cover;
     padding: $spacing-m;
-    border: 1px solid #eee;
+    border: 1px solid $secondary-separator-color;
     border-radius: $rounding;
     transition: border-color $hover-easing;
 }
@@ -840,6 +857,7 @@ footer .footer-icons {
     padding: 0 $spacing-s;
     margin: ($spacing-m - 1px) $spacing-m (1.75 * $spacing-l);
     vertical-align: top;
+    border-radius: $rounding;
 }
 
 .lSSlideOuter,
@@ -911,7 +929,7 @@ footer .footer-icons {
 .value:not(:first-of-type) {
     margin-top: $spacing-m;
     padding-top: $spacing-m - 1px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid $secondary-separator-color;
 }
 
 .value > p:first-child {
@@ -927,6 +945,7 @@ footer .footer-icons {
     background-color: #e7e7e7;
     display: inline-block;
     padding: 0 $spacing-s;
+    border-radius: $rounding;
 }
 
 .value a span {
@@ -1237,7 +1256,7 @@ footer .footer-icons {
 .search-filters .filter {
     display: flex;
     margin: 0;
-    background: #eee;
+    background: #e6e6e6;
     border-radius: $spacing-s;
     overflow: hidden;
 }
@@ -1248,7 +1267,7 @@ footer .footer-icons {
 
 .search-filters .filter-value:not(:empty) {
     padding: .5 * $spacing-s $spacing-s;
-    background: #ddd;
+    background: #d9d9d9;
 }
 
 #search-results img {
@@ -1379,12 +1398,8 @@ footer .footer-icons {
 
 /* @group ----- Containers ----- */
 
-body.menu-open {
-    position: fixed;
-}
-
 #content {
-    padding: (1.5 * $spacing-l) (2 * $spacing-l);
+    padding-block: (1.5 * $spacing-l);
 }
 
 #content > h2:first-child {
