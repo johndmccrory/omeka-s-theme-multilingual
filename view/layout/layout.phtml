@@ -19,7 +19,7 @@ $this->headScript()->prependFile($this->assetUrl('vendor/jquery/jquery.min.js', 
 $this->trigger('view.layout');
 ?>
 <?php echo $this->doctype(); ?>
-<?php echo $this->htmlElement('html'); ?>
+<?php echo $this->htmlElement('html')->appendAttribute('class', 'theme-multilingual'); ?>
     <head>
         <?php echo $this->headMeta(); ?>
         <?php echo $this->headTitle(); ?>
