@@ -535,7 +535,7 @@ header .menu-toggle.open:before {
     margin-inline: -100vw;
     margin-bottom: $spacing-l * 0.75;
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
-    z-index: 1;
+    z-index: 90;
 }
 
 #top-nav > ul > li:hover > ul,
