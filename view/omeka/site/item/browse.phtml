@@ -53,7 +53,7 @@ $sortHeadings = [
 <ul class="resource-list">
     <?php foreach ($items as $item): ?>
     <li class="item resource">
-        <?php echo $this->partial('common/helper/item-thumbnail', [ 'item' => $item ]); ?>
+        <?php echo $this->partial('common/helper/item-thumbnail', [ 'resource' => $item ]); ?>
         <h4><?php echo $item->link($item->displayTitle(null, $lang)); ?></h4>
         <?php if ($date = $item->value('dcterms:date')): ?>
         <div class="date"><?php echo $date; ?></div>

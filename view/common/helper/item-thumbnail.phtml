@@ -1,13 +1,18 @@
 <?php
 
-if ($media = $item->media()) {
-    $medium = $media[0]->thumbnailUrl('medium');
-    $large = $media[0]->thumbnailUrl('large');
+if ($resource) {
+    $medium = $resource->thumbnailDisplayUrl('medium');
+    $large = $resource->thumbnailDisplayUrl('large');
+    
     if ($medium && $large) {
-        $thumbnail = $this->thumbnail($item, 'medium', [
-            'srcset' => $medium . ' 200w, ' . $large . ' 800w',
-            'sizes' => '(max-width: 640px) 50vw, 25vw' ]);
-        echo $item->linkRaw($thumbnail);
+        if ($medium == $large) {
+            $thumbnail = $this->thumbnail($resource, 'medium');
+        } else {
+            $thumbnail = $this->thumbnail($resource, 'medium', [
+                'srcset' => $medium . ' 200w, ' . $large . ' 800w',
+                'sizes' => '(max-width: 640px) 50vw, 25vw' ]);
+        }
+        echo $resource->linkRaw($thumbnail);
     }
 }
 
