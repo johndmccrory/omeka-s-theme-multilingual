@@ -15,13 +15,17 @@ html {
 
 body {
     width: 100%;
-    color: #222;
+    color: $body-color;
     background-color: #f4f4f4;
 }
 
 h1, h2 {
     font-family: $heading-font;
     font-weight: 600;
+}
+
+h1, h2, h3, h4 {
+    color: $heading-color;
 }
 
 h1 {
@@ -52,7 +56,7 @@ h4 {
 
 a {
     text-decoration: none;
-    color: #000;
+    color: inherit;
 }
 
 p a,
@@ -381,7 +385,6 @@ div.language-switcher {
 }
 
 .language-switcher li a {
-    color: #000;
     opacity: 0.65;
     transition: opacity $hover-easing;
     white-space: nowrap;
@@ -447,10 +450,6 @@ header {
     align-items: center;
 }
 
-header a {
-    color: #000;
-}
-
 header .menu-toggle,
 .search-toggle,
 #switcher-toggle {
@@ -496,6 +495,7 @@ header .menu-toggle.open:before {
 }
 
 #top-nav ul a {
+    color: $heading-color;
     opacity: 0.6;
     transition: opacity 0.3s ease;
 }
@@ -505,7 +505,7 @@ header .menu-toggle.open:before {
 }
 
 #top-nav li.active > a {
-    opacity: 1;
+    opacity: 1 !important;
     font-weight: 500;
 }
 

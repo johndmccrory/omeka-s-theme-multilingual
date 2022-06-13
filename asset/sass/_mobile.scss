@@ -144,11 +144,12 @@ header h1 {
 #top-nav ul ul li::before {
     content: "\2014";
     margin-right: $spacing-s;
+    opacity: 0.6;
 }
 
 #top-nav.nav-light ul ul li::before,
 #top-nav.nav-light ul ul a {
-    color: inherit;
+    color: $heading-color;
     opacity: 0.6;
 }
 
