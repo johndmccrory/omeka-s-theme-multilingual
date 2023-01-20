@@ -1,0 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-20 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Site title override"
+msgstr ""
+
+msgid "Logo"
+msgstr ""
+
+msgid "Footer content"
+msgstr ""
+
+msgid "Footer license icons"
+msgstr ""
+
+msgid "HTML content to appear in the footer"
+msgstr ""
+
+msgid "Navigation bar color"
+msgstr ""
+
+msgid "Use dark navigation text color"
+msgstr ""
+
+msgid "When checked, black text will be shown in the top navigation bar"
+msgstr ""
+
+msgid "Accent color"
+msgstr ""
+
+msgid "The color to be used for buttons and links"
+msgstr ""
+
+msgid "Attempt to translate resource templates"
+msgstr ""
+
+msgid "When checked, custom resource template properties will be passed through the Translations module"
+msgstr ""
+
+msgid "Media caption in viewer"
+msgstr ""
+
+msgid "Set caption content for when a media is viewed in fullscreen"
+msgstr ""
