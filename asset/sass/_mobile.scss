@@ -112,6 +112,8 @@ header {
 
 header h1 {
     margin-bottom: 0;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
 }
 
 #top-nav > ul {
@@ -253,8 +255,14 @@ div#featured {
     margin-left: 0;
 }
 
+.property {
+    display: block;
+}
+
 .property h4,
-.property .value,
+.property dt,
+.property dd,
+.property .values,
 .item-with-metadata .media-list {
     font-size: 1.5 * $mobile-font-size;
     width: 100%;
