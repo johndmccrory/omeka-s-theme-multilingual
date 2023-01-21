@@ -14,7 +14,7 @@ Use the zipped releases provided on GitHub for a standard install.
 
 ## Dependencies
 
-The module [Internationalisation](https://github.com/Daniel-KM/Omeka-S-module-Internationalisation) should be installed and configured to enable full functionality. Omeka S version 3.1.0 or later is recommended.
+The module [Internationalisation](https://github.com/Daniel-KM/Omeka-S-module-Internationalisation) should be installed and configured to enable full functionality.
 
 ## License
 

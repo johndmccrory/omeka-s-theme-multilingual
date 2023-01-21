@@ -14,7 +14,7 @@ Use las versiones comprimidas que se proporcionan en GitHub para una instalació
 
 ## Dependencias
 
-El módulo [nternationalization](https://github.com/Daniel-KM/Omeka-S-module-Internationalisation) debe ser instalado y configurado para permitir la funcionalidad completa. Se recomienda usar Omeka S versión 3.1.0 o posterior.
+El módulo [nternationalization](https://github.com/Daniel-KM/Omeka-S-module-Internationalisation) debe ser instalado y configurado para permitir la funcionalidad completa.
 
 ## Licencia
 
