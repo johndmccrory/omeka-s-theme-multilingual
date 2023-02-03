@@ -1233,7 +1233,8 @@ a.resource-link {
     border: none !important;
 }
 
-.media-render {
+.media-render,
+.lg-inline .lg-backdrop {
     border-radius: 8px;
     overflow: hidden;
 }
@@ -1256,6 +1257,10 @@ a.resource-link {
 .lg-outer[data-lg-slide-type="video"] .lg-zoom-in, 
 .lg-outer[data-lg-slide-type="video"] .lg-zoom-out {
     display: none;
+}
+
+.lg-toolbar {
+    padding: $spacing-s ($spacing-s / 2);
 }
 
 .media-render > iframe[src*="youtube.com"] {
