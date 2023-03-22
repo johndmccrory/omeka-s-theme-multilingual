@@ -12,6 +12,7 @@ $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1')
 $this->headTitle($siteTitle)->setSeparator(' · ');
 $this->headLink()->prependStylesheet($this->assetUrl('css/style.css'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/iconfonts.css', 'Omeka'));
+$this->headLink()->prependStylesheet($this->assetUrl('css/uom-footer.css'));
 $this->headLink()->prependStylesheet('//fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
 $this->headScript()->prependFile($this->assetUrl('js/thedaily.js'));
 $this->headScript()->prependFile($this->assetUrl('js/global.js', 'Omeka'));
@@ -71,38 +72,59 @@ $this->trigger('view.layout');
             <?php echo $this->content; ?>
         </div>
         
-        <footer class="wrapper">
-            <div class="wrapper-inner">
-                <?php if ($footerLicense = $this->themeSetting('footer_license')): ?>
-                    <?php if ($footerLicense != 'none'): ?>
-                        <div class="footer-icons">
-                            <?php $footerIcons = explode('-', $footerLicense); ?>
-                            <?php if (in_array('nc', $footerIcons) || in_array('alt', $footerIcons)): ?>
-                                <?php $footerIconOptions = array_pop($footerIcons); ?>
-                            <?php endif; ?>
-                            
-                            <?php foreach ($footerIcons as $footerIcon): ?>
-                                <?php if (($footerIcon == 'nc' && $footerIconOptions != 'us') ||
-                                        ($footerIcon == 'pd' && isset($footerIconOptions))): ?>
-                                    <?php $footerIcon .= '-' . $footerIconOptions; ?>
-                                <?php endif; ?>
-                                <?php if ($footerIcon != 'cc'): ?>
-                                    <?php $footerIcon = 'cc-' . $footerIcon; ?>
-                                <?php endif; ?>
-                                <span class="license-icon <?= $footerIcon ?>"></span>
-                            <?php endforeach; ?>
-                        </div>
-                    <?php endif; ?>
-                <?php endif; ?>
-                
-                <div class="footer-content">
-                    <?php if ($footerContent = $this->themeSetting('footer')): ?>
-                        <?php echo $footerContent; ?>
-                    <?php else: ?>
-                        <?php echo $this->translate('Powered by Omeka S'); ?>
-                    <?php endif; ?>
+        <footer class="footerContainer">							
+            <div class="row tripleVertPadding">     
+                <div class="eightcol">
+                    <div class="footerLogos">
+                        <img src="https://www.library.manchester.ac.uk/assets/images/design/national-research-libraries.png" height="63" alt="National Research Libraries">											
+                        <p>The University of Manchester Library is one of five National Research Libraries</p>
+                    </div>
+                </div>     
+                <div class="fourcol last">
+                    <h2>Connect with us</h2>
+                    <ul class="inlineList footer-socialIcons">                
+                        <li><a href="https://www.facebook.com/pages/The-University-of-Manchester-Library/25777209922">
+                            <img class="lazy" src="https://www.library.manchester.ac.uk/assets/images/design/icon-facebook-large.png" width="40" height="40" data-original="/assets/images/design/icon-facebook-large.png" alt="Facebook page for The University of Manchester Library">
+                            <noscript><img class="" src="https://www.library.manchester.ac.uk/assets/images/design/icon-facebook-large.png" width="40" height="40" alt="Facebook page for The University of Manchester Library"></noscript>
+                            </a>
+                        </li>
+                        <li><a href="https://twitter.com/UoMLibrary">
+                            <img class="lazy" src="https://www.library.manchester.ac.uk/assets/images/design/icon-twitter-large.png" width="40" height="40" data-original="/assets/images/design/icon-twitter-large.png" alt="Twitter page for The University of Manchester Library">
+                            <noscript><img class="" src="https://www.library.manchester.ac.uk/assets/images/design/icon-twitter-large.png" width="40" height="40" alt="Twitter page for The University of Manchester Library"></noscript>
+                            </a>
+                        </li>
+                        <li><a href="https://www.instagram.com/uomlibrary/">
+                            <img class="lazy" src="https://www.library.manchester.ac.uk/assets/images/design/icon-instagram.png" width="40" height="40" data-original="/assets/images/design/icon-instagram.png"  alt="Instagram page for The University of Manchester Library">
+                            <noscript><img class="" src="https://www.library.manchester.ac.uk/assets/images/design/icon-instagram.png" width="40" height="40" alt="Instagram page for The University of Manchester Library"></noscript>
+                            </a>
+                        </li>
+                        <li><a href="https://www.youtube.com/user/UoMLibrary">
+                            <img class="lazy" src="https://www.library.manchester.ac.uk/assets/images/design/icon-youtube-large.png" width="40" height="40" data-original="/assets/images/design/icon-youtube-large.png"  alt="YouTube page for The University of Manchester Library">
+                            <noscript><img class="" src="https://www.library.manchester.ac.uk/assets/images/design/icon-youtube-large.png" width="40" height="40" alt="YouTube page for The University of Manchester Library"></noscript>
+                            </a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/showcase/the-university-of-manchester-library">
+                            <img class="lazy" src="https://www.library.manchester.ac.uk/assets/images/design/icon-linkedin.png" width="40" height="40" data-original="/assets/images/design/icon-linkedin.png"  alt="LinkedIn page for The University of Manchester Library">
+                            <noscript><img class="" src="https://www.library.manchester.ac.uk/assets/images/design/icon-linkedin.png" width="40" height="40" alt="LinkedIn page for The University of Manchester Library"></noscript>
+                            </a>
+                        </li>													
+                    </ul>
                 </div>
             </div>
-        </footer>
+            <hr>       
+            <div class="row singleVertPadding">
+                <div class="twelvecol">
+                    <ul class="inlineList">
+                        <li><a href="https://www.manchester.ac.uk/disclaimer/">Disclaimer</a> /</li>
+                                    <li><a href="https://www.manchester.ac.uk/discover/privacy-information/data-protection/">Data Protection</a> /</li>
+                                    <li><a href="https://www.manchester.ac.uk/copyright/">Copyright notice</a> /</li>
+                                    <li><a href="https://www.library.manchester.ac.uk/accessibility/manchester-digital-exhibitions/">Web accessibility</a> /</li>
+                                    <li><a href="https://www.manchester.ac.uk/discover/privacy-information/freedom-information/">Freedom of information</a> /</li>
+                                    <li><a href="https://www.manchester.ac.uk/discover/governance/charitable-status/">Charitable status</a> /</li>             
+                        <li>Royal Charter Number: RC000797</li>
+                    </ul>
+                </div>
+            </div>  
+        </footer> 
     </body>
 </html>

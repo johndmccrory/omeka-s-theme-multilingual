@@ -696,7 +696,7 @@ div#featured {
 #featured .record:first-child,
 #featured.layout-2 .record:nth-child(2),
 #featured .record:nth-child(6n),
-#featured .record:nth-child(6n+1), {
+#featured .record:nth-child(6n+1) {
     width: 100%;
 }
 
