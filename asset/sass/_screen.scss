@@ -17,6 +17,7 @@ body {
     width: 100%;
     color: $body-color;
     background-color: #f4f4f4;
+    overflow-x: hidden;
 }
 
 h1, h2 {
@@ -922,7 +923,7 @@ footer .footer-icons {
     margin-bottom: $spacing-l;
     vertical-align: top;
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     width: 100%;
     justify-content: flex-end;
     flex-wrap: wrap;
@@ -1422,7 +1423,6 @@ a.resource-link {
 
 .sitewide-search-form ~ .advanced-search {
   margin-top: $spacing-s;
-  display: inline-block;
   float: left;
 }
 
