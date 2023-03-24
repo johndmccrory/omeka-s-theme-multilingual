@@ -67,7 +67,6 @@ $lang = $filterLocale ? $this->lang() : null;
             ?>
             <div class="item resource">
                 <?= $render ?>
-                <?= $link ?>
                 <div class="caption">
                     <?= $caption ?>
                 </div>
@@ -76,6 +75,7 @@ $lang = $filterLocale ? $this->lang() : null;
         </div>
     </div>
     <div class="text">
+        <h3><?= $link ?></h3>
         <?= $html ?>
     </div>
 </div>
