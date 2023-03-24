@@ -1,0 +1,81 @@
+<?php
+/**
+ * @var \Laminas\View\Renderer\PhpRenderer $this
+ * @var \Omeka\Api\Representation\SitePageBlockRepresentation $block
+ * @var \Omeka\Api\Representation\SiteBlockAttachmentRepresentation[] $attachments
+ * @var string $heading
+ * @var string $html
+ * @var string $alignmentClass "left" or "right"
+ * @var string $thumbnailType
+ * @var string $showTitleOption "item_title" or "file_name" or "none".
+ * @var string $captionPosition "center", "left" or "right".
+ */
+
+$escape = $this->plugin('escapeHtml');
+$hyperlink = $this->plugin('hyperlink');
+$siteSetting = $this->plugin('siteSetting');
+
+$linkType = $siteSetting('attachment_link_type', 'item');
+
+$filterLocale = (bool) $this->siteSetting('filter_locale_values');
+$lang = $filterLocale ? $this->lang() : null;
+?>
+
+<div class="block media-text">
+    <?php if (!empty($heading)): ?>
+    <h2><?= $escape($heading) ?></h2>
+    <?php endif; ?>
+
+    <div class="<?= $alignmentClass . ' ' . $thumbnailType . ' captions-' . $captionPosition ?> media file">
+        <div class="attachments">
+            <?php
+            foreach ($attachments as $attachment):
+                $render = null;
+                $title = null;
+                $link = null;
+                $item = $attachment->item();
+                if ($item):
+                    $media = $attachment->media() ? : $item->primaryMedia();
+                     $mediaRenderer = $media->renderer();
+                     if ($media && $mediaRenderer !== 'iiif') :
+                         echo $media->render([
+                         'thumbnailType' => $thumbnailType,
+                         'link' => $link,
+                     ]);
+                     elseif ($media) :
+                         echo $item->linkRaw($this->thumbnail($media, $this->thumbnailType));
+                     endif;
+
+                    if ($showTitleOption == 'item_title'):
+                        $title = $item->displayTitle(null, $lang);
+                    elseif ($media && $showTitleOption == 'file_name'):
+                        $title = $media->displayTitle(null, $lang);
+                    endif;
+
+                    if ($title):
+                        if ($media && $linkType === 'media'):
+                            $link = $media->link($title);
+                        elseif ($media && $linkType === 'original' && $media->hasOriginal()):
+                            $link = $hyperlink($title, $media->originalUrl());
+                        else:
+                            $link = $item->link($title);
+                        endif;
+                    endif;
+                endif;
+
+                $caption = $attachment->caption();
+            ?>
+            <div class="item resource">
+                <?= $render ?>
+                <?= $link ?>
+                <div class="caption">
+                    <?= $caption ?>
+                </div>
+            </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+    <div class="text">
+        <?= $html ?>
+    </div>
+</div>

@@ -73,7 +73,7 @@ ul {
 .wrapper {
     max-width: 1350px;
     margin: 0 auto;
-    padding-inline: (2 * $spacing-l);
+    padding-inline: $spacing-s $spacing-l;
 }
 
     /* @group ----- Form Elements ----- */
@@ -482,7 +482,7 @@ header h1 {
 
 header {
     vertical-align: top;
-    padding-block: (2 * $spacing-l) (.75 * $spacing-l);
+    padding-block: $spacing-l (.75 * $spacing-l);
     position: relative;
     display: flex;
     justify-content: space-between;
