@@ -73,7 +73,7 @@ ul {
 .wrapper {
     max-width: 1350px;
     margin: 0 auto;
-    padding-inline: $spacing-s $spacing-l;
+    padding-inline: $spacing-s;
 }
 
     /* @group ----- Form Elements ----- */
@@ -1197,7 +1197,7 @@ a.resource-link {
 }
 
 .site-page-pagination {
-    background-color: #000;
+    background-color: #1d1d1d;
     color: #ccc;
     padding: $spacing-m;
     margin-top: 2 * $spacing-l;
