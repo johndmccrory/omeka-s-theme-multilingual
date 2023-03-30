@@ -73,7 +73,7 @@ ul {
 .wrapper {
     max-width: 1350px;
     margin: 0 auto;
-    padding-inline: $spacing-s;
+    padding-inline: 0;
 }
 
     /* @group ----- Form Elements ----- */
@@ -482,7 +482,7 @@ header h1 {
 
 header {
     vertical-align: top;
-    padding-block: $spacing-l (.75 * $spacing-l);
+    padding-block: $spacing-s (.75 * $spacing-l);
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -767,7 +767,7 @@ footer {
 }
 
 footer > .wrapper-inner {
-    padding-block: (2 * $spacing-l);
+    padding-block: $spacing-s;
     border-top: 1px solid $primary-separator-color;
 }
 

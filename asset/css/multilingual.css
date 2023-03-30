@@ -29,12 +29,12 @@
     /*End Resource with text block*/
     
     .header-top {
-        width: 1140px;
         display: flex;
         margin: 0 auto;
         justify-content: space-between;
         flex-wrap: wrap;
         align-items: center;
+        width: 1140px;
     }
     
     .site-title {
