@@ -53,7 +53,7 @@ $this->trigger('view.layout');
                 <?php endif; ?>
                 </a>
             </h1>
-            <button type="button" class="search-toggle" aria-label="Toggle search" aria-expanded="false"></button>
+            <button type="button" class="search-toggle" aria-label="Toggle search" aria-expanded="false" aria-controls="search-form"></button>
             <div id="search-container" class="closed">
                 <?php echo $this->partial('common/search-form'); ?>
             </div>
@@ -75,7 +75,7 @@ $this->trigger('view.layout');
             <div class="wrapper-inner">
                 <?php if ($footerLicense = $this->themeSetting('footer_license')): ?>
                     <?php if ($footerLicense != 'none'): ?>
-                        <div class="footer-icons">
+                        <div class="footer-icons" aria-hidden="true">
                             <?php $footerIcons = explode('-', $footerLicense); ?>
                             <?php if (in_array('nc', $footerIcons) || in_array('alt', $footerIcons)): ?>
                                 <?php $footerIconOptions = array_pop($footerIcons); ?>
