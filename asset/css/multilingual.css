@@ -48,10 +48,10 @@
         width: 100%;
         height: 100%;
     }
-    .university-logo  a img {
+    a.university-logo  img {
         width: 169px;
         height: 70px;
-        margin: 24px;
+        margin: 24px 24px 12px 24px;
     }
     .university-logo img:hover,
     header .site-title img:hover {
@@ -69,6 +69,7 @@
     }
     .site-heading p {
         color: #6B2C91;
+        margin: 12px 0;
     }
     .site-title h1 {
         color: #6B2C91;
@@ -118,6 +119,8 @@
         }
     }
 
-    @media screen and (max-width: 1200px) {
-
+    @media screen and (min-width: 600px) {
+        a.university-logo  img {
+            margin: 24px;
+        }
     }

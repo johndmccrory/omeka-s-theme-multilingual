@@ -49,13 +49,12 @@ $this->trigger('view.layout');
         <?php echo $userBar; ?>
         <header class="wrapper">
             <div class="header-top">
-                <div class="university-logo">
-                    <a href="http://www.manchester.ac.uk/library"><img alt="University of Manchester" src="/omeka-s/themes/omeka-s-theme-multilingual/asset/img/TAB_black.png" alt="The University of Manchester Library logo" class="university-logo"/></a></div>
-                <div class="site-heading"><p>Manchester Digital Exhibitions</p></div>
+                <a class="university-logo" href="http://www.manchester.ac.uk/library"><img alt="University of Manchester" src="/omeka-s/themes/omeka-s-theme-multilingual/asset/img/TAB_black.png" alt="The University of Manchester Library logo"/></a>
+                <div class="site-heading"><p>Manchester Digital Exhibitions</p>
+                </div>
+                <?php if ($this->getHelperPluginManager()->has('languageSwitcher')) echo $this->languageSwitcher(); ?>
+                <button type="button" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"></button>
             </div>
-            <?php if ($this->getHelperPluginManager()->has('languageSwitcher')) echo $this->languageSwitcher(); ?>
-            <button type="button" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"></button>
-
         </header>
 
         <div class="pure-g">
