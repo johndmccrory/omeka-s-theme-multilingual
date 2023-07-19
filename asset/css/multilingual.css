@@ -76,6 +76,12 @@
         text-decoration: none;
         padding: 0;
     }
+
+    h1.site-title-heading {
+        line-height: inherit;
+        padding: 0 24px;
+        font-size: 28px;
+    }
     .break {
       flex-basis: 100%;
       height: 0;

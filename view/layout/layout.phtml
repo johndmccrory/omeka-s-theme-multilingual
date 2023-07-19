@@ -58,7 +58,7 @@ $this->trigger('view.layout');
         </header>
 
         <div class="pure-g">
-            <h1 class="pure-u-1-6 site-title-heading">
+            <h1 class="pure-u-1-4 site-title-heading">
                 <a href="<?php echo $site->url(); ?>" class="site-title">
                 <?php if ($this->themeSetting('logo')): ?>
                     <img src="<?php echo $this->themeSettingAssetUrl('logo'); ?>" alt="<?php echo $escape($siteTitle); ?>" />
@@ -68,7 +68,7 @@ $this->trigger('view.layout');
                 </a>
             </h1>
             
-            <nav id="top-nav" class="pure-u-5-6 wrapper closed<?php if (!$headerDark): ?> nav-light<?php endif; ?>">
+            <nav id="top-nav" class="pure-u-3-4 wrapper closed<?php if (!$headerDark): ?> nav-light<?php endif; ?>">
             <?= $site->publicNav()->menu()->renderMenu(null, [
                 'maxDepth' => $this->themeSetting('nav_depth') - 1
             ]); ?>
