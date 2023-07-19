@@ -81,7 +81,9 @@
         line-height: inherit;
         padding: 0 24px;
         font-size: 28px;
+        text-align: right;
     }
+    
     .break {
       flex-basis: 100%;
       height: 0;
