@@ -106,6 +106,10 @@
     }
 
     @media screen and (max-width: 1024px) {
+        h1.site-title-heading {
+            text-align: left;
+        }
+        
         .media-text {
             display: block;
         }
