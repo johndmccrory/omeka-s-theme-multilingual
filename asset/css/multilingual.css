@@ -89,10 +89,10 @@
       height: 0;
     }
     
-    /*Remove IIIF Media from Item Show page*/
+    /*Remove IIIF Media from Item Show page
     .media-render.iiif {
     display: none;
-    }
+    }/*
 
     /*Media Queries*/
     @media screen and (max-width: 480px) {
