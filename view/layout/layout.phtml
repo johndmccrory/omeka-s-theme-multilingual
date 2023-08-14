@@ -17,6 +17,7 @@ $this->headLink()->prependStylesheet($this->assetUrl('css/pure-grid.css'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/uom-footer.css'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/multilingual.css'));
 $this->headLink()->prependStylesheet('//fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+$this->headLink()->prependStylesheet($this->assetUrl('css/annona.css'));
 $this->headScript()->prependFile($this->assetUrl('js/thedaily.js'));
 $this->headScript()->prependFile($this->assetUrl('js/global.js', 'Omeka'));
 $this->headScript()->prependFile($this->assetUrl('vendor/jquery/jquery.min.js', 'Omeka'));
@@ -132,6 +133,10 @@ $this->trigger('view.layout');
                     </ul>
                 </div>
             </div>  
-        </footer> 
+        </footer>
+        <?php
+        echo $this->inlineScript()
+        ->prependFile($this->assetUrl('js/annona.js'));
+        ?> 
     </body>
 </html>
