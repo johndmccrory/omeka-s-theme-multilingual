@@ -64,9 +64,11 @@ $lang = $filterLocale ? $this->lang() : null;
                 ?>
                 <div class="item resource">
                     <?= $render ?>
+                    <?php if (!empty($caption)): ?>
                     <div class="caption">
                         <?= $caption ?>
                     </div>
+                    <?php endif; ?> 
                 </div>
                 <?php endforeach; ?>
             </div>
