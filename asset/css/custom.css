@@ -32,6 +32,7 @@
     /*Add large first letter for introduction*/
     .paragraph-text.introduction::first-letter {
       initial-letter: 2;
+      margin-right: 12px;
     }
     
     /*Increase size of Media Embed IIIF manifests*/
@@ -192,6 +193,10 @@
     max-width: 500px;
     margin: 0 auto;
     }
+
+.paragraph-text.dark {
+padding: 4rem 1rem;
+}
     
     /*Annona Settings*/
     button#keyboardButton,
@@ -295,14 +300,14 @@
     margin-top: 12px!important;
     }
     
-    .blockquote-container {
-        display: flex;
-        flex-direction: column;
-        padding: 4rem 2rem 1rem 2rem!important;
-        align-items: center;
-        justify-content: center;
-        background: #dcf5fb;
-    }
+.blockquote-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem!important;
+    align-items: center;
+    justify-content: center;
+    background: #dcf5fb;
+}
     
     .blockquote-container p {
     margin-top: 48px;
