@@ -1,3 +1,49 @@
+/*Media Embed Openseadragon: Fill Width*/
+.center.large.file .attachments {
+    flex: 1 1 0;
+}
+
+
+/*Dark Colour Palette*/
+.dark-colour-1 .player-audio .player-controls {
+background: #1C1C1C;
+}
+
+.dark-colour-2 .player-audio .player-controls { 
+background: #373A3E;
+}
+
+.dark-colour-3 .player-audio .player-controls { 
+background: #515B63;
+}
+
+.dark-colour-4 .player-audio .player-controls { 
+background: #6A8086;
+}
+
+.dark-colour-5 .player-audio .player-controls { 
+background: #86A7A6;
+}
+
+.dark-colour-6 .player-audio .player-controls { 
+background: #A9CEC2;
+}
+
+/*Increase size of YouTube videos*/
+.media-render.youtube {
+width: 100%;
+}
+
+.iiif-storyboard-wide-container {
+width: 90vw;
+margin: 0 auto;
+}
+@media screen and (min-width: 1025px) {
+.iiif-storyboard-wide-container {
+width: 80%;
+}
+}
+
 /*Dark Background*/
 .dark {
     background-color: #1d1d1d;
@@ -6,6 +52,10 @@
     .dark p {
     color: #d7d7d7;
     }
+
+.dark h3 a {
+color: #fff;
+}
     
     /*Full width*/
     .full-width {
@@ -33,6 +83,12 @@
     .paragraph-text.introduction::first-letter {
       initial-letter: 2;
       margin-right: 12px;
+    }
+
+    /*Remove large first letter for introduction*/
+    .removelargeletter .paragraph-text.introduction::first-letter {
+      initial-letter: revert;
+      margin-right: unset;
     }
     
     /*Increase size of Media Embed IIIF manifests*/
@@ -184,7 +240,8 @@
     line-height: 2;
     }
     
-    .paragraph-text p {
+    .paragraph-text p,
+    .paragraph-text h3 {
         max-width: 800px;
         margin: 26px auto;
     }
@@ -333,7 +390,7 @@ padding: 4rem 1rem;
     blockquote:before,
     blockquote:after {
         position: absolute;
-        color: #00b6e3;
+        color: #27b9d4;
         font-size: 8rem;
         width: 4rem;
         height: 4rem;
@@ -485,7 +542,7 @@ padding: 4rem 1rem;
     
     /*Increase font size on Hero Image*/
     @media screen and (min-width: 450px) {
-    .overlay-container h1 {
+    .overlay-container h2 {
     font-size: 56px;
     }
     }
