@@ -1477,3 +1477,80 @@ a.resource-link {
 }
 
 /* @end */
+
+
+/* @group ----- JMc edits for MDE ----- */
+
+/*Increase font size for Hero images*/
+.overlay-container h2 {
+    font-size: 3 * $base-font-size;
+    }
+
+/*Blockquote*/
+
+@media only screen and (min-width: 1025px)  {
+    blockquote {
+    font-size: 3rem;
+    }
+    }
+
+    
+/*Switch order of media player and transcription*/
+@media only screen and (min-width: 1025px)  {
+    .player-reverse .file .attachments .item .media-render .player-container .player-controls {
+    order: 1;
+    }
+    }
+
+
+/*Media text overlay*/ 
+@media only screen and (min-width: 1025px)  {
+.media-text.overlay {
+position: relative;
+}
+
+.media-text.overlay .left, 
+.media-text.overlay .right {
+    width: 50%;
+}
+
+.media-text.overlay .text {
+    position: absolute;
+    left: 40%;
+    background: #fff;
+    width: 50%;
+}
+
+/*Right Alignment*/
+.right.media-text {
+overflow: unset;
+max-width: unset;
+justify-content: flex-end;
+}
+
+.right.media-text.overlay .text {
+    left: 5%;
+}
+
+.media-text.overlay .text h3 {
+text-align: inherit;
+}
+}
+
+/*Increase size of Media Embed IIIF manifests*/
+@media screen and (min-width: 801px)  {
+    .center.large.file .attachments .media-render.iiif_presentation {
+    width: 80vw;
+    height: 90vh;
+    }
+    }
+
+
+@media screen and (min-width: 1025px) {
+    .iiif-storyboard-wide-container {
+    width: 80%;
+    }
+    }
+
+
+/* @end */

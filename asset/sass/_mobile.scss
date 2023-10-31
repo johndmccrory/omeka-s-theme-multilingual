@@ -345,3 +345,508 @@ div#featured {
 }
 
 /* @end */
+
+
+
+/* @group ----- JMc edits ----- */
+
+/*Word Wrap for Columns*/
+.col-single {
+    word-wrap: break-word;
+    display: grid;
+    align-items: center;
+    }
+
+/*Minimum height for Banner Image*/
+.image-banner .overlay-container {
+    min-height: clamp(400px, 80vh, 600px);
+}
+
+/*Margin for Hero Image text*/
+.overlay-container {
+    margin-left: 24px;
+    }
+
+/*Ensure videos display at correct aspect ratio*/
+.media-render video {
+    width: 100%;
+    }
+    
+/*Bold transcript text*/
+    .player-track p.active {
+    font-weight: 600;
+    }
+
+/*Format List of Pages Block*/ 
+    .list-of-pages {
+        text-transform: capitalize;
+            font-size: 28px;
+    }
+        
+    .list-of-pages ul {
+    list-style: none;
+    }
+
+    .list-of-pages ul li {
+        background: #222222;
+        padding: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--accent-color, #ecb355);
+        font-weight: 600;
+    }
+
+    /*Update heading colours*/
+    h1 a {
+        color: #333333;
+        font-weight: 600; 
+    }
+
+    h2 a,
+    h3 a {
+    color: $heading-color;
+    font-weight: 600;
+    }
+
+    /*Block allowing increased padding*/
+    .padding-vertical-6 {
+        padding-top: 6rem!important;
+        padding-bottom: 6rem!important;
+        }
+    
+    /*Remove padding from first nav li item*/
+    #top-nav>ul>li:first-child {
+        padding-left: 9px;
+      }
+      
+    /*Move navigation items to right*/
+    #top-nav>ul {
+        justify-content: flex-end;
+    }
+
+    /*Remove download button from light gallery*/
+    #lg-download-1 {
+        display: none;
+    }
+
+    /*Blockquote*/ 
+    .blockquote-container {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 2rem!important;
+        align-items: center;
+        justify-content: center;
+        background: #dcf5fb;
+    }
+
+    .blockquote-container p {
+        margin-top: 48px;
+        }
+        
+    blockquote {
+        color: #3f3f5a;
+        font-weight: 100;
+        font-size: 2rem;
+        max-width: 600px;
+        line-height: 1.4;
+        position: relative;
+        margin: 5rem auto 4rem;
+        padding: 0.5rem;
+    }
+            
+    blockquote:before,
+    blockquote:after {
+        position: absolute;
+        color: #27b9d4;
+        font-size: 8rem;
+        width: 4rem;
+        height: 4rem;
+    }
+    
+    blockquote:before {
+        content: '“';
+        top: -5rem;
+    }
+    
+    blockquote:after {
+        content: '”';
+        bottom: -1rem;
+            right: 0;
+    }
+    
+    cite {
+        line-height: 2;
+        text-align: left;
+    }
+
+/*End Blockquote*/
+
+h2.block {
+    width: 100%;
+    }
+
+/*Header wrapper for mobiles*/
+
+    /*Add padding to mobile menu*/
+header .menu-toggle, .search-toggle, #switcher-toggle {
+    margin: 0 12px;
+    }
+    
+    /*Header Wrapper for Mobiles*/
+    header {
+    padding-block: 0;
+    }
+    
+    @media screen and (max-width: 640px) {
+    .wrapper {
+        padding-inline: 0;
+    }
+    header {
+        padding-block: 0;
+    }
+    }
+    
+    @media screen and (min-width: 501px) and (max-width: 640px) {
+    .site-heading {
+    order: 0;
+    }
+    }
+    
+    @media screen and (max-width: 500px) {
+    .site-heading {
+        width: 100%;
+    }
+    }
+    
+    @media screen and (max-width: 450px) {
+    .site-heading {
+        margin: 0 24px;
+        width: 100%;
+    }
+    }
+    
+    @media screen and (max-width: 340px) {
+    .site-heading p {
+        font-size: 19px;
+    }
+    }
+
+/*Media embed for Left and Right aligned items*/
+.page .left.file .resource h3,
+.page .right.file .resource h3 {
+    font-size: 1em;
+    margin: 0em;
+}
+
+.left.medium-large.file,
+.right.medium-large.file {
+margin-top: 12px!important;
+}
+
+/*Universal Viewer*/
+/*Increase height*/
+.universal-viewer {
+    height: calc(90vh - 12px)!important;
+}
+
+/*Remove padding from Universal Viewer*/
+.centerPanel #content {
+    padding-block: unset;
+}
+
+.footerPanel .searchResults {
+display: none;
+}
+
+.footerPanel .searchPager {
+display: none;
+}
+
+.footerPanel .search {
+display: none;
+}
+
+/*Remove download and share buttons*/
+.footerPanel .options button#download-btn {
+display: none!important;
+}
+
+.footerPanel .options button.share {
+display: none!important;
+}
+/*End Universal Viewer*/
+
+/*Add a centre class*/
+.centre {
+text-align: center;
+}
+
+/*Increase width of Media Details block*/
+.media-details-container > .col-single:only-child {
+    width: 100%;
+    max-width: 1350px;
+    margin: auto;
+}
+
+/*Set maximum height for medium details block*/
+.col-single > .media-render > img {
+    display: block;
+    height: calc(80vh - 12px);
+    width: auto;
+    margin: 0 auto;
+}
+
+/*Increase size of Openseadragon render for single items*/
+.col-single .media-render.iiif .openseadragon {
+    height: calc(90vh - 12px)!important;
+    background: #ededed!important;
+}
+
+/*Add background to Openseadragon render*/
+.col-single .media-render.iiif .openseadragon .openseadragon-container .openseadragon-canvas {
+    background: #1d1d1d!important;
+}
+
+/*Improving Media Embed and Transcriptions*/
+.page .item-showcase .resource.item:not(:only-child) h3, .page .file .resource h3 {
+    font-size: 1.5em;
+    margin: 2em 0;
+}
+
+.page .item.resource .caption {
+    font-size: 16.75px;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1em;
+}
+/*End Improving Media Embed and Transcriptions*/
+
+/*Annona Settings*/
+button#keyboardButton,
+button#settingsButton,
+button#reloadButton {
+display: none;
+}
+
+.storyboard_viewer {
+background: #000!important;
+}
+
+/*Paragraph Text*/
+.paragraph-text {
+    padding: 1em;
+    line-height: 2;
+    }
+    
+    .paragraph-text p,
+    .paragraph-text h2,
+    .paragraph-text h3 {
+        max-width: 800px;
+        margin: 26px auto;
+    }
+    
+    .paragraph-text.max-width-500 {
+    max-width: 500px;
+    margin: 0 auto;
+    }
+
+    .paragraph-text.dark {
+    padding: 4rem 1rem;
+    }
+
+/*Underline hover on main menu*/
+#top-nav ul a:hover {
+    text-decoration: underline;
+}
+
+    /*Media Text Overlay*/
+.media-text.overlay .text h3 {
+    text-align: center;
+    }
+        
+    /*Remove Padding from Annona*/
+    .storyboard_viewer {
+    padding-bottom: 0;
+    }
+    
+    /*Mirador Header*/
+    .mirador-viewer header {
+        align-items: inherit;
+    }
+    
+    /*Right Arrow on Annona using mobiles*/
+    @media only screen and (max-width: 500px)  {
+    .ltr#nextPageButton, 
+    .rtl#previousPageButton {
+        left: 89%;
+    }
+    }
+    
+    /*Additional margin*/
+    .left.file, .left.assets {
+        margin: 0 3rem 1rem 1rem;
+    }
+    
+    .media-text .left.file {
+    margin: 1em 0;
+    }
+
+    /*Increase size of Openseadragon for Large Centred Files - Media Embed*/
+    .center.large.file .media-render.iiif .openseadragon {
+        height: 85vh!important;
+        background: #000;
+    }
+    
+    /*Title above media player for Media Embed Blocks*/
+    .center.large.file .item.resource,
+    .center.medium-large.file .item.resource  {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+    .center.large.file .item.resource .media-render.webvtt,
+    .center.medium-large.file .item.resource .media-render.webvtt {
+        width: 100%;
+        flex-basis: 100%;
+    }
+    
+    .center.large.file .item.resource h3,
+    .center.medium-large.file .item.resource h3 {
+    order: -1;
+    }
+    
+    /*Right Alignment for Overlay Block*/
+    .right.media-text.overlay,
+    .left.media-text.overlay {
+    overflow: unset;
+    max-width: unset;
+    }
+    
+    /*Maximum Image Height*/
+    .media-text.max-image-height .media-render {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .media-text.max-image-height img {
+        width: auto;
+        max-height: 90vh;
+    }
+    
+    @media only screen and (min-width: 1025px)  {
+    .media-text.max-image-height .media-render {
+        display: inherit;
+    }
+    
+    .media-text.max-image-height img {
+        width: inherit;
+        max-height: unset;
+    }
+    }
+
+/*Dark Background*/
+.dark {
+    background-color: #1d1d1d;
+    }
+    
+    .dark p {
+    color: #d7d7d7;
+    }
+
+.dark h3 a {
+color: #fff;
+}
+    
+    /*Full width*/
+    .full-width {
+        width: 100vw;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    /*Margin-top-zero*/
+    .margin-top-zero {
+    margin-top: 0!important;
+    }
+    
+    /*Increase banner subheading size*/
+    .image-banner .overlay-container > p {
+        font-size: 1.2rem;
+    }
+    @media screen and (min-width: 450px)  {
+    .image-banner .overlay-container > p {
+        font-size: 2rem;
+    }
+}
+    
+    /*Add large first letter for introduction*/
+    .paragraph-text.introduction::first-letter {
+      initial-letter: 2;
+      margin-right: 12px;
+    }
+
+    /*Remove large first letter for introduction*/
+    .removelargeletter .paragraph-text.introduction::first-letter {
+      initial-letter: revert;
+      margin-right: unset;
+    }
+    
+    /*Increase size of Media Embed IIIF manifests*/
+    .center.large.file .attachments .media-render.iiif_presentation {
+    width: 95vw;
+    height: 100vh;
+    }
+
+/*Media Embed Openseadragon: Fill Width*/
+.center.large.file .attachments {
+    flex: 1 1 0;
+}
+
+/*Dark Colour Palette*/
+.dark-colour-1 .player-audio .player-controls {
+background: #1C1C1C;
+}
+
+.dark-colour-2 .player-audio .player-controls { 
+background: #373A3E;
+}
+
+.dark-colour-3 .player-audio .player-controls { 
+background: #515B63;
+}
+
+.dark-colour-4 .player-audio .player-controls { 
+background: #6A8086;
+}
+
+.dark-colour-5 .player-audio .player-controls { 
+background: #86A7A6;
+}
+
+.dark-colour-6 .player-audio .player-controls { 
+background: #A9CEC2;
+}
+
+/*Increase size of YouTube videos*/
+.media-render.youtube {
+width: 100%;
+}
+
+.iiif-storyboard-wide-container {
+width: 90vw;
+margin: 0 auto;
+}
+
+/*Remove language selector*/
+[aria-label="Transcript language"] {
+    display: none;
+    }
+
+/*Remove close button*/
+[aria-label="Close transcript"] {
+display: none;
+}
+
+/* @end */
