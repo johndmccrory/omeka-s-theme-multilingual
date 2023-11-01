@@ -317,9 +317,16 @@
         
         /*Increase width of Media Details block*/
         .media-details-container > .col-single:only-child {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        @media only screen and (min-width: 1400px)  {
+        .media-details-container > .col-single:only-child {
             width: 100%;
             max-width: 1350px;
             margin: auto;
+        }
         }
         
         /*Set maximum height for medium details block*/
@@ -332,8 +339,14 @@
         
         /*Increase size of Openseadragon render for single items*/
         .col-single .media-render.iiif .openseadragon {
-           height: calc(90vh - 12px)!important;
+           height: calc(80vh - 12px)!important;
            background: #ededed!important;
+        }
+
+        @media only screen and (min-width: 1400px)  {
+        .col-single .media-render.iiif .openseadragon {
+            height: calc(90vh - 12px)!important;
+        }
         }
         
         /*Add background to Openseadragon render*/
