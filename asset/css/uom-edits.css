@@ -106,12 +106,14 @@
         .center.large.file .attachments .media-render.iiif_presentation {
         width: 95vw;
         height: 100vh;
+        margin: 0 auto;
         }
         
         @media screen and (min-width: 801px)  {
         .center.large.file .attachments .media-render.iiif_presentation {
         width: 80vw;
         height: 90vh;
+        margin: 0 auto;
         }
         }
         
