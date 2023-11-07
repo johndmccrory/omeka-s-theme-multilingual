@@ -365,6 +365,11 @@
         .col-single .media-render.iiif .openseadragon .openseadragon-container .openseadragon-canvas {
            background: #1d1d1d!important;
         }
+
+        /*Position openseadragon canvas correctly*/
+        .openseadragon-canvas {
+            top: 4px;
+        }
         
         /*Improving Media Embed and Transcriptions*/
         .page .item-showcase .resource.item:not(:only-child) h3, .page .file .resource h3 {
