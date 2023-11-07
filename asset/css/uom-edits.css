@@ -1,3 +1,8 @@
+/*Improve colour contrast on main nav menu*/
+#top-nav ul a {
+    opacity: 0.9;
+}
+
 /*Remove language selector*/
 [aria-label="Transcript language"] {
     display: none;
