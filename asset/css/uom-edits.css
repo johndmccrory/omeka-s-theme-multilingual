@@ -3,6 +3,11 @@
     opacity: 0.9;
 }
 
+/*Underline active page*/
+#top-nav li.active>a {
+    text-decoration: underline;
+}
+
 /*Remove language selector*/
 [aria-label="Transcript language"] {
     display: none;
