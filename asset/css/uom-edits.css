@@ -1,3 +1,36 @@
+/*Accessibility Changes*/
+#top-nav li {
+    text-transform: none;
+    }
+    
+    #top-nav li.active>a {
+    text-decoration: underline;
+    }
+    
+    .site-page-pagination a {
+    color: #ecb355;
+    }
+    
+    /*Centre Media Embed items*/
+    .media-render.file {
+        display: flex;
+        justify-content: center;
+    } 
+    
+    .openseadragon-container {
+    margin-top: 4px!important;
+    }
+    
+    .seadragonbox {
+    height: 80vh!important;
+    }
+    
+    @media screen and (min-width: 641px) {
+    .seadragonbox {
+    height: 90vh!important;
+    }
+    }
+
 /*Improve colour contrast on main nav menu*/
 #top-nav ul a {
     opacity: 0.9;
