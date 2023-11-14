@@ -421,13 +421,19 @@ cite {
 /*Dark Background*/
 .dark {
   background-color: #1d1d1d;
-  p {
+}
+
+.dark p {
     color: #d7d7d7;
   }
-  h3 a {
+
+.dark p a {
+  color: #ecb355;
+}
+
+.dark h3 a {
     color: #fff;
   }
-}
 
 .padding-vertical-6 {
   padding-top: 6rem !important;
