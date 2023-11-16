@@ -5,8 +5,43 @@ $this->htmlElement('body')->appendAttribute('class', 'item resource show');
 $filterLocale = (bool) $this->siteSetting('filter_locale_values');
 $lang = $this->lang();
 $valueLang = $filterLocale ? [$lang, ''] : null;
+
+$itemMedia = $item->media();
+
+$useMediaRender = false;
+$useMiradorViewer = false;
+$useUniversalViewer = false;
+
+foreach ($itemMedia as $media) {
+    $mediaType = $media->mediaType();
+    $mediaRenderer = $media->renderer();
+    if (strpos($mediaRenderer, 'iiif') !== false
+    || $mediaType === 'image/jpeg' 
+    ) {
+        $useMiradorViewer = true;
+    }
+    elseif (strpos($mediaType, 'pdf') !== false 
+    ) {
+        $useUniversalViewer = true;
+    }
+    else {
+        $useMediaRender = true;
+    break;
+    }
+}
+
 ?>
 <?php echo $this->pageTitle($item->displayTitle(null, $valueLang), 2); ?>
 <h3><?php echo $translate('Item'); ?></h3>
+
 <?php $this->trigger('view.show.before'); ?>
+
+<?php if ($useMiradorViewer): ?>
+    <?php echo $this->mirador($item); ?> 
+<?php elseif ($useUniversalViewer): ?>    
+    <?php echo $this->universalViewer($item); ?> 
+<?php elseif ($useMediaRender): ?>    
+    <?php echo $media->render(); ?> 
+<?php endif; ?>
+
 <?php echo $this->resourcePageBlocks($item)->getBlocks(); ?>
