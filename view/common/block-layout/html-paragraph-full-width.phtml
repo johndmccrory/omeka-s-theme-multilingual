@@ -1,0 +1,36 @@
+<?php
+/**
+ * @var \Laminas\View\Renderer\PhpRenderer $this
+ * @var string $html
+ * @var string $divclass
+ * @var string $heading
+ */
+
+?>
+<?php if (empty($divclass)): ?>
+
+<div class="full-width">
+    <div class="wrapper">
+        <div class="paragraph-text">
+            <?php if (!empty($heading)): ?>
+                <h3><?= $this->escapeHtml($heading) ?></h3>
+            <?php endif; ?>
+        <?= $html ?>
+        </div>
+    </div>
+</div>
+
+<?php else: ?>
+
+<div class="full-width">
+    <div class="wrapper">
+        <div class="<?= $this->escapeHtmlAttr($divclass) ?> paragraph-text">
+            <?php if (!empty($heading)): ?>
+                <h3><?= $this->escapeHtml($heading) ?></h3>
+            <?php endif; ?>
+            <?= $html ?>
+        </div>
+    </div>
+</div>
+
+<?php endif; ?>
