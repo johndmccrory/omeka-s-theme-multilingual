@@ -69,31 +69,6 @@ header {
 width: 100%;
 }
 
-/*Dark Colour Palette*/
-.dark-colour-1 {
-  background: #1c1c1c;
-}
-
-.dark-colour-2 {
-  background: #373a3e;
-}
-
-.dark-colour-3 {
-  background: #515b63;
-}
-
-.dark-colour-4 {
-  background: #6a8086;
-}
-
-.dark-colour-5 {
-  background: #86a7a6;
-}
-
-.dark-colour-6 .player-audio .player-controls {
-  background: #a9cec2;
-}
-
 /*Increase size of YouTube videos*/
 .media-render.youtube {
   width: 100%;
