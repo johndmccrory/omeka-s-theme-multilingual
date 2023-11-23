@@ -9,10 +9,11 @@
 ?>
 <?php if (empty($divclass)): ?>
 
+
 <div class="paragraph-text">
-<?php if (!empty($heading)): ?>
-<h3><?= $this->escapeHtml($heading) ?></h3>
-<?php endif; ?>
+    <?php if (!empty($heading)): ?>
+        <h3><?= $this->escapeHtml($heading) ?></h3>
+    <?php endif; ?>
 <?= $html ?>
 </div>
 
@@ -20,7 +21,7 @@
 
 <div class="<?= $this->escapeHtmlAttr($divclass) ?> paragraph-text">
     <?php if (!empty($heading)): ?>
-    <h3><?= $this->escapeHtml($heading) ?></h3>
+        <h3><?= $this->escapeHtml($heading) ?></h3>
     <?php endif; ?>
     <?= $html ?>
 </div>
