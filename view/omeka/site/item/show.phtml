@@ -15,18 +15,15 @@ $useUniversalViewer = false;
 foreach ($itemMedia as $media) {
     $mediaType = $media->mediaType();
     $mediaRenderer = $media->renderer();
-    if (strpos($mediaRenderer, 'iiif') !== false
-    || $mediaType === 'image/jpeg' 
-    ) {
+
+    if (($mediaRenderer !== null && strpos($mediaRenderer, 'iiif') !== false) || 
+        ($mediaType !== null && $mediaType === 'image/jpeg')) {
         $useMiradorViewer = true;
-    }
-    elseif (strpos($mediaType, 'pdf') !== false 
-    ) {
+    } elseif ($mediaType !== null && strpos($mediaType, 'pdf') !== false) {
         $useUniversalViewer = true;
-    }
-    else {
+    } else {
         $useMediaRender = true;
-    break;
+        break;
     }
 }
 
