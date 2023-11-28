@@ -34,17 +34,12 @@ foreach ($itemMedia as $media) {
 
 <?php $this->trigger('view.show.before'); ?>
 
-<?php 
-$viewerMethods = [
-    'useMiradorViewer'=> 'mirador',
-    'useUniversalViewer' => 'universalViewer',
-    'useMediaRender' => 'render',
-];
-foreach ($viewerMethods as $viewerFlag => $viewerMethod):
-    if ($$viewerFlag): ?>
-        <?php echo $this->$viewerMethod($item); ?>
-    <?php endif;
-endforeach;
-?>
+<?php if ($useMiradorViewer): ?>
+    <?php echo $this->mirador($item); ?> 
+<?php elseif ($useUniversalViewer): ?>    
+    <?php echo $this->universalViewer($item); ?> 
+<?php elseif ($useMediaRender): ?>    
+    <?php echo $media->render(); ?> 
+<?php endif; ?>
 
 <?php echo $this->resourcePageBlocks($item)->getBlocks(); ?>
