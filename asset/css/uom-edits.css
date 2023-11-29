@@ -109,18 +109,6 @@ height: 40vh;
   font-size: 1.2rem;
 }
 
-/*Add large first letter for introduction*/
-.paragraph-text.introduction::first-letter {
-  initial-letter: 2;
-  margin-right: 12px;
-}
-
-/*Remove large first letter for introduction*/
-.removelargeletter .paragraph-text.introduction::first-letter {
-  initial-letter: revert;
-  margin-right: unset;
-}
-
 /*Increase size of Media Embed IIIF manifests*/
 .center.large.file .attachments .media-render.iiif_presentation {
   width: 95vw;
