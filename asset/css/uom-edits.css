@@ -112,7 +112,7 @@ height: 40vh;
 /*Increase size of Media Embed IIIF manifests*/
 .center.large.file .attachments .media-render.iiif_presentation {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -499,7 +499,7 @@ h2.block {
 @media screen and (min-width: 801px) {
   .center.large.file .attachments .media-render.iiif_presentation {
     width: 100%;
-    height: 90vh;
+    height: 100%;
     margin: 0 auto;
   }
 }
