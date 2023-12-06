@@ -176,7 +176,8 @@ height: 40vh;
 }
 
 .paragraph-text p,
-.paragraph-text h3 {
+.paragraph-text h3,
+.paragraph-text ul {
   max-width: 800px;
   margin: 26px auto;
 }
