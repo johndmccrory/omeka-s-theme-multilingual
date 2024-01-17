@@ -16,9 +16,11 @@ foreach ($itemMedia as $media) {
     $mediaType = $media->mediaType();
     $mediaRenderer = $media->renderer();
 
-    if (($mediaRenderer !== null && strpos($mediaRenderer, 'iiif') !== false) || 
-        ($mediaType !== null && $mediaType === 'image/jpeg')) ||
-        ($mediaType !== null && $mediaType === 'image/png')) {
+    if (
+        ($mediaRenderer !== null && strpos($mediaRenderer, 'iiif') !== false) ||
+        ($mediaType !== null && $mediaType === 'image/jpeg') ||
+        ($mediaType !== null && $mediaType === 'image/png')
+    ) {
         $useMiradorViewer = true;
     } elseif ($mediaType !== null && strpos($mediaType, 'pdf') !== false) {
         $useUniversalViewer = true;
