@@ -456,19 +456,10 @@ h2.block {
 }
 
 @media screen and (max-width: 500px) {
-  .site-heading {
-    width: 100%;
-  }
   /*Right Arrow on Annona using mobiles*/
   .ltr#nextPageButton,
   .rtl#previousPageButton {
     left: 89%;
-  }
-}
-
-@media screen and (min-width: 501px) and (max-width: 640px) {
-  .site-heading {
-    order: 0;
   }
 }
 
