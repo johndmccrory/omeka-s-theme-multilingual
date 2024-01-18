@@ -59,7 +59,13 @@ $this->trigger('view.layout');
                     <?php echo $this->partial('common/search-form'); ?>
                 </div>
                 <?php if ($this->getHelperPluginManager()->has('languageSwitcher')) echo $this->languageSwitcher(); ?>
-                <button type="button" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"></button>
+                <button type="button" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <nav id="top-nav" class="hide-for-desktop wrapper closed<?php if (!$headerDark): ?> nav-light<?php endif; ?>">
+                        <?= $site->publicNav()->menu()->renderMenu(null, [
+                    'maxDepth' => $this->themeSetting('nav_depth') - 1
+                    ]); ?>
+                    </nav>
+                </div>
             </div>
         </header>
 
