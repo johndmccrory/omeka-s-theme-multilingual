@@ -465,7 +465,7 @@ h2.block {
 
 @media screen and (max-width: 640px) {
   .wrapper {
-    padding-inline: 0;
+    padding-inline: 24px;
   }
   header {
     padding-block: 0;
