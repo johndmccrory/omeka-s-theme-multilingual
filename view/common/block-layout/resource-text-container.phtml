@@ -23,7 +23,7 @@ $lang = $filterLocale ? $this->lang() : null;
 
 <div class="media-text-title">
     <?php if (!empty($heading)): ?>
-        <h3 class="block"><?= $escape($heading) ?></h3>
+        <h2 class="block"><?= $escape($heading) ?></h2>
     <?php endif; ?>
     <div class="media-text">
         <div class="<?= $alignmentClass . ' ' . $thumbnailType . ' captions-' . $captionPosition ?> media file">
@@ -74,7 +74,7 @@ $lang = $filterLocale ? $this->lang() : null;
             </div>
         </div>
         <div class="text">
-            <h3><?= $link ?></h3>
+            <h2><?= $link ?></h2>
             <?= $html ?>
         </div>
     </div>

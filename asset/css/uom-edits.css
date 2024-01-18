@@ -1,7 +1,7 @@
 /*Text*/
 h1 a,
 h2 a,
-h3 a {
+h2 a {
   color: #1d1d1d;
   font-weight: 600;
 }
@@ -130,8 +130,8 @@ height: 40vh;
   flex-basis: 100%;
 }
 
-.center.large.file .item.resource h3,
-.center.medium-large.file .item.resource h3 {
+.center.large.file .item.resource h2,
+.center.medium-large.file .item.resource h2 {
   order: -1;
 }
 
@@ -155,7 +155,7 @@ height: 40vh;
 }
 
 /*Media Text Overlay*/
-.media-text.overlay .text h3 {
+.media-text.overlay .text h2 {
   text-align: center;
 }
 
@@ -176,7 +176,7 @@ height: 40vh;
 }
 
 .paragraph-text p,
-.paragraph-text h3,
+.paragraph-text h2,
 .paragraph-text ul {
   max-width: 800px;
   margin: 26px auto;
@@ -255,8 +255,8 @@ button#reloadButton {
 }
 
 /*Improving Media Embed and Transcriptions*/
-.page .item-showcase .resource.item:not(:only-child) h3,
-.page .file .resource h3 {
+.page .item-showcase .resource.item:not(:only-child) h2,
+.page .file .resource h2 {
   font-size: 1.5em;
   margin: 2em 0;
 }
@@ -271,8 +271,8 @@ button#reloadButton {
 /*End Improving Media Embed and Transcriptions*/
 
 /*Media embed for Left and Right aligned items*/
-.page .left.file .resource h3,
-.page .right.file .resource h3 {
+.page .left.file .resource h2,
+.page .right.file .resource h2 {
   font-size: 1em;
   margin: 0em;
 }
@@ -395,7 +395,7 @@ cite {
   color: #ecb355;
 }
 
-.dark h3 a {
+.dark h2 a {
     color: #fff;
   }
 
@@ -446,8 +446,8 @@ h2.block {
 
 @media screen and (min-width: 450px) {
   /*Increase font size on Hero Image*/
-  .overlay-container h2 {
-    font-size: 56px;
+  .overlay-container h1 {
+    font-size: 3rem;
   }
 
   .image-banner .overlay-container > p {
@@ -542,7 +542,7 @@ h2.block {
     left: 5%;
   }
 
-  .media-text.overlay .text h3 {
+  .media-text.overlay .text h2 {
     text-align: inherit;
   }
   .media-text.max-image-height .media-render {

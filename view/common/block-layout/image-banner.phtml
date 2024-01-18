@@ -1,0 +1,25 @@
+<?php
+
+$assetUrl = $this->plugin('assetUrl');
+$this->headLink()->appendStylesheet($assetUrl('css/style.css', 'PageBlocks'));
+
+$image = $this->api()->read('assets', $image)->getContent();
+
+?>
+
+
+<section class="grey-background full-width splash">
+    <div class="image-banner tint-<?= $tint ?>">
+        <div class="image-container">
+            <img src="<?= $image->assetUrl() ?>" alt="<?= $image->altText() ?>" />
+        </div>
+        <div class="overlay-container">
+            <?php if ($header): ?>
+                <h1><?= $header ?></h1>
+            <?php endif; ?>
+            <?php if ($subheader): ?>
+                <p><?= $subheader ?></p>
+            <?php endif; ?>
+        </div>
+    </div>
+</section>
