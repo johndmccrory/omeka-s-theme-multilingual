@@ -69,7 +69,7 @@ $this->trigger('view.layout');
             </div>
         </header>
 
-        <nav id="top-nav" class="wrapper closed<?php if (!$headerDark): ?> nav-light<?php endif; ?>">
+        <nav id="desktop-nav" class="wrapper closed<?php if (!$headerDark): ?> nav-light<?php endif; ?>">
             <?= $site->publicNav()->menu()->renderMenu(null, [
                 'maxDepth' => $this->themeSetting('nav_depth') - 1
             ]); ?>
