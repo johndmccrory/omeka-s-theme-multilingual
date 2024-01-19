@@ -1,4 +1,8 @@
 /*Text*/
+h2 {
+  line-height: 36px;
+}
+
 h1 a,
 h2 a,
 h2 a {
