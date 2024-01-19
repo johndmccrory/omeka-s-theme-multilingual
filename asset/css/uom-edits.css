@@ -21,25 +21,35 @@ header {
 }
 
 /*Move navigation items to right*/
-#top-nav > ul {
+#top-nav > ul,
+#desktop-nav > ul {
   justify-content: flex-end;
 }
 
 /*Improve colour contrast on main nav menu*/
-#top-nav ul a {
+#top-nav ul a,
+#desktop-nav ul a {
   opacity: 0.9;
 }
 
-#top-nav li {
+#top-nav li,
+#desktop-nav li {
   text-transform: none;
 }
 
-#top-nav li.active > a {
+#top-nav li.active > a,
+#desktop-nav li.active > a {
   text-decoration: underline;
+  opacity: 1;
+  font-weight: 600;
+  & :active {
+    font-weight: 600;
+  }
 }
 
 /*Remove padding from first nav li item*/
-#top-nav > ul > li:first-child {
+#top-nav > ul > li:first-child,
+#desktop-nav > ul > li:first-child {
   padding-left: 9px;
 }
 
@@ -513,7 +523,7 @@ h2.block {
   }
   /*Increase size of Blockquote*/
   blockquote {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .media-text.overlay {
     position: relative;
