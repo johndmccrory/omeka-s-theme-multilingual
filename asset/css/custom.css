@@ -1,0 +1,217 @@
+#desktop-nav>ul {
+    display: none;
+    }
+    
+    /*IvyRze Hero Image block*/
+    .image-banner.tint-dark .image-container::after, 
+    .call-to-action.scheme-dark .action-button {
+        background-color: #000;
+        max-width: 1400px;
+    }
+    
+    .grey-background {
+    background-color: #efefef;
+    }
+    
+    .image-banner .overlay-container {
+        min-height: clamp(350px, 35vh, 451px);
+        width: 1300px;
+        margin: 0 auto;
+        padding-inline: 24px;
+    }
+    
+    .image-banner .image-container img {
+      max-width: 1400px;
+    }
+    
+    .splash {
+    margin-top: -25px;
+    }
+    
+    /*Header logos colour*/
+    header .menu-toggle, .search-toggle, 
+    #switcher-toggle {
+        color: #b1b2b4; 
+    }
+    
+    /*Mobile Menu*/
+    button.menu-toggle {
+    position: relative;
+    }
+    
+    nav#top-nav.hide-for-desktop.open {
+        position: absolute;
+        right: 0;
+        margin-top: 40px;
+        width: 100vw;
+        background: #f4f4f4;
+        z-index: 999999;
+    }
+    
+    @media screen and (min-width: 342px) {
+    nav#top-nav.hide-for-desktop.open {
+    right: -1.35rem;
+    }
+    }
+    
+    /*Header Edits*/
+    a.university-logo {
+    flex-grow: 1;
+    }
+    
+    a.university-logo img {
+        margin: 12px 6px 12px -12px;
+    }
+    
+    button.search-toggle {
+    order: 0;
+    }
+    
+    .language-switcher {
+    order: 1;
+    }
+    
+    button.menu-toggle {
+    order: 2;
+    }
+    
+    .site-heading {
+    order: 3;
+        width: 246px;
+    }
+    
+    .site-heading p {
+        margin: 0 0 12px 0;
+    }
+    
+    header .menu-toggle, 
+    .search-toggle, 
+    #switcher-toggle {
+        margin: 0;
+        font-size: 16px;
+    }
+    
+    button#switcher-toggle path {
+    stroke: #b1b2b4;
+    }
+    
+    @media screen and (min-width: 360px) {
+       a.university-logo img {
+        margin: 24px 12px 12px 0;
+    }
+    }
+    
+    @media screen and (min-width: 420px) {
+    header .menu-toggle, 
+    .search-toggle, 
+    #switcher-toggle {
+       font-size: 20px;
+    }
+    }
+    
+    @media screen and (min-width: 400px) {
+    a.university-logo img {
+        margin: 24px;
+    }
+    }
+    
+    @media screen and (min-width: 641px) {
+    a.university-logo {
+        flex-grow: 0;
+    }
+      .site-heading {
+        order: 0;
+      }
+      button.search-toggle {
+        order: 1;
+        }
+        
+        .language-switcher {
+        order: 2;
+        }
+        
+        button.menu-toggle {
+        order: 3;
+        }
+       .splash {
+       margin-top: -49px;
+       }
+    /*Desktop menu*/
+    #desktop-nav>ul {
+        display:flex;
+        flex-wrap:wrap;
+        margin:0;
+        padding-bottom:12px;
+        border-bottom:1px solid #d0d0d0;
+        justify-content: flex-end;
+    }
+    #desktop-nav li{
+        font-size:16px;
+        list-style-type:none;
+        text-transform:uppercase;
+        letter-spacing:.5px
+    }
+    #desktop-nav ul a{
+        color:#222;
+        transition:opacity .3s ease
+    }
+    #desktop-nav ul a:hover{
+        opacity:1 !important
+    }
+    #desktop-nav li.active>a{
+        opacity:1 !important;
+        font-weight:600
+    }
+    #desktop-nav>ul>li{
+        padding-inline:9px;
+        padding-bottom:18px
+    }
+    #desktop-nav>ul>li:first-child{
+        padding-left:0
+    }
+    #desktop-nav>ul>li li{
+        font-family:"Work Sans",sans-serif;
+        display:block
+    }
+    #desktop-nav>ul>li li:not(:last-of-type){
+        margin-bottom:12px
+    }
+    #desktop-nav>ul>li>ul{
+        position:absolute;
+        height:0;
+        overflow:hidden;
+        background:var(--header-color, #f9bc58);
+        margin-inline:-100vw;
+        margin-bottom:18px;
+        box-shadow:0 4px 18px rgba(0,0,0,.15);
+        z-index:90
+    }
+    #desktop-nav>ul>li:hover>ul,#desktop-nav>ul>li>ul:focus-within{
+        height:auto;
+        overflow:visible;
+        padding:24px 100vw
+    }
+    #desktop-nav>ul>li>ul::before{
+        content:"";
+        position:absolute;
+        top:-5px;
+        border-left:5px solid rgba(0,0,0,0);
+        border-right:5px solid rgba(0,0,0,0);
+        border-bottom:5px solid var(--header-color, #f9bc58)
+    }
+    #desktop-nav ul ul{
+        margin:12px 0 0
+    }
+    #desktop-nav.nav-light ul ul a,#desktop-nav.nav-light ul ul li::before{
+        color:#fff;
+        opacity:.8
+    }
+    #desktop-nav ul ul ul{
+        padding-left:12px
+    }
+    #desktop-nav ul ul ul li::before{
+        content:"—";
+        margin-right:6px;
+        opacity:.6
+    }
+    }
