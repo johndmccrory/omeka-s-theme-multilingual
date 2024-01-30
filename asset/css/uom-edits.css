@@ -17,7 +17,7 @@ a.university-logo {
   }
   
   a.university-logo img {
-      margin: 12px 6px 12px -12px;
+    margin: 12px 6px 12px 0px;
   }
   
   button.search-toggle {
@@ -34,7 +34,8 @@ a.university-logo {
   
   .site-heading {
   order: 3;
-      width: 246px;
+  width: 246px;
+  margin: 0 24px;
   }
   
   .site-heading p {
@@ -52,6 +53,11 @@ a.university-logo {
   button#switcher-toggle path {
   stroke: #b1b2b4;
   }
+
+  /*Decrease padding-inline for header on mobiles*/
+  header.wrapper {
+    padding-inline: 12px;
+  } 
 
 
 /*Navigation menus*/
@@ -177,6 +183,11 @@ height: 40vh;
 .image-banner .overlay-container > p {
   font-size: 1.2rem;
 }
+
+/*Change opacity of image banner dark-tint*/
+.image-banner .image-container::after {
+  opacity: 0.6;
+} 
 
 /*Increase size of Media Embed IIIF manifests*/
 .center.large.file .attachments .media-render.iiif_presentation {
@@ -538,11 +549,15 @@ h2.block {
   a.university-logo img {
    margin: 24px 12px 12px 0;
 }
+
+header.wrapper {
+  padding-inline: 24px;
+} 
 }
 
 @media screen and (min-width: 400px) {
   a.university-logo img {
-      margin: 24px;
+      margin: 24px 24px 24px 0;
   }
 }
 
@@ -556,7 +571,7 @@ h2.block {
 
 @media screen and (max-width: 450px) {
   .site-heading {
-    margin: 0 24px;
+    margin: 0;
   }
 }
 
