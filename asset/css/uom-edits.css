@@ -10,6 +10,11 @@ h2 a {
   font-weight: 600;
 }
 
+/*Add padding to wrapper*/
+.wrapper {
+  padding-inline: 24px;
+}
+
 /*Header*/
 /*Header Edits*/
 a.university-logo {
@@ -35,7 +40,7 @@ a.university-logo {
   .site-heading {
   order: 3;
   width: 246px;
-  margin: 0 24px;
+  margin: 0 24px; 
   }
   
   .site-heading p {
@@ -122,6 +127,12 @@ button.menu-toggle {
 .media-render.file {
   display: flex;
   justify-content: center;
+}
+
+/*Decrease line height for medium embed h2*/
+.left.medium-large.file h2,
+.right.medium-large.file h2 {
+    line-height: 24px;
 }
 
 /*Remove language selector*/
@@ -525,7 +536,7 @@ h2.block {
 /*Additional margin*/
 .left.file,
 .left.assets {
-  margin: 0 3rem 1rem 1rem;
+  margin: 0 2rem 1rem 1rem;
 }
 
 .media-text .left.file {
@@ -595,9 +606,6 @@ header.wrapper {
 }
 
 @media screen and (max-width: 640px) {
-  .wrapper {
-    padding-inline: 24px;
-  }
   header {
     padding-block: 0;
   }
@@ -714,6 +722,11 @@ header.wrapper {
   }
   .medium .media-render.youtube.html {
   height: 50vh;
+  }
+  /*Additional margin for media embed*/
+  .left.file,
+  .left.assets {
+    margin: 0 3rem 1rem 1rem;
   }
 }
 
