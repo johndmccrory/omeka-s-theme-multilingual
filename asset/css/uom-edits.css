@@ -537,6 +537,7 @@ h2.block {
   word-wrap: break-word;
   display: grid;
   align-items: center;
+  align-content: center;
 }
 
 /*Additional margin*/
@@ -764,6 +765,7 @@ header.wrapper {
 
   /*Increase width of Annona viewer for wider screens*/
   .iiif-storyboard-wide-container {
+    width: 100%;
     max-width: 1350px;
   }
   /*Increase size of Blockquote*/
