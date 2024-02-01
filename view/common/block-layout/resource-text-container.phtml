@@ -32,14 +32,12 @@ $lang = $filterLocale ? $this->lang() : null;
                 foreach ($attachments as $attachment):
                     $render = null;
                     $title = null;
-                    $link = null;
                     $item = $attachment->item();
                     if ($item):
                         $media = $attachment->media() ?: $item->primaryMedia();
                         if ($media):
                             $render = $media->render([
                                 'thumbnailType' => $thumbnailType,
-                                'link' => $linkType,
                             ]);
                         endif;
 
@@ -47,16 +45,6 @@ $lang = $filterLocale ? $this->lang() : null;
                             $title = $item->displayTitle(null, $lang);
                         elseif ($media && $showTitleOption == 'file_name'):
                             $title = $media->displayTitle(null, $lang);
-                        endif;
-
-                        if ($title):
-                            if ($media && $linkType === 'media'):
-                                $link = $media->link($title);
-                            elseif ($media && $linkType === 'original' && $media->hasOriginal()):
-                                $link = $hyperlink($title, $media->originalUrl());
-                            else:
-                                $link = $item->link($title);
-                            endif;
                         endif;
                     endif;
 
@@ -74,7 +62,7 @@ $lang = $filterLocale ? $this->lang() : null;
             </div>
         </div>
         <div class="text">
-            <h2><?= $link ?></h2>
+            <h2><?php echo $title; ?></h2>
             <?= $html ?>
         </div>
     </div>

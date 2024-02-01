@@ -43,10 +43,10 @@ $lang = $filterLocale ? $this->lang() : null;
                          'link' => $link,
                      ]);
                      elseif ($media) :
-                         echo $item->linkRaw($this->thumbnail($media, $this->thumbnailType));
+                         echo $this->thumbnail($media, $this->thumbnailType);
                      endif;
 
-                    if ($showTitleOption == 'item_title'):
+                     if ($showTitleOption == 'item_title'):
                         $title = $item->displayTitle(null, $lang);
                     elseif ($media && $showTitleOption == 'file_name'):
                         $title = $media->displayTitle(null, $lang);
@@ -75,7 +75,7 @@ $lang = $filterLocale ? $this->lang() : null;
         </div>
     </div>
     <div class="text">
-        <h2><?= $link ?></h2>
+        <h2><?php echo $title; ?></h2>
         <?= $html ?>
     </div>
 </div>
