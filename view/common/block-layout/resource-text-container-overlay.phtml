@@ -76,6 +76,9 @@ $lang = $filterLocale ? $this->lang() : null;
         <div class="text">
         <h2><?php echo $title; ?></h2>
             <?= $html ?>
+            <div class="learn-more">
+                <h2 class="pure-button warning"><?php echo $item->link("View full item"); ?></h2>
+            </div>
         </div>
     </div>
 </div>
