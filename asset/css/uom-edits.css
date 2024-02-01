@@ -282,6 +282,12 @@ height: 40vh;
   padding: 4rem 1rem;
 }
 
+/*Remove padding and top margin*/ 
+.paragraph-text.introduction.no-margin-top {
+  padding-top: 0;
+  margin-top: unset!important;
+}
+
 /*Annona Settings*/
 button#keyboardButton,
 button#settingsButton,
@@ -708,7 +714,7 @@ header.wrapper {
 #desktop-nav ul ul ul li::before{
     content:"—";
     margin-right:6px;
-    opacity:.6
+    opacity: 0.4;
 }
   /*Increase height of Annona feature on larger screens*/
   .seadragonbox {
@@ -749,9 +755,16 @@ header.wrapper {
     .player-controls {
     order: 1;
   }
+  /*Increase height of Media Text items for larger screens*/
+/*Centre Media Embed items*/
+.media-render.file {
+    height: 80vh;
+    align-items: center;
+}
+
   /*Increase width of Annona viewer for wider screens*/
   .iiif-storyboard-wide-container {
-    width: 80%;
+    max-width: 1350px;
   }
   /*Increase size of Blockquote*/
   blockquote {
