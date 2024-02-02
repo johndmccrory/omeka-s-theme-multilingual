@@ -23,7 +23,10 @@
     $caption = $attachment->caption();
     if ($caption):
     ?>
-        <div class="caption"><?php echo $caption; ?></div>
+    <div class="caption"><?php echo $caption; ?></div>
+        <div class="learn-more">
+            <button class="pure-button-secondary button-xlarge"><?php echo $item->link("View full item"); ?></button>
+        </div>
     <?php endif; ?>
     </div>
 <?php endforeach; ?>
