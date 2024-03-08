@@ -8,41 +8,84 @@ $valueLang = $filterLocale ? [$lang, ''] : null;
 
 $itemMedia = $item->media();
 
-$useMediaRender = false;
-$useMiradorViewer = false;
-$useUniversalViewer = false;
-
-foreach ($itemMedia as $media) {
-    $mediaType = $media->mediaType();
-    $mediaRenderer = $media->renderer();
-
-    if (
-        ($mediaRenderer !== null && strpos($mediaRenderer, 'iiif') !== false) ||
-        ($mediaType !== null && $mediaType === 'image/jpeg') ||
-        ($mediaType !== null && $mediaType === 'image/png')
-    ) {
-        $useMiradorViewer = true;
-    } elseif ($mediaType !== null && strpos($mediaType, 'pdf') !== false) {
-        $useUniversalViewer = true;
-    } else {
-        $useMediaRender = true;
-        break;
-    }
-}
-
+$viewers = [];
+$miradorViewer = null;
+$miradorImageViewer = null;
+$universalViewer = null;
+$youtubeViewer = null;
+$defaultViewer = null;
 ?>
 
-<?php echo $this->pageTitle($item->displayTitle(null, $valueLang), 2); ?>
+<?php
+// Loop through Item Media and Choose Viewer for the First Item Only
+$firstMedia = true;
+foreach ($itemMedia as $index => $media) {
+    $mediaType = $media->mediaType();
+    $mediaRenderer = $media->renderer();
+        // Add debugging statements
+        // echo "Media Renderer: $mediaRenderer, Media Type: $mediaType<br>";
+
+    if ($firstMedia) {
+        if ($mediaRenderer == 'iiifPresentation') {
+            $viewers[] = 'mirador';
+            $firstMedia = false;
+        } elseif ($mediaRenderer == 'iiif') {
+            $viewers[] = 'mirador';
+            $miradorImageViewer = "<div>" . $this->mirador($item) . "</div>";
+            $firstMedia = false;
+        } elseif ($mediaRenderer == 'youtube') {
+            $viewers[] = 'youtube';
+            $youtubeViewer = "<div class='responsive-embed widescreen'>" . $media->render() . "</div>";
+            $firstMedia = false;
+        } else {
+            $viewers[] = 'default';
+            $defaultViewer = $media->render();
+            $firstMedia = false;
+        }
+    } else {
+        // For additional media, you may want to handle them differently or skip them.
+        // You can add additional logic here if needed.
+    }
+}
+?>
 <h2><?php echo $translate('Item'); ?></h2>
+<?php echo $this->pageTitle($item->displayTitle(null, $valueLang), 2); ?>
 
 <?php $this->trigger('view.show.before'); ?>
 
-<?php if ($useMiradorViewer): ?>
-    <?php echo $this->mirador($item); ?> 
-<?php elseif ($useUniversalViewer): ?>    
-    <?php echo $this->universalViewer($item); ?> 
-<?php elseif ($useMediaRender): ?>    
-    <?php echo $media->render(); ?> 
-<?php endif; ?>
+<div class="pure-g full-width">
+<style>
+    .l-box {
+        padding: 1em;
+    }
+</style>
+    <div class="pure-u-sm-1 pure-u-lg-2-4 pure-u-xl-3-5">
+        <div class="l-box">
+            <?php 
+                // Display the main viewer
+                if ($miradorViewer !== null) {
+                    echo $miradorViewer;
+                }
+                elseif ($miradorImageViewer !== null) {
+                    echo $miradorImageViewer;
+                } 
+                elseif ($universalViewer !== null) {
+                    echo $universalViewer;
+                } 
+                elseif ($youtubeViewer !== null) {
+                    echo $youtubeViewer;
+                } 
+                elseif ($defaultViewer !== null) {
+                    echo $defaultViewer;
+                }
+            ?>
+        </div>
+    </div>
+    <div class="pure-u-sm-1 pure-u-lg-1-3 pure-u-xl-1-4">
+        <div class="l-box">
+            <?php echo $item->displayValues(); ?>
+        </div>
+    </div>
+</div>
 
 <?php echo $this->resourcePageBlocks($item)->getBlocks(); ?>
