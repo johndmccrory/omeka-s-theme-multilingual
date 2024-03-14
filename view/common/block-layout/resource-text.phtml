@@ -65,12 +65,14 @@ $lang = $filterLocale ? $this->lang() : null;
 
                 $caption = $attachment->caption();
             ?>
-            <div class="item resource">
-                <?= $render ?>
-                <div class="caption">
-                    <?= $caption ?>
+            <?php if($caption) { ?>
+                <div class='item resource'> 
+                    <?= $render ?>
+                    <div class="caption">
+                        <?= $caption ?>
+                    </div>
                 </div>
-            </div>
+            <?php } ?>
             <?php endforeach; ?>
         </div>
     </div>
