@@ -15,9 +15,13 @@
         ?>
         <?php $showTitleOption = $this->showTitleOption; ?>
         <?php if ($showTitleOption == 'item_title'): ?>
-        <h2><?php echo $item->displayTitle(); ?></h2>
+            <div class="title">
+                <h2><?php echo $item->displayTitle(); ?></h2>
+            </div>
         <?php elseif ($showTitleOption == 'file_name'): ?>
-        <h2><?php echo $media->displayTitle(); ?></h2>
+            <div class="title">
+                <h2><?php echo $media->displayTitle(); ?></h2>
+            </div>
         <?php endif; ?>
     <?php endif; ?>
 
