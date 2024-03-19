@@ -666,11 +666,11 @@ header.wrapper {
 @media screen and (min-width: 450px) {
   /*Increase font size on Hero Image*/
   .overlay-container h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .image-banner .overlay-container > p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   }
 }
 
@@ -813,6 +813,9 @@ header.wrapper {
     height: 100%;
     margin: 0 auto;
   }
+  .overlay-container h1 {
+    font-size: 3rem;
+  }
 }
 
 @media only screen and (min-width: 1025px) {
@@ -882,6 +885,12 @@ header.wrapper {
   .media-text.max-image-height img {
     width: inherit;
     max-height: unset;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+.image-banner .overlay-container > p {
+  font-size: 2rem;
   }
 }
 
