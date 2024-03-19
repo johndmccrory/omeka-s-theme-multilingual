@@ -556,7 +556,7 @@ background-color: #efefef;
 /*Minimum height for Banner Image*/
 .image-banner .overlay-container {
   min-height: clamp(350px, 35vh, 451px);
-  width: 1300px;
+  max-width: 1300px;
   margin: 0 auto;
   padding-inline: 24px;
 }
