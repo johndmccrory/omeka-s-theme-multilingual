@@ -836,7 +836,7 @@ header.wrapper {
 }
 
 .left .item.resource audio, .left .item.resource canvas, .left .item.resource video, .left .item.resource progress, .left .item.resource img, .right .item.resource audio, .right .item.resource canvas, .right .item.resource video, .right .item.resource progress, .right .item.resource img {
-  max-height: 100vh;
+  max-height: 90vh;
 }
 
   /*Increase width of Annona viewer for wider screens*/
