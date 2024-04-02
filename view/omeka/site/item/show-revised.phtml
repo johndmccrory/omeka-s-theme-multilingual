@@ -53,23 +53,39 @@ foreach ($itemMedia as $index => $media) {
 
 <?php $this->trigger('view.show.before'); ?>
 
-    <?php 
-        // Display the main viewer
-        if ($miradorViewer !== null) {
-            echo $miradorViewer;
-        }
-        elseif ($miradorImageViewer !== null) {
-            echo $miradorImageViewer;
-        } 
-        elseif ($universalViewer !== null) {
-            echo $universalViewer;
-        } 
-        elseif ($youtubeViewer !== null) {
-            echo $youtubeViewer;
-        } 
-        elseif ($defaultViewer !== null) {
-            echo $defaultViewer;
-        }
-    ?>
+<div class="pure-g full-width">
+<style>
+    .l-box {
+        padding: 1em;
+    }
+</style>
+    <div class="pure-u-sm-1 pure-u-lg-2-4 pure-u-xl-3-5">
+        <div class="l-box">
+            <?php 
+                // Display the main viewer
+                if ($miradorViewer !== null) {
+                    echo $miradorViewer;
+                }
+                elseif ($miradorImageViewer !== null) {
+                    echo $miradorImageViewer;
+                } 
+                elseif ($universalViewer !== null) {
+                    echo $universalViewer;
+                } 
+                elseif ($youtubeViewer !== null) {
+                    echo $youtubeViewer;
+                } 
+                elseif ($defaultViewer !== null) {
+                    echo $defaultViewer;
+                }
+            ?>
+        </div>
+    </div>
+    <div class="pure-u-sm-1 pure-u-lg-1-3 pure-u-xl-1-4">
+        <div class="l-box">
+            <?php echo $item->displayValues(); ?>
+        </div>
+    </div>
+</div>
 
 <?php echo $this->resourcePageBlocks($item)->getBlocks(); ?>
