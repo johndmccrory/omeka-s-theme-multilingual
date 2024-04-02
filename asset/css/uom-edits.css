@@ -407,7 +407,7 @@ button#reloadButton {
   margin-top: 4px !important;
 }
 .seadragonbox {
-  height: 80vh !important;
+  height: 70vh !important;
 }
 
 /*Remove Padding from Annona*/
@@ -789,7 +789,7 @@ header.wrapper {
 }
   /*Increase height of Annona feature on larger screens*/
   .seadragonbox {
-    height: 90vh !important;
+    height: 80vh !important;
   }
   .large .media-render.youtube.html {
   height: 80vh;
@@ -838,6 +838,11 @@ header.wrapper {
 .left .item.resource audio, .left .item.resource canvas, .left .item.resource video, .left .item.resource progress, .left .item.resource img, .right .item.resource audio, .right .item.resource canvas, .right .item.resource video, .right .item.resource progress, .right .item.resource img {
   max-height: 90vh;
 }
+
+  /*Increase height of Annona feature on larger screens*/
+  .seadragonbox {
+    height: 90vh !important;
+  }
 
   /*Increase width of Annona viewer for wider screens*/
   .iiif-storyboard-wide-container {
