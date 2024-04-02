@@ -313,6 +313,7 @@ height: 40vh;
   max-width: 800px;
   margin: 0 auto;
   padding: 1em;
+  text-align: left;
 }
 /*End Improving Media Embed and Transcriptions*/
 
@@ -715,7 +716,6 @@ header.wrapper {
     flex-wrap:wrap;
     margin:0;
     padding-bottom:12px;
-    border-bottom:1px solid #d0d0d0;
     justify-content: flex-end;
 }
 #desktop-nav li{
