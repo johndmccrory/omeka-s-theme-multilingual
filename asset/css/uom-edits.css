@@ -1,3 +1,8 @@
+/*Add padding to wrapper*/
+.wrapper {
+  padding-inline: 24px;
+}
+
 /*Text*/
 h2 {
   line-height: 36px;
@@ -10,13 +15,8 @@ h2 a {
   font-weight: 600;
 }
 
-/*Add padding to wrapper*/
-.wrapper {
-  padding-inline: 24px;
-}
-
 /*Header*/
-/*Header Edits*/
+/*Header and Menu Edits*/
 a.university-logo {
   flex-grow: 1;
   }
@@ -117,12 +117,24 @@ button.menu-toggle {
   }
 }
 
+/*Remove language selector*/
+[aria-label="Transcript language"] {
+  display: none;
+}
+
+/*Remove close button*/
+[aria-label="Close transcript"] {
+  display: none;
+}
+
 /*Remove padding from first nav li item*/
 #top-nav > ul > li:first-child,
 #desktop-nav > ul > li:first-child {
   padding-left: 9px;
 }
 
+
+/*Block Styling*/
 /*Centre Media Embed items*/
 .media-render.file {
   display: flex;
@@ -133,16 +145,6 @@ button.menu-toggle {
 .left.medium-large.file h2,
 .right.medium-large.file h2 {
     line-height: 24px;
-}
-
-/*Remove language selector*/
-[aria-label="Transcript language"] {
-  display: none;
-}
-
-/*Remove close button*/
-[aria-label="Close transcript"] {
-  display: none;
 }
 
 /*Media Embed Openseadragon: Fill Width*/
@@ -189,17 +191,6 @@ height: 40vh;
   background: #000;
 }
 
-/*Full width*/
-.full-width {
-  width: 100vw;
-  margin-left: 50%;
-  transform: translateX(-50%);
-}
-
-/*Margin-top-zero*/
-.margin-top-zero {
-  margin-top: 0 !important;
-}
 
 /*Increase banner subheading size*/
 .image-banner .overlay-container > p {
@@ -208,8 +199,8 @@ height: 40vh;
 
 /*Change opacity of image banner dark-tint*/
 .image-banner .image-container::after {
-  opacity: 0.6;
-} 
+  opacity: 0.3;
+}
 
 /*Increase size of Media Embed IIIF manifests*/
 .center.large.file .attachments .media-render.iiif_presentation {
@@ -271,33 +262,6 @@ height: 40vh;
   text-decoration: underline;
 }
 
-/*Paragraph Text*/
-.paragraph-text {
-  padding: 1em;
-  line-height: 2;
-}
-
-.paragraph-text p,
-.paragraph-text h2,
-.paragraph-text ul {
-  max-width: 800px;
-  margin: 26px auto;
-}
-
-.paragraph-text.max-width-500 {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.paragraph-text.dark {
-  padding: 4rem 1rem;
-}
-
-/*Remove padding and top margin*/ 
-.paragraph-text.introduction.no-margin-top {
-  padding-top: 0;
-  margin-top: unset!important;
-}
 
 /*Media Embed Block*/
 /*Improving Media Embed and Transcriptions*/
@@ -363,22 +327,6 @@ height: 40vh;
 
 .media-render.iiif {
   margin: 0 1em;
-}
-
-@media screen and (min-width: 1024px) {
-  .media-text {
-  flex-direction: row;
-  }
-  .media-text .text {
-    padding: 24px;
-    flex-basis: 40%;
-  }
-  }
-
-@media screen and (min-width: 1300px) {
-  .media-text .text {
-    flex-basis: 30%;
-  }
 }
 
 .learn-more {
@@ -455,6 +403,106 @@ button#reloadButton {
   color: #ecb355;
 }
 
+
+/*Format List of Pages Block*/
+.list-of-pages {
+  text-transform: capitalize;
+  font-size: 28px;
+}
+
+.list-of-pages ul {
+  list-style: none;
+}
+
+.list-of-pages ul li {
+  background: #222222;
+  padding: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color, #ecb355);
+  font-weight: 600;
+}
+
+/*Remove download button from light gallery*/
+#lg-download-1 {
+  display: none;
+}
+
+/*Ensure videos display at correct aspect ratio*/
+.media-render video {
+  width: 100%;
+}
+
+/*Bold transcript text*/
+.player-track p.active {
+  font-weight: 600;
+}
+
+/*Hero Image - IvyRze Block*/
+/*Margin for Hero Image text*/
+.image-banner.tint-dark .image-container::after, 
+.call-to-action.scheme-dark .action-button {
+    background-color: #000;
+    max-width: 1400px;
+}
+
+.overlay-container {
+  margin-left: 24px;
+}
+
+/*Minimum height for Banner Image*/
+.image-banner .overlay-container {
+  min-height: clamp(350px, 35vh, 451px);
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-inline: 24px;
+}
+
+.image-banner .image-container img {
+max-width: 1400px;
+}
+
+/*Openseadragon Hero*/
+.grid-x {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.grid-container {
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  max-width: 71.25rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.openseadragon-container {
+  background-color: #1c1919 !important;
+}
+
+.openseadragon-hero {
+  height: 18.75rem;
+  margin-top: -1rem;
+  position: relative;
+}
+
+.openseadragon-hero .hero-title-openseadragon {
+  position: absolute;
+  bottom: 10%;
+}
+
+.hero-title-openseadragon h1 {
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem 2rem;
+  font-size: 2rem;
+  margin-bottom: 0;
+  }
+
 /*Blockquote*/
 .blockquote-container {
   display: flex;
@@ -505,72 +553,51 @@ cite {
   text-align: left;
 }
 
-/*Format List of Pages Block*/
-.list-of-pages {
-  text-transform: capitalize;
-  font-size: 28px;
+/*Paragraph Text*/
+.paragraph-text {
+  padding: 1em;
+  line-height: 2;
 }
 
-.list-of-pages ul {
-  list-style: none;
+.paragraph-text p,
+.paragraph-text h2,
+.paragraph-text ul {
+  max-width: 800px;
+  margin: 26px auto;
 }
 
-.list-of-pages ul li {
-  background: #222222;
-  padding: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: var(--accent-color, #ecb355);
-  font-weight: 600;
-}
-
-/*Remove download button from light gallery*/
-#lg-download-1 {
-  display: none;
-}
-
-/*Ensure videos display at correct aspect ratio*/
-.media-render video {
-  width: 100%;
-}
-
-/*Bold transcript text*/
-.player-track p.active {
-  font-weight: 600;
-}
-
-/*Hero Image - IvyRzr Block*/
-/*Margin for Hero Image text*/
-.image-banner.tint-dark .image-container::after, 
-.call-to-action.scheme-dark .action-button {
-    background-color: #000;
-    max-width: 1400px;
-}
-
-.grey-background {
-background-color: #efefef;
-}
-
-.overlay-container {
-  margin-left: 24px;
-}
-
-/*Minimum height for Banner Image*/
-.image-banner .overlay-container {
-  min-height: clamp(350px, 35vh, 451px);
-  max-width: 1300px;
+.paragraph-text.max-width-500 {
+  max-width: 500px;
   margin: 0 auto;
-  padding-inline: 24px;
 }
 
-.image-banner .image-container img {
-max-width: 1400px;
+.paragraph-text.dark {
+  padding: 4rem 1rem;
 }
 
+/*Remove padding and top margin*/ 
+.paragraph-text.introduction.no-margin-top {
+  padding-top: 0;
+  margin-top: unset!important;
+}
+
+/*Margin for first block*/
 .splash {
-margin-top: -25px;
+  margin-top: -25px;
+  }
+
+/*Styling and Utility elements*/
+/*Full width*/
+.full-width {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
-/*Styling elements*/
+/*Margin-top-zero*/
+.margin-top-zero {
+  margin-top: 0 !important;
+}
 
 /*Dark Background*/
 .dark {
@@ -585,11 +612,13 @@ margin-top: -25px;
   color: #ecb355;
 }
 
-.dark h2 a {
+.dark h2, 
+.dark h2, a {
     color: #fff;
   }
 
-.padding-vertical-6 {
+/*Padding-vertical 6*/
+  .padding-vertical-6 {
   padding-top: 6rem !important;
   padding-bottom: 6rem !important;
 }
@@ -619,6 +648,32 @@ h2.block {
 
 .media-text .left.file {
   margin: 1em 0;
+}
+
+.grey-background {
+  background-color: #efefef;
+  }
+
+.font-white {
+  color: #fff;
+  }
+
+/*See More CSS*/
+#seeMore {
+  display: none;
+}
+
+#seeMore:target {
+  display: block;
+}
+
+/*Remove Margin*/
+.no-margin-top {
+margin-top: 0!important;
+}
+
+.no-margin-bottom {
+margin-top: 0!important;
 }
 
 /*Media queries*/
@@ -681,6 +736,13 @@ header.wrapper {
   .rtl#previousPageButton {
     left: 89%;
   }
+}
+
+@media screen and (max-width: 600px) {
+  .openseadragon-hero {
+    height: 350px;
+    margin-top: -32px !important;
+}
 }
 
 @media screen and (max-width: 640px) {
@@ -807,6 +869,12 @@ header.wrapper {
   }
 }
 
+@media screen and (min-width: 800px) {
+  .hero-title-openseadragon h1 {
+    font-size: 3rem;
+    }
+}
+
 @media screen and (min-width: 801px) {
   .center.large.file .attachments .media-render.iiif_presentation {
     width: 100%;
@@ -816,6 +884,26 @@ header.wrapper {
   .overlay-container h1 {
     font-size: 3rem;
   }
+}
+
+@media screen and (min-width: 901px) {
+  .openseadragon-hero .hero-title-openseadragon {
+    bottom: 20%;
+}
+}
+
+@media screen and (min-width: 1024px) {
+  .media-text {
+  flex-direction: row;
+  }
+  .media-text .text {
+    padding: 24px;
+    flex-basis: 40%;
+  }
+  .openseadragon-hero {
+    height: 400px;
+    margin-top: -32px !important;
+}
 }
 
 @media only screen and (min-width: 1025px) {
@@ -897,6 +985,22 @@ header.wrapper {
 .image-banner .overlay-container > p {
   font-size: 2rem;
   }
+  .splash {
+    margin-top: -49px;
+}
+.openseadragon-hero {
+  height: 500px;
+  margin-top: 32px !important;
+}
+}
+
+@media screen and (min-width: 1300px) {
+  .media-text .text {
+    flex-basis: 30%;
+  }
+  .full-width .media-text .text {
+    flex-basis: 40%;
+}
 }
 
 @media only screen and (min-width: 1400px) {
