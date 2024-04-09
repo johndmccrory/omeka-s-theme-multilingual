@@ -23,7 +23,7 @@ $lang = $filterLocale ? $this->lang() : null;
 
 <div class="media-text-title">
     <?php if (!empty($heading)): ?>
-        <h3 class="block"><?= $escape($heading) ?></h3>
+        <h2 class="block"><?= $escape($heading) ?></h2>
     <?php endif; ?>
     <div class="<?= $alignmentClass?> media-text overlay max-image-height">
         <div class="<?= $thumbnailType . ' captions-' . $captionPosition ?> media file">
@@ -74,8 +74,11 @@ $lang = $filterLocale ? $this->lang() : null;
             </div>
         </div>
         <div class="text">
-            <h3><?= $link ?></h3>
+        <h2><?php echo $title; ?></h2>
             <?= $html ?>
+            <div class="learn-more">
+                <button class="pure-button-secondary button-xlarge"><?php echo $item->link("View full item"); ?></button>
+            </div>
         </div>
     </div>
 </div>

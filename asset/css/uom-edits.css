@@ -1,45 +1,125 @@
 /*Text*/
+h2 {
+  line-height: 36px;
+}
+
 h1 a,
 h2 a,
-h3 a {
+h2 a {
   color: #1d1d1d;
   font-weight: 600;
 }
 
-/*Navigation menus*/
-
-/*Add padding to mobile menu*/
-header .menu-toggle,
-.search-toggle,
-#switcher-toggle {
-  margin: 0 12px;
+/*Add padding to wrapper*/
+.wrapper {
+  padding-inline: 24px;
 }
+
+/*Header*/
+/*Header Edits*/
+a.university-logo {
+  flex-grow: 1;
+  }
+  
+  a.university-logo img {
+    margin: 12px 6px 12px 0px;
+  }
+  
+  button.search-toggle {
+  order: 0;
+  }
+  
+  .language-switcher {
+  order: 1;
+  }
+  
+  button.menu-toggle {
+  order: 2;
+  }
+  
+  .site-heading {
+  order: 3;
+  width: 246px;
+  margin: 0 24px; 
+  }
+  
+  .site-heading p {
+      margin: 0 0 12px 0;
+  }
+  
+  header .menu-toggle, 
+  .search-toggle, 
+  #switcher-toggle {
+      margin: 0;
+      font-size: 16px;
+      color: #b1b2b4;
+  }
+  
+  button#switcher-toggle path {
+  stroke: #b1b2b4;
+  }
+
+  /*Decrease padding-inline for header on mobiles*/
+  header.wrapper {
+    padding-inline: 12px;
+  } 
+
+
+/*Navigation menus*/
+/*Add desktop menu*/
+#desktop-nav>ul {
+  display: none;
+  }
 
 /*Header Wrapper for Mobiles*/
 header {
   padding-block: 0;
 }
 
+/*Mobile Menu*/
+button.menu-toggle {
+  position: relative;
+  }
+
+  nav#top-nav.hide-for-desktop.open {
+    position: absolute;
+    right: 0;
+    margin-top: 40px;
+    width: 100vw;
+    background: #f4f4f4;
+    z-index: 999999;
+}
+
 /*Move navigation items to right*/
-#top-nav > ul {
+#top-nav > ul,
+#desktop-nav > ul {
   justify-content: flex-end;
 }
 
 /*Improve colour contrast on main nav menu*/
-#top-nav ul a {
+#top-nav ul a,
+#desktop-nav ul a {
   opacity: 0.9;
 }
 
-#top-nav li {
+#top-nav li,
+#desktop-nav li {
   text-transform: none;
 }
 
-#top-nav li.active > a {
+#top-nav li.active > a,
+#desktop-nav li.active > a {
   text-decoration: underline;
+  opacity: 1;
+  font-weight: 600;
+  & :active {
+    font-weight: 600;
+  }
 }
 
 /*Remove padding from first nav li item*/
-#top-nav > ul > li:first-child {
+#top-nav > ul > li:first-child,
+#desktop-nav > ul > li:first-child {
   padding-left: 9px;
 }
 
@@ -47,6 +127,12 @@ header {
 .media-render.file {
   display: flex;
   justify-content: center;
+}
+
+/*Decrease line height for medium embed h2*/
+.left.medium-large.file h2,
+.right.medium-large.file h2 {
+    line-height: 24px;
 }
 
 /*Remove language selector*/
@@ -92,6 +178,17 @@ height: 40vh;
   margin: 0 auto;
 }
 
+/*Item Showcase Block*/
+.item-showcase > .item.resource:only-child > img {
+  height: 85vh;
+}
+
+/*Item Showcase Openseadragon*/ 
+.openseadragon {
+  height: 85vh!important;
+  background: #000;
+}
+
 /*Full width*/
 .full-width {
   width: 100vw;
@@ -108,6 +205,11 @@ height: 40vh;
 .image-banner .overlay-container > p {
   font-size: 1.2rem;
 }
+
+/*Change opacity of image banner dark-tint*/
+.image-banner .image-container::after {
+  opacity: 0.6;
+} 
 
 /*Increase size of Media Embed IIIF manifests*/
 .center.large.file .attachments .media-render.iiif_presentation {
@@ -130,8 +232,8 @@ height: 40vh;
   flex-basis: 100%;
 }
 
-.center.large.file .item.resource h3,
-.center.medium-large.file .item.resource h3 {
+.center.large.file .item.resource h2,
+.center.medium-large.file .item.resource h2 {
   order: -1;
 }
 
@@ -155,7 +257,7 @@ height: 40vh;
 }
 
 /*Media Text Overlay*/
-.media-text.overlay .text h3 {
+.media-text.overlay .text h2 {
   text-align: center;
 }
 
@@ -176,7 +278,7 @@ height: 40vh;
 }
 
 .paragraph-text p,
-.paragraph-text h3,
+.paragraph-text h2,
 .paragraph-text ul {
   max-width: 800px;
   margin: 26px auto;
@@ -190,6 +292,100 @@ height: 40vh;
 .paragraph-text.dark {
   padding: 4rem 1rem;
 }
+
+/*Remove padding and top margin*/ 
+.paragraph-text.introduction.no-margin-top {
+  padding-top: 0;
+  margin-top: unset!important;
+}
+
+/*Media Embed Block*/
+/*Improving Media Embed and Transcriptions*/
+.page .item-showcase .resource.item:not(:only-child) h2,
+.page .file .resource h2 {
+  font-size: 1.5em;
+  margin: 2em 0;
+}
+
+.page .item.resource .caption {
+  font-size: 16.75px;
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em;
+  text-align: left;
+}
+/*End Improving Media Embed and Transcriptions*/
+
+/*Media embed for Left and Right aligned items*/
+.page .left.file .resource h2,
+.page .right.file .resource h2 {
+  font-size: 1em;
+  margin: 0em;
+}
+
+.left.medium-large.file,
+.right.medium-large.file {
+  margin-top: 12px !important;
+}
+
+
+/*Resource with Text block*/
+.media-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.media-text .text {
+  padding: 0 24px 24px 24px;
+  max-width: 600px;
+}
+
+.media-text .item.resource .caption {
+  font-size: initial;
+  line-height: initial;
+  max-width: 800px;
+  margin: initial;
+  padding: 0;
+  font-size: 95%;
+  color: #655e5e; 
+}
+
+.media-text .left .item.resource .caption {
+  text-align: left;
+}
+
+.media-text .right .item.resource .caption {
+  text-align: right;
+}
+
+.media-render.iiif {
+  margin: 0 1em;
+}
+
+@media screen and (min-width: 1024px) {
+  .media-text {
+  flex-direction: row;
+  }
+  .media-text .text {
+    padding: 24px;
+    flex-basis: 40%;
+  }
+  }
+
+@media screen and (min-width: 1300px) {
+  .media-text .text {
+    flex-basis: 30%;
+  }
+}
+
+.learn-more {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+} 
 
 /*Annona Settings*/
 button#keyboardButton,
@@ -211,7 +407,7 @@ button#reloadButton {
   margin-top: 4px !important;
 }
 .seadragonbox {
-  height: 80vh !important;
+  height: 70vh !important;
 }
 
 /*Remove Padding from Annona*/
@@ -252,34 +448,6 @@ button#reloadButton {
   .openseadragon-container
   .openseadragon-canvas {
   background: #1d1d1d !important;
-}
-
-/*Improving Media Embed and Transcriptions*/
-.page .item-showcase .resource.item:not(:only-child) h3,
-.page .file .resource h3 {
-  font-size: 1.5em;
-  margin: 2em 0;
-}
-
-.page .item.resource .caption {
-  font-size: 16.75px;
-  line-height: 1.5;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1em;
-}
-/*End Improving Media Embed and Transcriptions*/
-
-/*Media embed for Left and Right aligned items*/
-.page .left.file .resource h3,
-.page .right.file .resource h3 {
-  font-size: 1em;
-  margin: 0em;
-}
-
-.left.medium-large.file,
-.right.medium-large.file {
-  margin-top: 12px !important;
 }
 
 /*Style site page pagination*/
@@ -370,14 +538,36 @@ cite {
   font-weight: 600;
 }
 
+/*Hero Image - IvyRzr Block*/
 /*Margin for Hero Image text*/
+.image-banner.tint-dark .image-container::after, 
+.call-to-action.scheme-dark .action-button {
+    background-color: #000;
+    max-width: 1400px;
+}
+
+.grey-background {
+background-color: #efefef;
+}
+
 .overlay-container {
   margin-left: 24px;
 }
 
 /*Minimum height for Banner Image*/
 .image-banner .overlay-container {
-  min-height: clamp(400px, 80vh, 600px);
+  min-height: clamp(350px, 35vh, 451px);
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-inline: 24px;
+}
+
+.image-banner .image-container img {
+max-width: 1400px;
+}
+
+.splash {
+margin-top: -25px;
 }
 
 /*Styling elements*/
@@ -395,7 +585,7 @@ cite {
   color: #ecb355;
 }
 
-.dark h3 a {
+.dark h2 a {
     color: #fff;
   }
 
@@ -418,12 +608,13 @@ h2.block {
   word-wrap: break-word;
   display: grid;
   align-items: center;
+  align-content: center;
 }
 
 /*Additional margin*/
 .left.file,
 .left.assets {
-  margin: 0 3rem 1rem 1rem;
+  margin: 0 2rem 1rem 1rem;
 }
 
 .media-text .left.file {
@@ -437,28 +628,54 @@ h2.block {
   }
 }
 
+@media screen and (min-width: 342px) {
+  nav#top-nav.hide-for-desktop.open {
+  right: -1.35rem;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  a.university-logo img {
+   margin: 24px 12px 12px 0;
+}
+
+header.wrapper {
+  padding-inline: 24px;
+} 
+}
+
+@media screen and (min-width: 400px) {
+  a.university-logo img {
+      margin: 24px 24px 24px 0;
+  }
+}
+
+@media screen and (min-width: 420px) {
+  header .menu-toggle, 
+  .search-toggle, 
+  #switcher-toggle {
+     font-size: 20px;
+  }
+}
+
 @media screen and (max-width: 450px) {
   .site-heading {
-    margin: 0 24px;
-    width: 100%;
+    margin: 0;
   }
 }
 
 @media screen and (min-width: 450px) {
   /*Increase font size on Hero Image*/
-  .overlay-container h2 {
-    font-size: 56px;
+  .overlay-container h1 {
+    font-size: 2.5rem;
   }
 
   .image-banner .overlay-container > p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .site-heading {
-    width: 100%;
-  }
   /*Right Arrow on Annona using mobiles*/
   .ltr#nextPageButton,
   .rtl#previousPageButton {
@@ -466,25 +683,113 @@ h2.block {
   }
 }
 
-@media screen and (min-width: 501px) and (max-width: 640px) {
-  .site-heading {
-    order: 0;
-  }
-}
-
 @media screen and (max-width: 640px) {
-  .wrapper {
-    padding-inline: 0;
-  }
   header {
     padding-block: 0;
   }
 }
 
 @media screen and (min-width: 641px) {
+  a.university-logo {
+    flex-grow: 0;
+}
+  .site-heading {
+    order: 0;
+  }
+  button.search-toggle {
+    order: 1;
+    }
+    
+    .language-switcher {
+    order: 2;
+    }
+    
+    button.menu-toggle {
+    order: 3;
+    }
+   .splash {
+   margin-top: -49px;
+   }
+/*Desktop menu*/
+#desktop-nav>ul {
+    display:flex;
+    flex-wrap:wrap;
+    margin:0;
+    padding-bottom:12px;
+    justify-content: flex-end;
+}
+#desktop-nav li{
+    font-size:16px;
+    list-style-type:none;
+    text-transform:uppercase;
+    letter-spacing:.5px
+}
+#desktop-nav ul a{
+    color:#222;
+    transition:opacity .3s ease
+}
+#desktop-nav ul a:hover{
+    opacity:1 !important
+}
+#desktop-nav li.active>a{
+    opacity:1 !important;
+    font-weight:600
+}
+#desktop-nav>ul>li{
+    padding-inline:9px;
+    padding-bottom:18px
+}
+#desktop-nav>ul>li:first-child{
+    padding-left:0
+}
+#desktop-nav>ul>li li{
+    font-family:"Work Sans",sans-serif;
+    display:block
+}
+#desktop-nav>ul>li li:not(:last-of-type){
+    margin-bottom:12px
+}
+#desktop-nav>ul>li>ul{
+    position:absolute;
+    height:0;
+    overflow:hidden;
+    background:var(--header-color, #f9bc58);
+    margin-inline:-100vw;
+    margin-bottom:18px;
+    box-shadow:0 4px 18px rgba(0,0,0,.15);
+    z-index:90
+}
+#desktop-nav>ul>li:hover>ul,#desktop-nav>ul>li>ul:focus-within{
+    height:auto;
+    overflow:visible;
+    padding:24px 100vw
+}
+#desktop-nav>ul>li>ul::before{
+    content:"";
+    position:absolute;
+    top:-5px;
+    border-left:5px solid rgba(0,0,0,0);
+    border-right:5px solid rgba(0,0,0,0);
+    border-bottom:5px solid var(--header-color, #f9bc58)
+}
+#desktop-nav ul ul{
+    margin:12px 0 0
+}
+#desktop-nav.nav-light ul ul a,#desktop-nav.nav-light ul ul li::before{
+    color:#fff;
+    opacity:.8
+}
+#desktop-nav ul ul ul{
+    padding-left:12px
+}
+#desktop-nav ul ul ul li::before{
+    content:"—";
+    margin-right:6px;
+    opacity: 0.4;
+}
   /*Increase height of Annona feature on larger screens*/
   .seadragonbox {
-    height: 90vh !important;
+    height: 80vh !important;
   }
   .large .media-render.youtube.html {
   height: 80vh;
@@ -495,6 +800,11 @@ h2.block {
   .medium .media-render.youtube.html {
   height: 50vh;
   }
+  /*Additional margin for media embed*/
+  .left.file,
+  .left.assets {
+    margin: 0 3rem 1rem 1rem;
+  }
 }
 
 @media screen and (min-width: 801px) {
@@ -502,6 +812,9 @@ h2.block {
     width: 100%;
     height: 100%;
     margin: 0 auto;
+  }
+  .overlay-container h1 {
+    font-size: 3rem;
   }
 }
 
@@ -516,13 +829,29 @@ h2.block {
     .player-controls {
     order: 1;
   }
+  /*Increase height of Media Text items for larger screens*/
+/*Centre Media Embed items*/
+.media-render.file {
+    align-items: center;
+}
+
+.left .item.resource audio, .left .item.resource canvas, .left .item.resource video, .left .item.resource progress, .left .item.resource img, .right .item.resource audio, .right .item.resource canvas, .right .item.resource video, .right .item.resource progress, .right .item.resource img {
+  max-height: 90vh;
+}
+
+  /*Increase height of Annona feature on larger screens*/
+  .seadragonbox {
+    height: 90vh !important;
+  }
+
   /*Increase width of Annona viewer for wider screens*/
   .iiif-storyboard-wide-container {
-    width: 80%;
+    width: 100%;
+    max-width: 1350px;
   }
   /*Increase size of Blockquote*/
   blockquote {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .media-text.overlay {
     position: relative;
@@ -551,7 +880,7 @@ h2.block {
     left: 5%;
   }
 
-  .media-text.overlay .text h3 {
+  .media-text.overlay .text h2 {
     text-align: inherit;
   }
   .media-text.max-image-height .media-render {
@@ -561,6 +890,12 @@ h2.block {
   .media-text.max-image-height img {
     width: inherit;
     max-height: unset;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+.image-banner .overlay-container > p {
+  font-size: 2rem;
   }
 }
 

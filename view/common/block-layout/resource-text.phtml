@@ -43,10 +43,10 @@ $lang = $filterLocale ? $this->lang() : null;
                          'link' => $link,
                      ]);
                      elseif ($media) :
-                         echo $item->linkRaw($this->thumbnail($media, $this->thumbnailType));
+                         echo $this->thumbnail($media, $this->thumbnailType);
                      endif;
 
-                    if ($showTitleOption == 'item_title'):
+                     if ($showTitleOption == 'item_title'):
                         $title = $item->displayTitle(null, $lang);
                     elseif ($media && $showTitleOption == 'file_name'):
                         $title = $media->displayTitle(null, $lang);
@@ -65,17 +65,22 @@ $lang = $filterLocale ? $this->lang() : null;
 
                 $caption = $attachment->caption();
             ?>
-            <div class="item resource">
-                <?= $render ?>
-                <div class="caption">
-                    <?= $caption ?>
+            <?php if($caption) { ?>
+                <div class='item resource'> 
+                    <?= $render ?>
+                    <div class="caption">
+                        <?= $caption ?>
+                    </div>
                 </div>
-            </div>
+            <?php } ?>
             <?php endforeach; ?>
         </div>
     </div>
     <div class="text">
-        <h3><?= $link ?></h3>
+        <h2><?php echo $title; ?></h2>
         <?= $html ?>
+        <div class="learn-more">
+            <button class="pure-button-secondary button-xlarge"><?php echo $item->link("View full item"); ?></button>
+        </div>
     </div>
 </div>
