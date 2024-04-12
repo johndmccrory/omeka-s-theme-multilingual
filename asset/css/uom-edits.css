@@ -100,6 +100,7 @@ button.menu-toggle {
 #top-nav ul a,
 #desktop-nav ul a {
   opacity: 0.9;
+  color: #1D1D1D;
 }
 
 #top-nav li,
@@ -109,7 +110,6 @@ button.menu-toggle {
 
 #top-nav li.active > a,
 #desktop-nav li.active > a {
-  text-decoration: underline;
   opacity: 1;
   font-weight: 600;
   & :active {
@@ -136,6 +136,11 @@ button.menu-toggle {
 
 /*Block Styling*/
 /*Centre Media Embed items*/
+.file {
+  margin: 0;
+  padding: 1rem 0;
+}
+
 .media-render.file {
   display: flex;
   justify-content: center;
@@ -626,10 +631,21 @@ cite {
     color: #fff;
   }
 
+  /*Padding-vertical 3*/
+  .padding-vertical-3 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
 /*Padding-vertical 6*/
   .padding-vertical-6 {
   padding-top: 6rem !important;
   padding-bottom: 6rem !important;
+}
+
+/*Additional margin-top*/
+.margin-top-5 {
+  margin-top: 5rem;
 }
 
 h2.block {
@@ -800,11 +816,11 @@ header.wrapper {
     letter-spacing:.5px; 
 }
 #desktop-nav ul a{
-    color:#222;
     transition:opacity .3s ease
 }
 #desktop-nav ul a:hover{
-    opacity:1 !important
+    opacity:1 !important;
+    text-decoration: underline;
 }
 #desktop-nav li.active>a{
     opacity:1 !important;
