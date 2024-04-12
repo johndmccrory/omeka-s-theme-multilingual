@@ -517,15 +517,17 @@ max-width: 1400px;
   padding: 1rem 2rem !important;
   align-items: center;
   justify-content: center;
-  background: #dcf5fb;
+  background: #497D7E;
 }
 
 .blockquote-container p {
-  margin-top: 48px;
+  /*margin-top: 48px;*/
+  font-size: 1em;
+  color: #fff;
 }
 
 blockquote {
-  color: #3f3f5a;
+  color: #fff;
   font-weight: 100;
   font-size: 2rem;
   max-width: 600px;
@@ -538,7 +540,7 @@ blockquote {
 blockquote:before,
 blockquote:after {
   position: absolute;
-  color: #27b9d4;
+  color: #8facad;
   font-size: 8rem;
   width: 4rem;
   height: 4rem;
@@ -795,8 +797,7 @@ header.wrapper {
 #desktop-nav li{
     font-size:16px;
     list-style-type:none;
-    text-transform:uppercase;
-    letter-spacing:.5px
+    letter-spacing:.5px; 
 }
 #desktop-nav ul a{
     color:#222;
