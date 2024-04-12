@@ -923,6 +923,10 @@ header.wrapper {
     height: 400px;
     margin-top: -32px !important;
 }
+
+.center.large.file .item.resource h2 {
+  margin: 2em 0;
+}
 }
 
 @media only screen and (min-width: 1025px) {
