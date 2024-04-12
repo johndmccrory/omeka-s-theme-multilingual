@@ -191,7 +191,6 @@ height: 40vh;
   background: #000;
 }
 
-
 /*Increase banner subheading size*/
 .image-banner .overlay-container > p {
   font-size: 1.2rem;
@@ -207,6 +206,14 @@ height: 40vh;
   width: 100%;
   height: 100%;
   margin: 0 auto;
+}
+
+.center .media-render.iiif_presentation iframe,
+.rangestoryboard,
+.rangestoryboard .storyboard_viewer {
+  width: 90vw!important;
+  height: 50vh!important;
+  max-width: 1350px!important;
 }
 
 /*Title above media player for Media Embed Blocks*/
@@ -268,7 +275,7 @@ height: 40vh;
 .page .item-showcase .resource.item:not(:only-child) h2,
 .page .file .resource h2 {
   font-size: 1.5em;
-  margin: 2em 0;
+  margin: 1em 0;
 }
 
 .page .item.resource .caption {
@@ -743,6 +750,12 @@ header.wrapper {
     height: 350px;
     margin-top: -32px !important;
 }
+
+.center .media-render.iiif_presentation iframe,
+.rangestoryboard,
+.rangestoryboard .storyboard_viewer {
+  height: 70vh!important;
+}
 }
 
 @media screen and (max-width: 640px) {
@@ -886,6 +899,12 @@ header.wrapper {
   }
 }
 
+.center .media-render.iiif_presentation iframe,
+.rangestoryboard,
+.rangestoryboard .storyboard_viewer {
+  height: 80vh!important;
+}
+
 @media screen and (min-width: 901px) {
   .openseadragon-hero .hero-title-openseadragon {
     bottom: 20%;
@@ -991,6 +1010,11 @@ header.wrapper {
 .openseadragon-hero {
   height: 500px;
   margin-top: 32px !important;
+}
+.center .media-render.iiif_presentation iframe,
+.rangestoryboard,
+.rangestoryboard .storyboard_viewer {
+  height: 85vh!important;
 }
 }
 
