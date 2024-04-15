@@ -575,6 +575,8 @@ cite {
 
 .paragraph-text p,
 .paragraph-text h2,
+.paragraph-text h3,
+.paragraph-text h4,
 .paragraph-text ul {
   max-width: 800px;
   margin: 26px auto;
@@ -627,7 +629,11 @@ cite {
 }
 
 .dark h2, 
-.dark h2, a {
+.dark h2 a,
+.dark h3, 
+.dark h3 a,
+.dark h4, 
+.dark h4 a{
     color: #fff;
   }
 
