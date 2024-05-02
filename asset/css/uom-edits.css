@@ -506,7 +506,7 @@ max-width: 1400px;
 
 .openseadragon-hero {
   height: 18.75rem;
-  margin-top: -1rem;
+  margin-top: -32px;
   position: relative;
 }
 
@@ -810,7 +810,7 @@ header.wrapper {
 @media screen and (max-width: 600px) {
   .openseadragon-hero {
     height: 350px;
-    margin-top: -32px !important;
+    margin-top: -24px !important;
 }
 
 .center .media-render.iiif_presentation iframe,
@@ -818,6 +818,12 @@ header.wrapper {
 .rangestoryboard .storyboard_viewer {
   height: 70vh!important;
 }
+}
+
+@media screen and (min-width: 625px) {
+  .site-heading {
+    order: 0;
+  }
 }
 
 @media screen and (max-width: 640px) {
