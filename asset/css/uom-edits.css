@@ -347,6 +347,14 @@ height: 40vh;
   justify-content: center;
 } 
 
+/*Remove button from Media Embed left and right*/
+.left .learn-more,
+.right .learn-more {
+  display: none;
+  }
+
+
+
 /*Annona Settings*/
 button#keyboardButton,
 button#settingsButton,
@@ -507,6 +515,10 @@ max-width: 1400px;
   bottom: 10%;
 }
 
+#content .openseadragon-hero {
+  padding-block: 0;
+  }
+
 .hero-title-openseadragon h1 {
   background-color: #000;
   color: #fff;
@@ -514,6 +526,24 @@ max-width: 1400px;
   font-size: 2rem;
   margin-bottom: 0;
   }
+
+/*Image Banner*/
+.image-banner .image-container::after {
+  opacity: 0.3;
+}
+
+/*Remove restricted width for image banners*/
+.image-banner .image-container img {
+max-width: unset;
+}
+
+.image-banner.tint-dark .image-container::after, .call-to-action.scheme-dark .action-button {
+max-width: unset;
+}
+
+.image-banner .overlay-container {
+height: 500px;
+}
 
 /*Blockquote*/
 .blockquote-container {
@@ -569,7 +599,7 @@ cite {
 
 /*Paragraph Text*/
 .paragraph-text {
-  padding: 1em;
+  padding: 1em 0;
   line-height: 2;
 }
 
@@ -591,6 +621,11 @@ cite {
   padding: 4rem 1rem;
 }
 
+/*Add underline to links in paragraph text*/
+.paragraph-text a {
+  text-decoration: underline;
+  }
+
 /*Remove padding and top margin*/ 
 .paragraph-text.introduction.no-margin-top {
   padding-top: 0;
@@ -599,8 +634,17 @@ cite {
 
 /*Margin for first block*/
 .splash {
-  margin-top: -25px;
+  margin-top: initial;
   }
+
+/*Item Show*/
+/*Item Show Heading*/
+.show #content h2:first-child {
+  margin: 0;
+  background: #6B2C91;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
 
 /*Styling and Utility elements*/
 /*Full width*/
@@ -895,6 +939,11 @@ header.wrapper {
   .left.file,
   .left.assets {
     margin: 0 3rem 1rem 1rem;
+  }
+  /*Add side padding for paragraph text*/
+  .paragraph-text {
+    padding: 1em;
+    line-height: 2;
   }
 }
 
