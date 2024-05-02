@@ -870,7 +870,10 @@ header.wrapper {
 }
 #desktop-nav ul a:hover{
     opacity:1 !important;
-    text-decoration: underline;
+    border-bottom: solid #6b2c90 3px;
+    padding-bottom: 3px;
+    color: #6b2c90;
+    transition: 0.1s;
 }
 #desktop-nav li.active>a{
     opacity:1 !important;
