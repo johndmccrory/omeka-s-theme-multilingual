@@ -1078,7 +1078,7 @@ header.wrapper {
 }
 .openseadragon-hero {
   height: 500px;
-  margin-top: 32px !important;
+  margin-top: -32px !important;
 }
 .center .media-render.iiif_presentation iframe,
 .rangestoryboard,
