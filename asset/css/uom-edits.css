@@ -730,12 +730,6 @@ header.wrapper {
 } 
 }
 
-@media screen and (min-width: 400px) {
-  a.university-logo img {
-      margin: 24px 24px 24px 0;
-  }
-}
-
 @media screen and (min-width: 420px) {
   header .menu-toggle, 
   .search-toggle, 
