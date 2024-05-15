@@ -48,30 +48,39 @@ foreach ($itemMedia as $index => $media) {
     }
 }
 ?>
-
-<div class="item-show-title">
-    <?php echo $this->pageTitle($item->displayTitle(null, $valueLang), 2); ?>
-</div>
-
 <?php $this->trigger('view.show.before'); ?>
 
-    <?php 
-        // Display the main viewer
-        if ($miradorViewer !== null) {
-            echo $miradorViewer;
-        }
-        elseif ($miradorImageViewer !== null) {
-            echo $miradorImageViewer;
-        } 
-        elseif ($universalViewer !== null) {
-            echo $universalViewer;
-        } 
-        elseif ($youtubeViewer !== null) {
-            echo $youtubeViewer;
-        } 
-        elseif ($defaultViewer !== null) {
-            echo $defaultViewer;
-        }
-    ?>
+<div class="pure-g full-width item-show-section">
+    <div class="pure-u-sm-1 pure-u-lg-2-3 pure-u-xl-3-5 item-show-media">
+        <div class="l-box">
+            <?php 
+                // Display the main viewer
+                if ($miradorViewer !== null) {
+                    echo $miradorViewer;
+                }
+                elseif ($miradorImageViewer !== null) {
+                    echo $miradorImageViewer;
+                } 
+                elseif ($universalViewer !== null) {
+                    echo $universalViewer;
+                } 
+                elseif ($youtubeViewer !== null) {
+                    echo $youtubeViewer;
+                } 
+                elseif ($defaultViewer !== null) {
+                    echo $defaultViewer;
+                }
+            ?>
+        </div>
+    </div>
+    <div class="pure-u-sm-1 pure-u-lg-1-3 pure-u-xl-2-5">
+        <div class="l-box item-show-metadata">
+            <div class="item-show-title">
+                <?php echo $this->pageTitle($item->displayTitle(null, $valueLang), 2); ?>
+            </div>
+            <?php echo $item->displayValues(); ?>
+        </div>
+    </div>
+</div>
 
 <?php echo $this->resourcePageBlocks($item)->getBlocks(); ?>

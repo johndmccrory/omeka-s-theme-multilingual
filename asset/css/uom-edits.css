@@ -636,13 +636,52 @@ cite {
 
 /*Item Show*/
 /*Item Show Heading*/
+.item-show-title {
+  margin-bottom: 0.5rem;
+  }
+
 .item-show-title h2 {
   margin: 0;
-  background: #000;
+  background: #1d1d1d;
   padding: 0.5rem 1rem;
   color: #fff;
 }
 
+.pure-g.item-show-section {
+  background: #ede0e0;
+  margin-bottom: 3rem;
+  }
+  
+  .item-show-media img {
+  width: 100%;
+  height: 100%;
+  max-height: 90vh;
+  }
+  
+  .item-show-metadata  {
+  padding: 1rem;
+  background: #1d1d1d;
+  color: #fff;
+  border: solid 12px #1d1d1d;
+  border-radius: 12px 0 0 12px;
+  }
+  
+  .item-show-metadata .property {
+  justify-content: flex-start;
+  }
+  
+  .item-show-metadata .property dt {
+  color: #FFCC33;
+  text-align: left;
+  }
+      
+  @media screen and (min-width: 641px) {
+  .item-show-title {
+      display: inline-block;
+  }
+  }
+  
+  
 /*Styling and Utility elements*/
 /*Full width*/
 .full-width {
@@ -998,6 +1037,29 @@ header.wrapper {
 .center.large.file .item.resource h2 {
   margin: 2em 0;
 }
+/*Item Show*/
+.item-show-title h2 {
+  padding: 1rem 0;
+  font-size: 30px;
+  }
+  
+  .item-show-media  {
+  padding: 1rem 2rem 1rem 1rem;
+  }
+  
+  .item-show-metadata {
+  padding: 1rem 1rem 1rem 2rem;
+  }
+  
+  .item-show-metadata .property dt {
+      width: 100%;
+      margin: 0;
+  }
+  
+  .item-show-metadata .property dd {
+  text-align: left;
+  width: 100%;
+  }
 }
 
 @media only screen and (min-width: 1025px) {
@@ -1074,6 +1136,20 @@ header.wrapper {
     max-height: unset;
   }
 }
+
+@media screen and (min-width: 1080px) {
+  .item-show-metadata .property dt {
+      width: 35%;
+  }
+
+  .item-show-title h2 {
+    font-size: 34px;
+  }
+  
+  .media-list .resource-link, .property dd {
+      width: calc(65% - 26px);
+  }
+  }
 
 @media only screen and (min-width: 1200px) {
 .image-banner .overlay-container > p {
