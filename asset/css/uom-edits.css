@@ -217,7 +217,7 @@ height: 40vh;
 .rangestoryboard,
 .rangestoryboard .storyboard_viewer {
   width: 90vw!important;
-  height: 75vh!important;
+  height: 76vh!important;
   max-width: 1350px!important;
 }
 
@@ -376,7 +376,7 @@ button#reloadButton {
 }
 
 .seadragonbox {
-  height: 70vh !important;
+    height: 69.5vh;
 }
 
 /*Remove Padding from Annona*/
@@ -648,7 +648,7 @@ cite {
 }
 
 .pure-g.item-show-section {
-  background: #ede0e0;
+  background: #e5e5e5;
   margin-bottom: 3rem;
   }
   
@@ -664,6 +664,7 @@ cite {
   color: #fff;
   border: solid 12px #1d1d1d;
   border-radius: 12px 0 0 12px;
+  min-height: 100vh;
   }
   
   .item-show-metadata .property {
@@ -888,7 +889,7 @@ header.wrapper {
        .center .media-render.iiif_presentation iframe, 
        .rangestoryboard, 
        .rangestoryboard .storyboard_viewer {
-        height: 75vh !important;
+        height: 87vh !important;
     }
 
 /*Desktop menu*/
@@ -1080,10 +1081,6 @@ header.wrapper {
 }
 
   /*Increase height of Annona feature on larger screens*/
-  .seadragonbox {
-    height: 90vh !important;
-  }
-
   /*Increase width of Annona viewer for wider screens*/
   .iiif-storyboard-wide-container {
     width: 100%;
@@ -1158,6 +1155,11 @@ header.wrapper {
   height: 500px;
   margin-top: -32px !important;
 }
+
+  .seadragonbox {
+    height: 88.5vh !important;
+  }
+
 .center .media-render.iiif_presentation iframe,
 .rangestoryboard,
 .rangestoryboard .storyboard_viewer {
