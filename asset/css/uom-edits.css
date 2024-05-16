@@ -217,7 +217,7 @@ height: 40vh;
 .rangestoryboard,
 .rangestoryboard .storyboard_viewer {
   width: 90vw!important;
-  height: 50vh!important;
+  height: 75vh!important;
   max-width: 1350px!important;
 }
 
@@ -848,12 +848,6 @@ header.wrapper {
     height: 350px;
     margin-top: -24px !important;
 }
-
-.center .media-render.iiif_presentation iframe,
-.rangestoryboard,
-.rangestoryboard .storyboard_viewer {
-  height: 70vh!important;
-}
 }
 
 @media screen and (min-width: 625px) {
@@ -889,6 +883,14 @@ header.wrapper {
    .splash {
    margin-top: -49px;
    }
+
+   /*Range Storyboard*/ 
+       .center .media-render.iiif_presentation iframe, 
+       .rangestoryboard, 
+       .rangestoryboard .storyboard_viewer {
+        height: 75vh !important;
+    }
+
 /*Desktop menu*/
 #desktop-nav>ul {
     display:flex;
@@ -1007,12 +1009,6 @@ header.wrapper {
   .overlay-container h1 {
     font-size: 3rem;
   }
-}
-
-.center .media-render.iiif_presentation iframe,
-.rangestoryboard,
-.rangestoryboard .storyboard_viewer {
-  height: 80vh!important;
 }
 
 @media screen and (min-width: 901px) {
@@ -1165,7 +1161,7 @@ header.wrapper {
 .center .media-render.iiif_presentation iframe,
 .rangestoryboard,
 .rangestoryboard .storyboard_viewer {
-  height: 85vh!important;
+  height: 95vh!important;
 }
 }
 
