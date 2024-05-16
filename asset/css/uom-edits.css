@@ -671,7 +671,12 @@ cite {
   color: #fff;
   border: solid 12px #1d1d1d;
   border-radius: 12px 0 0 12px;
+  margin-top: 1rem;
   }
+
+  .item-show-media  {
+    padding-inline: 12px;
+    }
   
   .item-show-metadata .property {
   justify-content: flex-start;
@@ -840,6 +845,10 @@ header.wrapper {
   .image-banner .overlay-container > p {
   font-size: 1.5rem;
   }
+
+  .item-show-media  {
+    padding-inline: 12px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -1041,15 +1050,19 @@ header.wrapper {
   margin: 2em 0;
 }
 /*Item Show*/
+.item-show-media  {
+  padding: 1rem 2rem 1rem 1rem;
+  }
+
+.item-show-metadata  {
+  margin-top: 0;
+}
+
 .item-show-title h2 {
   padding: 1rem 0;
   font-size: 30px;
   }
-  
-  .item-show-media  {
-  padding: 1rem 2rem 1rem 1rem;
-  }
-  
+    
   .item-show-metadata {
   padding: 1rem 1rem 1rem 2rem;
   }
