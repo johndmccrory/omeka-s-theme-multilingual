@@ -453,10 +453,17 @@ button#reloadButton {
   width: 100%;
 }
 
+/*Transcript module*/
 /*Bold transcript text*/
 .player-track p.active {
   font-weight: 600;
 }
+
+/*Remove Pure G flex display for Transcript module*/
+.pure-g.item-show-section:has(.webvtt) {
+  display: block;
+  }
+
 
 /*Hero Image - IvyRze Block*/
 /*Margin for Hero Image text*/
@@ -664,7 +671,6 @@ cite {
   color: #fff;
   border: solid 12px #1d1d1d;
   border-radius: 12px 0 0 12px;
-  min-height: 100vh;
   }
   
   .item-show-metadata .property {
@@ -1057,6 +1063,9 @@ header.wrapper {
   text-align: left;
   width: 100%;
   }
+  .pure-g.item-show-section:has(.webvtt) {
+    display: flex;
+  }
 }
 
 @media only screen and (min-width: 1025px) {
@@ -1127,6 +1136,10 @@ header.wrapper {
   .media-text.max-image-height img {
     width: inherit;
     max-height: unset;
+  }
+
+  .item-show-metadata  {
+  min-height: 100vh;
   }
 }
 
