@@ -79,8 +79,7 @@ foreach ($itemMedia as $index => $media) {
                 <?php echo $this->pageTitle($item->displayTitle(null, $valueLang), 2); ?>
             </div>
             <?php echo $item->displayValues(); ?>
+            <?php echo $this->resourcePageBlocks($item)->getBlocks(); ?>
         </div>
     </div>
 </div>
-
-<?php echo $this->resourcePageBlocks($item)->getBlocks(); ?>

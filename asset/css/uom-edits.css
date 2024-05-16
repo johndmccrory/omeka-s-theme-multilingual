@@ -654,11 +654,19 @@ cite {
   color: #fff;
 }
 
-.pure-g.item-show-section {
+  .item-show-section {
   background: #e5e5e5;
   margin-bottom: 3rem;
   }
+
+  .item-show-section .mirador {
+    height: 90vh;
+  }
   
+  .item-show-media .iiif_presentation {
+    height: 60vh;
+  }
+
   .item-show-media img {
   width: 100%;
   height: 100%;
@@ -766,10 +774,16 @@ h2.block {
 /*Additional margin*/
 .left.file,
 .left.assets {
-  margin: 0 2rem 1rem 1rem;
+  margin: 0 2rem 0 0;
 }
 
-.media-text .left.file {
+.right.file,
+.right.assets {
+  margin: 0 0 0 2rem;
+}
+
+.media-text .left.file,
+.media-text .right.file {
   margin: 1em 0;
 }
 
@@ -864,12 +878,6 @@ header.wrapper {
     height: 350px;
     margin-top: -24px !important;
 }
-}
-
-@media screen and (min-width: 625px) {
-  .site-heading {
-    order: 0;
-  }
 }
 
 @media screen and (max-width: 640px) {
@@ -1001,12 +1009,20 @@ header.wrapper {
   /*Additional margin for media embed*/
   .left.file,
   .left.assets {
-    margin: 0 3rem 1rem 1rem;
+    margin: 0 3rem 0 0;
+  }
+  .right.file,
+  .right.assets {
+    margin: 0 0 0 3rem;
   }
   /*Add side padding for paragraph text*/
   .paragraph-text {
     padding: 1em;
     line-height: 2;
+  }
+
+  .item-show-media .iiif_presentation {
+    height: 75vh;
   }
 }
 
@@ -1052,6 +1068,10 @@ header.wrapper {
 /*Item Show*/
 .item-show-media  {
   padding: 1rem 2rem 1rem 1rem;
+  }
+
+  .item-show-media .iiif_presentation iframe {
+    height: 90vh;
   }
 
 .item-show-metadata  {
