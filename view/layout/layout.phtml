@@ -16,6 +16,7 @@ $this->headLink()->prependStylesheet($this->assetUrl('css/pure-base.css'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/pure-grid.css'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/uom-footer.css'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/multilingual.css'));
+$this->headLink()->prependStylesheet($this->assetUrl('css/storiiies-viewer.css'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/annona.css'));
 $this->headLink()->prependStylesheet('//fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
 $this->headLink()->appendStylesheet($this->assetUrl('css/uom-edits.css'));
@@ -141,6 +142,10 @@ $this->trigger('view.layout');
             <?php
             echo $this->inlineScript()
             ->prependFile($this->assetUrl('js/annona.js'));
+            ?> 
+            <?php
+            echo $this->inlineScript()
+            ->prependFile($this->assetUrl('js/storiiies-viewer.js'));
             ?> 
     </body>
 </html>
