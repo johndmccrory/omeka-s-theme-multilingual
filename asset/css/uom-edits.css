@@ -162,6 +162,21 @@ button.menu-toggle {
 width: 100%;
 }
 
+/*Allow openseadragon use in Media Embed*/
+.left.medium .openseadragon,
+.right.medium .openseadragon {
+height: 40vh!important;
+}
+
+.left .media-render.iiif,
+.right .media-render.iiif {
+margin: 0;
+}
+
+.right, .left {
+  max-width: 50%;
+}
+
 /*Increase size of YouTube videos*/
 .media-render.youtube {
   width: 100%;
