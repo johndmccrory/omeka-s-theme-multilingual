@@ -760,8 +760,8 @@ cite {
 
 /*Padding-vertical 6*/
   .padding-vertical-6 {
-  padding-top: 6rem !important;
-  padding-bottom: 6rem !important;
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
 }
 
 /*Additional margin-top*/
@@ -1044,6 +1044,12 @@ header.wrapper {
   .item-show-media .iiif_presentation {
     height: 75vh;
   }
+
+  /*Padding-vertical 6*/
+  .padding-vertical-6 {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
 }
 
 @media screen and (min-width: 800px) {
@@ -1239,6 +1245,11 @@ header.wrapper {
 .medium-large .rangestoryboard,
 .medium-large .rangestoryboard .storyboard_viewer {
   height: 80.5vh !important;
+}
+/*Padding-vertical 6*/
+.padding-vertical-6 {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
 }
 }
 
