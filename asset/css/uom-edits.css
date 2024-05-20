@@ -1248,3 +1248,7 @@ header.wrapper {
     margin: auto;
   }
 }
+
+.openseadragon.fullpage {
+  height: 100vh!important;
+}
