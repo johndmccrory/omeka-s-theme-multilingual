@@ -368,6 +368,10 @@ height: 40vh;
   display: none;
   }
 
+/*Button*/ 
+.pure-button-primary:hover {
+  background: #79379D;
+}
 
 
 /*Annona Settings*/
