@@ -930,6 +930,11 @@ header.wrapper {
         height: 87vh !important;
     }
 
+    .medium-large .rangestoryboard,
+    .medium-large .rangestoryboard .storyboard_viewer {
+      height: 75vh !important;
+    }
+
 /*Desktop menu*/
 #desktop-nav>ul {
     display:flex;
@@ -1229,6 +1234,11 @@ header.wrapper {
 .rangestoryboard,
 .rangestoryboard .storyboard_viewer {
   height: 95vh!important;
+}
+
+.medium-large .rangestoryboard,
+.medium-large .rangestoryboard .storyboard_viewer {
+  height: 80.5vh !important;
 }
 }
 
