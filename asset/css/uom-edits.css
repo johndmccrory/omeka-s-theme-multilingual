@@ -1009,8 +1009,8 @@ header.wrapper {
     opacity: 0.4;
 }
   /*Increase height of Annona feature on larger screens*/
-  .seadragonbox {
-    height: 80vh !important;
+  .large .seadragonbox {
+    height: 75vh !important;
   }
   .large .media-render.youtube.html {
   height: 80vh;
@@ -1217,7 +1217,11 @@ header.wrapper {
   margin-top: -32px !important;
 }
 
-  .seadragonbox {
+.medium-large .seadragonbox {
+  height: 75vh !important;
+}
+
+ .large .seadragonbox {
     height: 88.5vh !important;
   }
 
