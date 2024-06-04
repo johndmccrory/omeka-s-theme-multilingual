@@ -1019,7 +1019,7 @@ header.wrapper {
 }
   /*Increase height of Annona feature on larger screens*/
   .large .seadragonbox {
-    height: 75vh !important;
+    height: 70vh !important;
   }
   .large .media-render.youtube.html {
   height: 80vh;
