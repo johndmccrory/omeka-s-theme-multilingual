@@ -178,20 +178,24 @@ margin: 0;
 }
 
 /*Increase size of YouTube videos*/
-.media-render.youtube {
+.media-render.youtube,
+.media-render.oembed {
   width: 100%;
 }
 
 /*HTML Media Render YouTube*/
-.large .media-render.youtube.html {
+.large .media-render.youtube.html
+.large .media-render.oembed.html {
 height: 60vh;
 }
 
-.medium-large .media-render.youtube.html {
+.medium-large .media-render.youtube.html,
+.medium-large .media-render.oembed.html {
 height: 50vh;
 }
 
-.medium .media-render.youtube.html {
+.medium .media-render.youtube.html,
+.medium .media-render.oembed.html {
 height: 40vh;
 }
 
@@ -1021,13 +1025,16 @@ header.wrapper {
   .large .seadragonbox {
     height: 70vh !important;
   }
-  .large .media-render.youtube.html {
-  height: 80vh;
+  .large .media-render.youtube.html,
+  .large .media-render.oembed.html {
+  height: 70vh;
   }
-  .medium-large .media-render.youtube.html {
-  height: 65vh;
+  .medium-large .media-render.youtube.html,
+  .medium-large .media-render.oembed.html {
+  height: 60vh;
   }
-  .medium .media-render.youtube.html {
+  .medium .media-render.youtube.html,
+  .medium .media-render.oembed.html {
   height: 50vh;
   }
   /*Additional margin for media embed*/
