@@ -1,62 +1,6 @@
-/*Resource with text block*/
-.media-text {
-    display: flex;
-    align-items: center;
-    }
+
     
-    .media-text img {
-    width: 100%;
-    }
     
-    .media-text .left,
-    .media-text .right {
-    flex-basis: 50%;
-    max-width: 50%;
-    }
-    
-    .media-text .left {
-    order: 0;
-    }
-    .media-text .right {
-    order: 1;
-    }
-    
-    .media-text .text {
-    flex-basis: 50%;
-    padding: 48px;
-    }
-    
-    /*End Resource with text block*/
-    
-    .header-top {
-        display: flex;
-        margin: 0 auto;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        align-items: center;
-        width: 1140px;
-    }
-    
-    .site-title {
-        vertical-align: middle;
-        margin-right: auto
-    }
-    
-    .site-title img {
-        vertical-align: top;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
-    a.university-logo  img {
-        width: 169px;
-        height: 70px;
-        margin: 24px 24px 12px 24px;
-    }
-    .university-logo img:hover,
-    header .site-title img:hover {
-        opacity: 1 !important;
-    }
     .site-heading {
         color: #6B2C91;
         text-decoration: none;
@@ -68,31 +12,14 @@
         width: 25%;
     }
     .site-heading p {
-        color: #6B2C91;
+        
         margin: 12px 0;
     }
-    .site-title h1 {
-        color: #6B2C91;
-        text-decoration: none;
-        padding: 0;
-    }
-
-    h1.site-title-heading {
-        line-height: inherit;
-        padding: 0 24px;
-        font-size: 28px;
-        text-align: right;
-    }
-    
+ 
     .break {
       flex-basis: 100%;
       height: 0;
     }
-    
-    /*Remove IIIF Media from Item Show page
-    .media-render.iiif {
-    display: none;
-    }/*
 
     /*Media Queries*/
     @media screen and (max-width: 480px) {

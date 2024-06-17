@@ -47,10 +47,23 @@ a.university-logo {
   width: 246px;
   margin: 0 24px; 
   }
-  
-  .site-heading p {
-      margin: 0 0 12px 0;
-  }
+    .site-title h1 {
+    color: #6B2C91;
+    text-decoration: none;
+    padding: 0;
+}
+
+.site-heading p {
+  margin: 0 0 12px 0;
+  color: #6B2C91;
+}
+
+h1.site-title-heading {
+  line-height: inherit;
+  padding: 0 24px;
+  font-size: 28px;
+  text-align: right;
+}
 
 .break {
   flex-basis: 100%;
@@ -64,6 +77,36 @@ a.university-logo {
       font-size: 16px;
       color: #b1b2b4;
   }
+
+  .header-top {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 1140px;
+}
+
+.site-title {
+  vertical-align: middle;
+  margin-right: auto
+}
+
+.site-title img {
+  vertical-align: top;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+a.university-logo  img {
+  width: 169px;
+  height: 70px;
+  margin: 24px 24px 12px 24px;
+}
+.university-logo img:hover,
+header .site-title img:hover {
+  opacity: 1 !important;
+}
   
   button#switcher-toggle path {
   stroke: #b1b2b4;
@@ -347,7 +390,12 @@ height: 40vh;
   justify-content: space-around;
 }
 
+.media-text img {
+  width: 100%;
+  }
+
 .media-text .text {
+  flex-basis: 50%;
   padding: 0 24px 24px 24px;
   max-width: 600px;
 }
@@ -360,6 +408,19 @@ height: 40vh;
   padding: 0;
   font-size: 95%;
   color: #655e5e; 
+}
+
+.media-text .left,
+.media-text .right {
+flex-basis: 50%;
+max-width: 50%;
+}
+
+.media-text .left {
+order: 0;
+}
+.media-text .right {
+order: 1;
 }
 
 .media-text .left .item.resource .caption {
