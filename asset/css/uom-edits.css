@@ -1,3 +1,8 @@
+html {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 /*Add padding to wrapper*/
 .wrapper {
   padding-inline: 24px;
@@ -46,6 +51,11 @@ a.university-logo {
   .site-heading p {
       margin: 0 0 12px 0;
   }
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
   
   header .menu-toggle, 
   .search-toggle, 
@@ -627,7 +637,6 @@ cite {
 /*Paragraph Text*/
 .paragraph-text {
   padding: 1em 0;
-  line-height: 2;
 }
 
 .paragraph-text p,
@@ -818,6 +827,11 @@ h2.block {
   color: #fff;
   }
 
+/*Add larger font size option*/ 
+.lead {
+  font-size: 110%;
+  }
+
 /*See More CSS*/
 #seeMore {
   display: none;
@@ -953,7 +967,6 @@ header.wrapper {
 #desktop-nav li{
     font-size:16px;
     list-style-type:none;
-    letter-spacing:.5px; 
 }
 #desktop-nav ul a{
     transition:opacity .3s ease
