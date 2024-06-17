@@ -1,37 +1,4 @@
-
-    
-    
-    .site-heading {
-        color: #6B2C91;
-        text-decoration: none;
-        padding: 0;
-        margin: 0 30px;
-        display: flex;
-        order: 1;
-        flex-grow: 3;
-        width: 25%;
-    }
-    .site-heading p {
-        
-        margin: 12px 0;
-    }
- 
-    .break {
-      flex-basis: 100%;
-      height: 0;
-    }
-
     /*Media Queries*/
-    @media screen and (max-width: 480px) {
-        .media-text .text {
-            padding: 12px;
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-
-    }
-
     @media screen and (max-width: 1024px) {
         h1.site-title-heading {
             text-align: left;
