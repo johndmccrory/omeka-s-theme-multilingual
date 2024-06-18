@@ -39,16 +39,13 @@ h2 a {
     color: #6B2C91;
     text-decoration: none;
     padding: 0;
-    margin: 0 30px;
     display: flex;
-    order: 1;
     flex-grow: 3;
-    width: 25%;
-
     order: 3;
     width: 246px;
     margin: 0 24px 0 0; 
     }
+
     .site-title h1 {
     color: #6B2C91;
     text-decoration: none;
@@ -456,7 +453,7 @@ order: 1;
 
 /*Button*/ 
 .pure-button-primary:hover {
-  background: #79379D;
+  background: hsl(0deg 0% 82.45);
 }
 
 
@@ -1003,6 +1000,9 @@ header.wrapper {
   a.university-logo  img {
       margin: 24px;
   }
+  .site-heading {
+    margin: 0 24px;
+}
 }
 
 @media screen and (max-width: 640px) {
