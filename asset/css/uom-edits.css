@@ -55,6 +55,7 @@ h2 a {
 .site-heading p {
   margin: 0 0 12px 0;
   color: #6B2C91;
+  font-size: 18px;
 }
 
 h1.site-title-heading {
@@ -920,12 +921,6 @@ margin-top: 0!important;
 }
 
 /*Media queries*/
-@media screen and (max-width: 340px) {
-  .site-heading p {
-    font-size: 19px;
-  }
-}
-
 @media screen and (min-width: 342px) {
   nav#top-nav.hide-for-desktop.open {
   right: -1.35rem;
@@ -998,10 +993,10 @@ header.wrapper {
 
 @media screen and (min-width: 600px) {
   a.university-logo  img {
-      margin: 24px;
+      margin: 24px 24px 24px 12px;
   }
   .site-heading {
-    margin: 0 24px;
+    margin: 0 12px;
 }
 }
 
@@ -1168,6 +1163,12 @@ header.wrapper {
   .hero-title-openseadragon h1 {
     font-size: 3rem;
     }
+}
+
+@media screen and (min-width: 700px) {
+  .site-heading p {
+    font-size: 20px;
+  }
 }
 
 @media screen and (min-width: 801px) {
