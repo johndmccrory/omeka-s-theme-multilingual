@@ -42,7 +42,7 @@ h2 a {
     display: flex;
     flex-grow: 3;
     order: 3;
-    width: 246px;
+    width: 280px;
     margin: 0 24px 0 0; 
     }
 
@@ -191,6 +191,12 @@ button.menu-toggle {
   padding-left: 9px;
 }
 
+/*Search options*/ 
+.results>ul+a,
+.results li a:not(.resource-link) {
+    color: #fff;
+    padding: 2px;
+}
 
 /*Block Styling*/
 /*Centre Media Embed items*/
@@ -224,11 +230,12 @@ width: 100%;
 .left.medium .openseadragon,
 .right.medium .openseadragon {
 height: 40vh!important;
+min-width: 25vw !important;
 }
 
 .left .media-render.iiif,
 .right .media-render.iiif {
-margin: 0;
+margin: 0 0 12px 0;
 }
 
 .right, .left {
@@ -267,6 +274,11 @@ height: 40vh;
   height: 85vh;
 }
 
+/*Minimum width for openseadron item showcase*/
+.item-showcase .openseadragon {
+  min-width: 80vw;
+}
+
 /*Item Showcase Openseadragon*/ 
 .openseadragon {
   height: 85vh!important;
@@ -298,7 +310,7 @@ height: 40vh;
 .rangestoryboard,
 .rangestoryboard .storyboard_viewer {
   width: 90vw!important;
-  height: 76vh!important;
+  height: 75vh!important;
   max-width: 1350px!important;
 }
 
@@ -457,6 +469,15 @@ order: 1;
   background: hsl(0deg 0% 82.45);
 }
 
+/*Item Show*/
+/*Underline links and remove additional link formatting*/
+.item-show-metadata a {
+  text-decoration: underline;
+  } 
+
+  span a {
+    background-color: unset;
+}
 
 /*Annona Settings*/
 button#keyboardButton,
@@ -927,6 +948,19 @@ margin-top: 0!important;
   }
 }
 
+/*Screen Readers*/ 
+/*Code for hero banner accessibility*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 @media screen and (min-width: 360px) {
   a.university-logo img {
    margin: 24px 12px 12px 0;
@@ -1029,11 +1063,17 @@ header.wrapper {
    }
 
    /*Range Storyboard*/ 
-       .center .media-render.iiif_presentation iframe, 
+       /*.center .media-render.iiif_presentation iframe, 
        .rangestoryboard, 
        .rangestoryboard .storyboard_viewer {
         height: 87vh !important;
-    }
+    }*/
+
+    .center .media-render.iiif_presentation iframe, 
+    .rangestoryboard, 
+    .rangestoryboard .storyboard_viewer {
+      height: 75vh !important;
+  }
 
     .medium-large .rangestoryboard,
     .medium-large .rangestoryboard .storyboard_viewer {
@@ -1389,6 +1429,10 @@ header.wrapper {
 .padding-vertical-6 {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
+}
+
+.item-showcase .openseadragon {
+  min-width: 70vw;
 }
 }
 
