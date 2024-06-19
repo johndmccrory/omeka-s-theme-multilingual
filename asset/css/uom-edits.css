@@ -897,12 +897,12 @@ h2.block {
 /*Additional margin*/
 .left.file,
 .left.assets {
-  margin: 0 2rem 0 0;
+  margin: 0 1rem 0 0;
 }
 
 .right.file,
 .right.assets {
-  margin: 0 0 0 2rem;
+  margin: 0 0 0 1rem;
 }
 
 .media-text .left.file,
@@ -1008,6 +1008,19 @@ header.wrapper {
   .item-show-media  {
     padding-inline: 12px;
     }
+}
+
+@media screen and (min-width: 480px) {
+  /*Additional margin*/
+.left.file,
+.left.assets {
+  margin: 0 2rem 0 0;
+}
+
+.right.file,
+.right.assets {
+  margin: 0 0 0 2rem;
+}
 }
 
 @media screen and (max-width: 500px) {
@@ -1244,13 +1257,6 @@ header.wrapper {
   .media-text .text {
       flex-basis: 100%;
       padding: 24px;
-  }
-  .left.file, 
-  .left.assets,
-  .right.file, 
-  .right.assets {
-      margin: 0;
-      width: 100%;
   }
 }
 
