@@ -1303,6 +1303,10 @@ header.wrapper {
 }
 
 @media only screen and (min-width: 1025px) {
+  .learn-more {
+    justify-content: flex-start;
+  }
+  
   .media-text .left, .media-text .right {
     max-width: unset;
     flex-basis: 55%;
