@@ -34,7 +34,7 @@
         <div class="caption"><?php echo $caption; ?></div>
     <?php endif; ?>
         <div class="learn-more">
-            <button class="pure-button-secondary button-xlarge"><?php echo $item->link("View full item"); ?></button>
+            <button class="pure-button-primary button-xlarge"><?php echo $item->link("View full item"); ?></button>
         </div>
     </div>
 <?php endforeach; ?>
