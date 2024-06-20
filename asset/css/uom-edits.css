@@ -437,8 +437,8 @@ height: 40vh;
 
 .media-text .left,
 .media-text .right {
-flex-basis: 50%;
-max-width: 50%;
+flex-basis: 100%;
+max-width: 100%;
 }
 
 .media-text .left {
@@ -913,11 +913,6 @@ h2.block {
   margin: 0 0 0 1rem;
 }
 
-.media-text .left.file,
-.media-text .right.file {
-  margin: 1em 0;
-}
-
 .grey-background {
   background-color: #efefef;
   }
@@ -1308,6 +1303,11 @@ header.wrapper {
 }
 
 @media only screen and (min-width: 1025px) {
+  .media-text .left, .media-text .right {
+    max-width: unset;
+    flex-basis: 55%;
+  }
+
   /*Switch order of media player and transcription*/
   .player-reverse
     .file
