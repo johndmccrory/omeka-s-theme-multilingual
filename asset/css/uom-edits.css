@@ -1255,7 +1255,7 @@ header.wrapper {
   flex-direction: row;
   }
   .media-text .text {
-    padding: 24px;
+    padding: 24px 48px;
     flex-basis: 40%;
   }
   .openseadragon-hero {
@@ -1306,10 +1306,11 @@ header.wrapper {
   .learn-more {
     justify-content: flex-start;
   }
-  
-  .media-text .left, .media-text .right {
+
+  .media-text .left, 
+  .media-text .right {
     max-width: unset;
-    flex-basis: 55%;
+    flex-basis: 60%;
   }
 
   /*Switch order of media player and transcription*/
