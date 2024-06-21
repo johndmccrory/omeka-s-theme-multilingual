@@ -281,12 +281,20 @@ height: 40vh;
 
 /*Item Showcase Openseadragon*/ 
 .openseadragon {
-  height: 85vh!important;
+  height: 70vh!important;
   background: #000;
 }
 
 .openseadragon.fullpage {
   height: 100vh!important;
+}
+
+.medium-large .openseadragon {
+  height: 60vh!important;
+}
+
+.medium .openseadragon {
+  height: 50vh!important;
 }
 
 /*Increase banner subheading size*/
@@ -316,20 +324,23 @@ height: 40vh;
 
 /*Title above media player for Media Embed Blocks*/
 .center.large.file .item.resource,
-.center.medium-large.file .item.resource {
+.center.medium-large.file .item.resource,
+.center.medium.file .item.resource {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 }
 
 .center.large.file .item.resource .media-render.webvtt,
-.center.medium-large.file .item.resource .media-render.webvtt {
+.center.medium-large.file .item.resource .media-render.webvtt,
+.center.medium.file .item.resource .media-render.webvtt {
   width: 100%;
   flex-basis: 100%;
 }
 
 .center.large.file .item.resource h2,
-.center.medium-large.file .item.resource h2 {
+.center.medium-large.file .item.resource h2,
+.center.medium.file .item.resource h2 {
   order: -1;
 }
 
@@ -511,7 +522,7 @@ button#reloadButton {
     height: 69.5vh;
 }
 
-.medium.seadragonbox {
+.medium .seadragonbox {
   height: 40vh;
 }
 
@@ -831,6 +842,16 @@ cite {
   }
       
   @media screen and (min-width: 641px) {
+
+/*Item Showcase Openseadragon*/ 
+.medium-large .openseadragon {
+  height: 70vh!important;
+}
+
+.medium .openseadragon {
+  height: 60vh!important;
+}
+
   .item-show-title {
       display: inline-block;
   }
@@ -1095,10 +1116,15 @@ header.wrapper {
       height: 75vh !important;
   }
 
-    .medium-large .rangestoryboard,
-    .medium-large .rangestoryboard .storyboard_viewer {
-      height: 75vh !important;
-    }
+  .medium-large .rangestoryboard,
+  .medium-large .rangestoryboard .storyboard_viewer {
+    height: 75vh !important;
+  }
+
+  .medium .rangestoryboard,
+  .medium .rangestoryboard .storyboard_viewer {
+    height: 65vh !important;
+  }  
 
 /*Desktop menu*/
 #desktop-nav>ul {
@@ -1259,6 +1285,15 @@ header.wrapper {
 }
 
 @media screen and (min-width: 1024px) {
+
+  .medium-large .openseadragon {
+    height: 75vh!important;
+  }
+  
+  .medium .openseadragon {
+    height: 70vh!important;
+  }
+
   .media-text {
   flex-direction: row;
   }
@@ -1437,6 +1472,11 @@ header.wrapper {
 .rangestoryboard,
 .rangestoryboard .storyboard_viewer {
   height: 95vh!important;
+}
+
+.medium .rangestoryboard,
+.medium .rangestoryboard .storyboard_viewer {
+  height: 70vh !important;
 }
 
 .medium-large .rangestoryboard,
