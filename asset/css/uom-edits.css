@@ -511,6 +511,10 @@ button#reloadButton {
     height: 69.5vh;
 }
 
+.medium.seadragonbox {
+  height: 40vh;
+}
+
 /*Remove Padding from Annona*/
 .storyboard_viewer {
   padding-bottom: 0;
@@ -1174,6 +1178,10 @@ header.wrapper {
     opacity: 0.4;
 }
   /*Increase height of Annona feature on larger screens*/
+  .medium .seadragonbox {
+    height: 60vh !important;
+  }
+
   .large .seadragonbox {
     height: 70vh !important;
   }
@@ -1411,6 +1419,10 @@ header.wrapper {
 .openseadragon-hero {
   height: 500px;
   margin-top: -32px !important;
+}
+
+.medium .seadragonbox {
+  height: 70vh !important;
 }
 
 .medium-large .seadragonbox {
