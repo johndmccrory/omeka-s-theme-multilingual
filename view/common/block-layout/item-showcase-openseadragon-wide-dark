@@ -1,6 +1,6 @@
 <div class="item-showcase full-width dark">
 <?php foreach ($attachments as $attachment): ?>
-    <div class="item resource">
+    <div class="item resource <?= $thumbnailType?>">
     <?php
     $item = $attachment->item();
     if ($item):
