@@ -520,7 +520,7 @@ button#reloadButton {
 }
 
 .seadragonbox {
-    height: 69.5vh;
+    height: 40vh;
 }
 
 .medium .seadragonbox {
@@ -1101,6 +1101,10 @@ header.wrapper {
    margin-top: -49px;
    }
 
+  .seadragonbox {
+    height: 75vh!important;
+  }
+
    .openseadragon {
     height: 75vh!important;
     background: #000;
@@ -1257,7 +1261,8 @@ header.wrapper {
     font-size: 3rem;
     }
 
-    .openseadragon {
+    .openseadragon,
+    .seadragonbox {
       height: 80vh!important;
       background: #000;
     }
@@ -1456,7 +1461,8 @@ header.wrapper {
   }
 
 @media only screen and (min-width: 1200px) {
-  .openseadragon {
+  .openseadragon,
+  .seadragonbox {
     height: 95vh!important;
     background: #000;
   }
