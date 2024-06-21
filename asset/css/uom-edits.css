@@ -43,7 +43,7 @@ h2 a {
     flex-grow: 3;
     order: 3;
     width: 280px;
-    margin: 0 24px 0 0; 
+    margin: 0; 
     }
 
     .site-title h1 {
@@ -281,7 +281,7 @@ height: 40vh;
 
 /*Item Showcase Openseadragon*/ 
 .openseadragon {
-  height: 70vh!important;
+  height: 85vh!important;
   background: #000;
 }
 
@@ -1070,9 +1070,6 @@ header.wrapper {
   a.university-logo  img {
       margin: 24px 24px 24px 12px;
   }
-  .site-heading {
-    margin: 0 12px;
-}
 }
 
 @media screen and (max-width: 640px) {
@@ -1082,12 +1079,12 @@ header.wrapper {
 }
 
 @media screen and (min-width: 641px) {
+  .site-heading {
+    order: 0;
+}
   a.university-logo {
     flex-grow: 0;
 }
-  .site-heading {
-    order: 0;
-  }
   button.search-toggle {
     order: 1;
     }
@@ -1256,6 +1253,9 @@ header.wrapper {
 }
 
 @media screen and (min-width: 700px) {
+  .site-heading {
+    margin: 0 12px;
+  }
   .site-heading p {
     font-size: 20px;
   }
@@ -1285,13 +1285,12 @@ header.wrapper {
 }
 
 @media screen and (min-width: 1024px) {
-
   .medium-large .openseadragon {
-    height: 75vh!important;
+    height: 85vh!important;
   }
   
   .medium .openseadragon {
-    height: 70vh!important;
+    height: 80vh!important;
   }
 
   .media-text {
@@ -1445,6 +1444,14 @@ header.wrapper {
   }
 
 @media only screen and (min-width: 1200px) {
+  .medium-large .openseadragon {
+    height: 95vh!important;
+  }
+  
+  .medium .openseadragon {
+    height: 90vh!important;
+  }
+
 .image-banner .overlay-container > p {
   font-size: 2rem;
   }
