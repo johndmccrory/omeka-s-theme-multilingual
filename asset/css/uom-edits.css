@@ -288,6 +288,14 @@ height: 40vh;
   margin: 0 auto;
 }
 
+.center .media-render.iiif_presentation iframe,
+.rangestoryboard,
+.rangestoryboard .storyboard_viewer {
+  width: 90vw!important;
+  height: 45.5vh!important;
+  max-width: 1350px!important;
+}
+
 /*Item Showcase Block*/
 .item-showcase > .item.resource:only-child > img {
   height: 85vh;
@@ -313,14 +321,6 @@ height: 40vh;
   width: 100%;
   height: 100%;
   margin: 0 auto;
-}
-
-.center .media-render.iiif_presentation iframe,
-.rangestoryboard,
-.rangestoryboard .storyboard_viewer {
-  width: 90vw!important;
-  height: 75vh!important;
-  max-width: 1350px!important;
 }
 
 /*Title above media player for Media Embed Blocks*/
@@ -1106,13 +1106,6 @@ header.wrapper {
     height: 75vh!important;
     background: #000;
   }
-
-   /*Range Storyboard*/ 
-       /*.center .media-render.iiif_presentation iframe, 
-       .rangestoryboard, 
-       .rangestoryboard .storyboard_viewer {
-        height: 87vh !important;
-    }*/
 
     .center .media-render.iiif_presentation iframe, 
     .rangestoryboard, 
