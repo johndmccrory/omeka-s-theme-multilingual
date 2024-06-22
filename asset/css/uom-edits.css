@@ -456,9 +456,6 @@ max-width: 100%;
 .media-text .left {
 order: 0;
 }
-.media-text .right {
-order: 1;
-}
 
 .media-text .left .item.resource .caption {
   text-align: left;
@@ -1371,6 +1368,10 @@ header.wrapper {
     max-width: unset;
     flex-basis: 60%;
   }
+
+  .media-text .right {
+    order: 1;
+    }
 
   /*Switch order of media player and transcription*/
   .player-reverse
