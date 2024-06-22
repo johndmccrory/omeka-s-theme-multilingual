@@ -804,7 +804,7 @@ cite {
   }
 
   .item-show-section .mirador {
-    height: 90vh;
+    height: 60vh;
   }
   
   .item-show-media .iiif_presentation {
@@ -1292,6 +1292,9 @@ header.wrapper {
 }
 
 @media screen and (min-width: 1024px) {
+  .item-show-section .mirador {
+    height: 95vh;
+  }
   .medium-large .openseadragon {
     height: 85vh!important;
   }
