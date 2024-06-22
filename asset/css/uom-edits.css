@@ -748,7 +748,7 @@ cite {
 
 /*Paragraph Text*/
 .paragraph-text {
-  padding: 1em 0;
+  padding: 1em;
 }
 
 .paragraph-text p,
@@ -1352,7 +1352,7 @@ header.wrapper {
 }
 
 @media only screen and (min-width: 1025px) {
-  .learn-more {
+  .media-text .learn-more {
     justify-content: flex-start;
   }
 
