@@ -219,7 +219,7 @@ button.menu-toggle {
 
 
 /*Centre Media Embed items*/
-.file {
+.file.media-embed {
   margin: 0;
   padding: 1rem 0;
 }
@@ -926,12 +926,12 @@ h2.block {
 }
 
 /*Additional margin*/
-.left.file:not(.media-text),
+.left.file.media-embed,
 .left.assets {
   margin: 0 1rem 0 0;
 }
 
-.right.file:not(.media-text),
+.right.file.media-embed,
 .right.assets {
   margin: 0 0 0 1rem;
 }
@@ -1038,12 +1038,12 @@ header.wrapper {
 
 @media screen and (min-width: 480px) {
   /*Additional margin*/
-.left.file,
+.left.file.media-embed,
 .left.assets {
   margin: 0 2rem 0 0;
 }
 
-.right.file,
+.right.file.media-embed,
 .right.assets {
   margin: 0 0 0 2rem;
 }
@@ -1228,11 +1228,11 @@ header.wrapper {
   height: 50vh;
   }
   /*Additional margin for media embed*/
-  .left.file,
+  .left.file.media-embed,
   .left.assets {
     margin: 0 3rem 0 0;
   }
-  .right.file,
+  .right.file.media-embed,
   .right.assets {
     margin: 0 0 0 3rem;
   }
