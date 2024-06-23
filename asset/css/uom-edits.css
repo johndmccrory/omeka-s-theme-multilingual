@@ -286,6 +286,8 @@ height: 40vh;
 
 .iiif-storyboard-wide-container {
   margin: 0 auto;
+  width: 100%;
+  min-width: 80vw;
 }
 
 .center .media-render.iiif_presentation iframe,
@@ -372,6 +374,10 @@ height: 40vh;
 /*Mirador Header*/
 .mirador-viewer header {
   align-items: inherit;
+}
+
+.MuiIconButton-root {
+  padding: 8px!important;
 }
 
 /*Underline hover on main menu*/
@@ -1405,6 +1411,7 @@ header.wrapper {
   /*Increase width of Annona viewer for wider screens*/
   .iiif-storyboard-wide-container {
     width: 100%;
+    min-width: 90vw;
     max-width: 1350px;
   }
   /*Increase size of Blockquote*/
