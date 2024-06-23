@@ -1239,7 +1239,7 @@ header.wrapper {
   }
   .right.media-embed, 
   .left.media-embed {
-    max-width: unset;
+    max-width: 33%;
   }
   /*Add side padding for paragraph text*/
   .paragraph-text {
