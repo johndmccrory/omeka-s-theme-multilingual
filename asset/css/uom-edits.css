@@ -285,7 +285,6 @@ height: 40vh;
 }
 
 .iiif-storyboard-wide-container {
-  width: 90vw;
   margin: 0 auto;
 }
 
@@ -471,7 +470,7 @@ order: 0;
 }
 
 .learn-more {
-  margin-top: 3rem;
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
 } 
@@ -1106,31 +1105,6 @@ header.wrapper {
    margin-top: -49px;
    }
 
-  .seadragonbox {
-    height: 75vh!important;
-  }
-
-   .openseadragon {
-    height: 75vh!important;
-    background: #000;
-  }
-
-    .center .media-render.iiif_presentation iframe, 
-    .rangestoryboard, 
-    .rangestoryboard .storyboard_viewer {
-      height: 75vh !important;
-  }
-
-  .medium-large .rangestoryboard,
-  .medium-large .rangestoryboard .storyboard_viewer {
-    height: 75vh !important;
-  }
-
-  .medium .rangestoryboard,
-  .medium .rangestoryboard .storyboard_viewer {
-    height: 65vh !important;
-  }  
-
 /*Desktop menu*/
 #desktop-nav>ul {
     display:flex;
@@ -1208,6 +1182,32 @@ header.wrapper {
     margin-right:6px;
     opacity: 0.4;
 }
+
+.seadragonbox {
+  height: 75vh!important;
+}
+
+ .openseadragon {
+  height: 75vh!important;
+  background: #000;
+}
+
+  .center .media-render.iiif_presentation iframe, 
+  .rangestoryboard, 
+  .rangestoryboard .storyboard_viewer {
+    height: 75vh !important;
+}
+
+.medium-large .rangestoryboard,
+.medium-large .rangestoryboard .storyboard_viewer {
+  height: 75vh !important;
+}
+
+.medium .rangestoryboard,
+.medium .rangestoryboard .storyboard_viewer {
+  height: 65vh !important;
+}  
+
   /*Increase height of Annona feature on larger screens*/
   .medium .seadragonbox {
     height: 60vh !important;
@@ -1237,10 +1237,6 @@ header.wrapper {
   .right.assets {
     margin: 0 0 0 3rem;
   }
-  .right.media-embed, 
-  .left.media-embed {
-    max-width: 33%;
-  }
   /*Add side padding for paragraph text*/
   .paragraph-text {
     padding: 1em;
@@ -1258,6 +1254,15 @@ header.wrapper {
   }
 }
 
+@media screen and (min-width: 700px) {
+  .site-heading {
+    margin: 0 12px;
+  }
+  .site-heading p {
+    font-size: 20px;
+  }
+}
+
 @media screen and (min-width: 800px) {
   .hero-title-openseadragon h1 {
     font-size: 3rem;
@@ -1269,15 +1274,10 @@ header.wrapper {
       background: #000;
     }
 
-}
-
-@media screen and (min-width: 700px) {
-  .site-heading {
-    margin: 0 12px;
-  }
-  .site-heading p {
-    font-size: 20px;
-  }
+    .right.media-embed, 
+    .left.media-embed {
+      max-width: 33%;
+    }
 }
 
 @media screen and (min-width: 801px) {
@@ -1500,7 +1500,7 @@ header.wrapper {
 }
 
 .medium-large .seadragonbox {
-  height: 75vh !important;
+  height: 67vh !important;
 }
 
  .large .seadragonbox {
