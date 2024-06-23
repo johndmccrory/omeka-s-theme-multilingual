@@ -257,7 +257,8 @@ min-width: 25vw !important;
 margin: 0 0 12px 0;
 }
 
-.right, .left {
+.right:not(.media-embed), 
+.left:not(.media-embed) {
   max-width: 50%;
 }
 
