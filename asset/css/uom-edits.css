@@ -257,8 +257,8 @@ min-width: 25vw !important;
 margin: 0 0 12px 0;
 }
 
-.right:not(.media-embed), 
-.left:not(.media-embed) {
+.right,
+.left {
   max-width: 50%;
 }
 
@@ -1236,6 +1236,10 @@ header.wrapper {
   .right.file.media-embed,
   .right.assets {
     margin: 0 0 0 3rem;
+  }
+  .right.media-embed, 
+  .left.media-embed {
+    max-width: unset;
   }
   /*Add side padding for paragraph text*/
   .paragraph-text {
