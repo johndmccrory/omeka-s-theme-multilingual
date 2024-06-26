@@ -1,6 +1,6 @@
 <div class="item-showcase">
 <?php foreach ($attachments as $attachment): ?>
-    <div class="item resource">
+    <div class="item resource <?= $thumbnailType?>">
     <?php
     $item = $attachment->item();
     if ($item):
@@ -32,7 +32,7 @@
         <div class="caption"><?php echo $caption; ?></div>
     <?php endif; ?>
         <div class="learn-more">
-            <button class="pure-button-secondary button-xlarge"><?php echo $item->link("View full item"); ?></button>
+            <button class="pure-button-primary button-xlarge"><?php echo $item->link("View full item"); ?></button>
         </div>
     </div>
 <?php endforeach; ?>

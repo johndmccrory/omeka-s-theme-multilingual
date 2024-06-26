@@ -1,0 +1,43 @@
+<div class="item-showcase full-width dark">
+    <div class="wrapper">
+        <?php foreach ($attachments as $attachment): ?>
+            <div class="item resource <?= $thumbnailType?>">
+            <?php
+            $item = $attachment->item();
+            if ($item):
+            ?>
+            <section class="iiif-storyboard-wide-container">
+                <?php
+                $media = $attachment->media() ?: $item->primaryMedia();
+                if ($media):
+                    echo $media->render([
+                        'thumbnailType' => $thumbnailType,
+                    ]);
+                endif;
+                ?>
+            </section>
+                <?php $showTitleOption = $this->showTitleOption; ?>
+                <?php if ($showTitleOption == 'item_title'): ?>
+                    <div class="title">
+                        <h2><?php echo $item->displayTitle(); ?></h2>
+                    </div>
+                <?php elseif ($showTitleOption == 'file_name'): ?>
+                    <div class="title">
+                        <h2><?php echo $media->displayTitle(); ?></h2>
+                    </div>
+                <?php endif; ?>
+            <?php endif; ?>
+
+            <?php
+            $caption = $attachment->caption();
+            if ($caption):
+            ?>
+                <div class="caption"><?php echo $caption; ?></div>
+            <?php endif; ?>
+                <div class="learn-more">
+                    <button class="pure-button-primary button-xlarge"><?php echo $item->link("View full item"); ?></button>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</div>
