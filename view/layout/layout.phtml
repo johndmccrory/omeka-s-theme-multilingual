@@ -140,5 +140,9 @@ $this->trigger('view.layout');
             echo $this->inlineScript()
             ->prependFile($this->assetUrl('js/annona.js'));
             ?> 
+            <?php
+            echo $this->inlineScript()
+            ->prependFile($this->assetUrl('../application/asset/vendor/openseadragon/openseadragon.min.js"'));
+            ?> 
     </body>
 </html>
