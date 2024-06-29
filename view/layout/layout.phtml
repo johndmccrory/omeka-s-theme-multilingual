@@ -20,6 +20,7 @@ $this->headLink()->appendStylesheet($this->assetUrl('css/uom-edits.css'));
 $this->headScript()->prependFile($this->assetUrl('js/thedaily.js'));
 $this->headScript()->prependFile($this->assetUrl('js/global.js', 'Omeka'));
 $this->headScript()->prependFile($this->assetUrl('vendor/jquery/jquery.min.js', 'Omeka'));
+$this->headScript()->prependFile($this->assetUrl('vendor/openseadragon/openseadragon.min.js', 'Omeka'));
 $this->jsTranslate();
 $this->trigger('view.layout');
 ?>
