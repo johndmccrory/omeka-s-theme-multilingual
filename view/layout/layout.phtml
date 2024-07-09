@@ -50,7 +50,9 @@ $this->trigger('view.layout');
         <?php echo $userBar; ?>
         <header class="wrapper">
             <div class="header-top">
-                <a class="university-logo" href="http://www.manchester.ac.uk"><img alt="University of Manchester" src="https://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_backgrounds/TAB_col_white_background.png" alt="The University of Manchester Library logo"/></a>
+            <a class="university-logo" href="http://www.manchester.ac.uk">
+                <img alt="University of Manchester" src="<?php echo $this->assetUrl('img/TAB_col_white_background.png'); ?>" alt="The University of Manchester Library logo"/>
+            </a>
                 <div class="site-heading"><p>Manchester Digital Exhibitions</p>
                 </div>
                 <button type="button" class="search-toggle" aria-label="Toggle search" aria-expanded="false" aria-controls="search-form"></button>
@@ -82,7 +84,7 @@ $this->trigger('view.layout');
                 <div class="row tripleVertPadding">     
                     <div class="fourcol halfSizeUntilLargeMobile">
                         <div class="footerLogos">
-                            <img src="https://www.library.manchester.ac.uk/assets/images/design/national-research-libraries.png" height="63" alt="National Research Libraries">											
+                            <img src="<?php echo $this->assetUrl('img/national-research-libraries.png'); ?>" height="63" alt="National Research Libraries">											
                             <p>The University of Manchester Library is one of five National Research Libraries</p>
                         </div>
                     </div>
@@ -94,28 +96,23 @@ $this->trigger('view.layout');
                         <h2>Connect with us</h2>
                         <ul class="inlineList footer-socialIcons">                
                             <li><a href="https://www.facebook.com/pages/The-University-of-Manchester-Library/25777209922">
-                                <img class="lazy" src="https://www.library.manchester.ac.uk/assets/images/design/icon-facebook-large.png" width="40" height="40" data-original="/assets/images/design/icon-facebook-large.png" alt="Facebook page for The University of Manchester Library">
-                                <noscript><img class="" src="https://www.library.manchester.ac.uk/assets/images/design/icon-facebook-large.png" width="40" height="40" alt="Facebook page for The University of Manchester Library"></noscript>
+                                <img src="<?php echo $this->assetUrl('img/icon-facebook-large.png'); ?>" width="40" height="40" alt="Facebook page for The University of Manchester Library">
                                 </a>
                             </li>
                             <li><a href="https://twitter.com/UoMLibrary">
-                                <img class="lazy" src="https://www.library.manchester.ac.uk/assets/images/design/icon-twitter-large.png" width="40" height="40" data-original="/assets/images/design/icon-twitter-large.png" alt="Twitter page for The University of Manchester Library">
-                                <noscript><img class="" src="https://www.library.manchester.ac.uk/assets/images/design/icon-twitter-large.png" width="40" height="40" alt="Twitter page for The University of Manchester Library"></noscript>
+                                <img src="<?php echo $this->assetUrl('img/icon-twitter-large.png'); ?>" width="40" height="40" data-original="/assets/images/design/icon-twitter-large.png" alt="Twitter page for The University of Manchester Library">
                                 </a>
                             </li>
                             <li><a href="https://www.instagram.com/uomlibrary/">
-                                <img class="lazy" src="https://www.library.manchester.ac.uk/assets/images/design/icon-instagram.png" width="40" height="40" data-original="/assets/images/design/icon-instagram.png"  alt="Instagram page for The University of Manchester Library">
-                                <noscript><img class="" src="https://www.library.manchester.ac.uk/assets/images/design/icon-instagram.png" width="40" height="40" alt="Instagram page for The University of Manchester Library"></noscript>
+                                <img class="lazy" src="<?php echo $this->assetUrl('img/icon-instagram.png'); ?>" width="40" height="40" alt="Instagram page for The University of Manchester Library">
                                 </a>
                             </li>
                             <li><a href="https://www.youtube.com/user/UoMLibrary">
-                                <img class="lazy" src="https://www.library.manchester.ac.uk/assets/images/design/icon-youtube-large.png" width="40" height="40" data-original="/assets/images/design/icon-youtube-large.png"  alt="YouTube page for The University of Manchester Library">
-                                <noscript><img class="" src="https://www.library.manchester.ac.uk/assets/images/design/icon-youtube-large.png" width="40" height="40" alt="YouTube page for The University of Manchester Library"></noscript>
+                                <img class="lazy" src="<?php echo $this->assetUrl('img/icon-youtube-large.png'); ?>" width="40" height="40" alt="YouTube page for The University of Manchester Library">
                                 </a>
                             </li>
                             <li><a href="https://www.linkedin.com/showcase/the-university-of-manchester-library">
-                                <img class="lazy" src="https://www.library.manchester.ac.uk/assets/images/design/icon-linkedin.png" width="40" height="40" data-original="/assets/images/design/icon-linkedin.png"  alt="LinkedIn page for The University of Manchester Library">
-                                <noscript><img class="" src="https://www.library.manchester.ac.uk/assets/images/design/icon-linkedin.png" width="40" height="40" alt="LinkedIn page for The University of Manchester Library"></noscript>
+                                <img class="lazy" src="<?php echo $this->assetUrl('img/icon-linkedin.png'); ?>" width="40" height="40" alt="LinkedIn page for The University of Manchester Library">
                                 </a>
                             </li>													
                         </ul>
