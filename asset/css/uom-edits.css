@@ -242,22 +242,22 @@ button.menu-toggle {
 }
 
 .center.large.file .attachments .media-render.file img {
-width: 100%;
+  width: 100%;
 }
 
 /*Allow openseadragon use in Media Embed*/
 .left.medium .openseadragon,
 .right.medium .openseadragon {
-height: 40vh!important;
-min-width: 25vw !important;
+  height: 40vh!important;
+  min-width: 25vw !important;
 }
 
 .left .media-render.iiif,
 .right .media-render.iiif {
-margin: 0 0 12px 0;
+  margin: 0 0 12px 0;
 }
 
-.right,
+.right, 
 .left {
   max-width: 50%;
 }
@@ -287,7 +287,9 @@ height: 40vh;
 .iiif-storyboard-wide-container {
   margin: 0 auto;
   width: 100%;
-  min-width: 80vw;
+  min-width: unset;
+  height: 45vh;/*30/6/24*/
+  padding: 1em;
 }
 
 .center .media-render.iiif_presentation iframe,
@@ -679,8 +681,9 @@ max-width: 1400px;
   background-color: #000;
   color: #fff;
   padding: 0.5rem 2rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin-bottom: 0;
+  word-break: break-word;
   }
 
 /*Image Banner*/
@@ -845,24 +848,11 @@ cite {
   color: #FFCC33;
   text-align: left;
   }
+
+  .MuiIconButton-root {
+    padding: 8px!important;
+    }
       
-  @media screen and (min-width: 641px) {
-
-/*Item Showcase Openseadragon*/ 
-.medium-large .openseadragon {
-  height: 70vh!important;
-}
-
-.medium .openseadragon {
-  height: 60vh!important;
-}
-
-  .item-show-title {
-      display: inline-block;
-  }
-  }
-  
-  
 /*Styling and Utility elements*/
 /*Full width*/
 .full-width {
@@ -941,6 +931,11 @@ h2.block {
 .right.file.media-embed,
 .right.assets {
   margin: 0 0 0 1rem;
+}
+
+.right.media-embed, 
+.left.media-embed {
+  max-width: 33%;
 }
 
 .grey-background {
@@ -1087,6 +1082,9 @@ header.wrapper {
   header {
     padding-block: 0;
   }
+  .iiif-storyboard-wide-container {
+    height: 82vh;/*30/6/24*/
+}
 }
 
 @media screen and (min-width: 641px) {
@@ -1234,6 +1232,12 @@ header.wrapper {
   .medium .media-render.oembed.html {
   height: 50vh;
   }
+  .medium .openseadragon {
+    height: 60vh!important;
+  }
+  .medium-large .openseadragon {
+    height: 70vh!important;
+  }
   /*Additional margin for media embed*/
   .left.file.media-embed,
   .left.assets {
@@ -1253,6 +1257,10 @@ header.wrapper {
     height: 75vh;
   }
 
+  .item-show-title {
+    display: inline-block;
+}
+
   /*Padding-vertical 6*/
   .padding-vertical-6 {
     padding-top: 4rem !important;
@@ -1271,7 +1279,7 @@ header.wrapper {
 
 @media screen and (min-width: 800px) {
   .hero-title-openseadragon h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     }
 
     .openseadragon,
@@ -1376,12 +1384,14 @@ header.wrapper {
   .media-text .learn-more {
     justify-content: flex-start;
   }
-
+  .learn-more {
+    justify-content: center;
+ }
   .media-text .left, 
   .media-text .right {
-    max-width: unset;
+    max-width: 60%;
     flex-basis: 60%;
-  }
+}
 
   .media-text .right {
     order: 1;
@@ -1403,6 +1413,10 @@ header.wrapper {
     align-items: center;
 }
 
+.hero-title-openseadragon h1 {
+  font-size: 3rem;
+}
+
 .left .item.resource audio, .left .item.resource canvas, .left .item.resource video, .left .item.resource progress, .left .item.resource img, .right .item.resource audio, .right .item.resource canvas, .right .item.resource video, .right .item.resource progress, .right .item.resource img {
   max-height: 90vh;
 }
@@ -1410,10 +1424,18 @@ header.wrapper {
   /*Increase height of Annona feature on larger screens*/
   /*Increase width of Annona viewer for wider screens*/
   .iiif-storyboard-wide-container {
+    /*min-width: 1000px;*/
     width: 100%;
-    min-width: 90vw;
     max-width: 1350px;
-  }
+    height: 96.8vh;/*30/6/24*/
+}
+
+/*Item Showcase Openseadragon*/
+.item-showcase .iiif-storyboard-wide-container {
+  min-width: 1000px;
+  max-width: 1350px;
+  height: 84.8vh;
+}
   /*Increase size of Blockquote*/
   blockquote {
     font-size: 2.5rem;
@@ -1490,6 +1512,10 @@ header.wrapper {
   .medium .openseadragon {
     height: 90vh!important;
   }
+
+  .item-showcase .iiif-storyboard-wide-container {
+    height: 73.8vh;
+}
 
 .image-banner .overlay-container > p {
   font-size: 2rem;
