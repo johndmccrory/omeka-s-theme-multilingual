@@ -248,7 +248,7 @@ button.menu-toggle {
 /*Allow openseadragon use in Media Embed*/
 .left.medium .openseadragon,
 .right.medium .openseadragon {
-  height: 40vh!important;
+  height: 30vh!important;
   min-width: 25vw !important;
 }
 
@@ -419,6 +419,7 @@ height: 40vh;
 .page .right.file .resource h2 {
   font-size: 1em;
   margin: 0em;
+  text-align: center;
 }
 
 .left.medium-large.file,
@@ -486,10 +487,17 @@ order: 0;
 /*Remove button from Media Embed left and right*/
 .left .learn-more,
 .right .learn-more {
-  display: none;
+  /*display: none;*/
+  margin-top: 1rem;
   }
 
-/*Button*/ 
+/*Button*/
+.button,
+button,
+input[type=submit] {
+  color: #fff
+}
+
 .pure-button-primary:hover {
   background: #d2d2d2;
 }
@@ -933,11 +941,6 @@ h2.block {
   margin: 0 0 0 1rem;
 }
 
-.right.media-embed, 
-.left.media-embed {
-  max-width: 33%;
-}
-
 .grey-background {
   background-color: #efefef;
   }
@@ -1238,6 +1241,11 @@ header.wrapper {
   .medium-large .openseadragon {
     height: 70vh!important;
   }
+  /*Allow openseadragon use in Media Embed*/
+.left.medium .openseadragon,
+.right.medium .openseadragon {
+  height: 40vh!important;
+}
   /*Additional margin for media embed*/
   .left.file.media-embed,
   .left.assets {
