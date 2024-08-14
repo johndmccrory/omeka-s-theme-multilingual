@@ -789,7 +789,7 @@ cite {
 }
 
 .paragraph-text.dark {
-  padding: 4rem 1rem;
+  padding-inline: 24px;
 }
 
 /*Add underline to links in paragraph text*/
