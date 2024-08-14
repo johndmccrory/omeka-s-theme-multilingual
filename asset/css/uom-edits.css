@@ -764,7 +764,7 @@ cite {
 
 /*Paragraph Text*/
 .paragraph-text {
-  padding: 1em;
+  padding: 1em 0;
 }
 
 .paragraph-text p,
