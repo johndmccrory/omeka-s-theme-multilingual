@@ -288,7 +288,7 @@ height: 40vh;
   margin: 0 auto;
   width: 100%;
   min-width: unset;
-  height: 45vh;/*30/6/24*/
+  height: 47vh;/*30/6/24*/
   padding: 1em;
 }
 
@@ -297,7 +297,7 @@ height: 40vh;
 .rangestoryboard .storyboard_viewer {
   width: 90vw!important;
   height: 45.5vh!important;
-  max-width: 1350px!important;
+  max-width: 1080px!important;
 }
 
 /*Item Showcase Block*/
@@ -947,6 +947,10 @@ h2.block {
   color: #fff;
   }
 
+.small-margin-top {
+  margin-top: 24px!important;
+}
+
 /*Add larger font size option*/ 
 .lead {
   font-size: 110%;
@@ -1285,9 +1289,9 @@ header.wrapper {
 
 @media screen and (min-width: 800px) {
   .iiif-storyboard-wide-container {
-    height: 88vh;
+    height: 83vh;
   }
-  
+
   .hero-title-openseadragon h1 {
     font-size: 2rem;
     }
@@ -1436,13 +1440,13 @@ header.wrapper {
   .iiif-storyboard-wide-container {
     /*min-width: 1000px;*/
     width: 100%;
-    max-width: 1350px;
+    max-width: 1100px;
 }
 
 /*Item Showcase Openseadragon*/
 .item-showcase .iiif-storyboard-wide-container {
   min-width: 1000px;
-  max-width: 1350px;
+  max-width: 1100px;
   height: 84.8vh;
 }
   /*Increase size of Blockquote*/
@@ -1562,7 +1566,7 @@ header.wrapper {
 
 .medium-large .rangestoryboard,
 .medium-large .rangestoryboard .storyboard_viewer {
-  height: 80.5vh !important;
+  height: 80vh !important;
 }
 /*Padding-vertical 6*/
 .padding-vertical-6 {
