@@ -1395,6 +1395,10 @@ header.wrapper {
 }
 
 @media only screen and (min-width: 1025px) {
+  .media-text {
+    align-items: unset;
+  }
+
   .media-text .learn-more {
     justify-content: flex-start;
   }
