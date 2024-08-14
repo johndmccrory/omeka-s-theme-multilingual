@@ -539,9 +539,12 @@ button#reloadButton {
     height: 50vh;
 }
 
-.medium .seadragonbox {
+.medium .seadragonbox,
+.rangestoryboard .seadragonbox {
   height: 40vh;
 }
+
+
 
 /*Remove Padding from Annona*/
 .storyboard_viewer {
