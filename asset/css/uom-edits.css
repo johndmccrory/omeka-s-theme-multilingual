@@ -419,7 +419,6 @@ height: 40vh;
 .page .right.file .resource h2 {
   font-size: 1em;
   margin: 0em;
-  text-align: center;
 }
 
 .left.medium-large.file,
@@ -484,17 +483,16 @@ order: 0;
   justify-content: center;
 } 
 
-/*Remove button from Media Embed left and right*/
-.left .learn-more,
-.right .learn-more {
+  .left .learn-more button,
+.right .learn-more button {
   /*display: none;*/
   margin-top: 1rem;
   }
 
 /*Button*/
-.button,
-button,
-input[type=submit] {
+.advanced-search-content .button,
+.advanced-search-content button,
+.advanced-search-content input[type=submit] {
   color: #fff
 }
 
@@ -1085,12 +1083,12 @@ header.wrapper {
   header {
     padding-block: 0;
   }
-  .iiif-storyboard-wide-container {
-    height: 82vh;/*30/6/24*/
-}
 }
 
 @media screen and (min-width: 641px) {
+  .iiif-storyboard-wide-container {
+    height: 82vh;/*30/6/24*/
+}
   .site-heading {
     order: 0;
 }
@@ -1207,7 +1205,7 @@ header.wrapper {
 
 .medium-large .rangestoryboard,
 .medium-large .rangestoryboard .storyboard_viewer {
-  height: 75vh !important;
+  height: 85vh !important;
 }
 
 .medium .rangestoryboard,
@@ -1286,6 +1284,10 @@ header.wrapper {
 }
 
 @media screen and (min-width: 800px) {
+  .iiif-storyboard-wide-container {
+    height: 88vh;
+  }
+  
   .hero-title-openseadragon h1 {
     font-size: 2rem;
     }
@@ -1435,7 +1437,6 @@ header.wrapper {
     /*min-width: 1000px;*/
     width: 100%;
     max-width: 1350px;
-    height: 96.8vh;/*30/6/24*/
 }
 
 /*Item Showcase Openseadragon*/
@@ -1541,7 +1542,7 @@ header.wrapper {
 }
 
 .medium-large .seadragonbox {
-  height: 67vh !important;
+  height: 75vh !important;
 }
 
  .large .seadragonbox {
