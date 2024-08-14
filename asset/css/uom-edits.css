@@ -224,6 +224,10 @@ button.menu-toggle {
   padding: 1rem 0;
 }
 
+.media-render {
+  border-radius: 0;
+}
+
 .media-render.file {
   display: flex;
   justify-content: center;
@@ -532,7 +536,7 @@ button#reloadButton {
 }
 
 .seadragonbox {
-    height: 40vh;
+    height: 50vh;
 }
 
 .medium .seadragonbox {
@@ -1395,6 +1399,10 @@ header.wrapper {
 }
 
 @media only screen and (min-width: 1025px) {
+  .media-render {
+      border-radius: 8px;
+    }
+
   .media-text {
     align-items: unset;
   }
