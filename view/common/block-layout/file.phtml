@@ -36,16 +36,13 @@ $hyperlink = $this->plugin('hyperlink');
             <div class="caption"><?php echo $caption; ?></div>
         <?php endif; ?>
         <?php if ($showTitleOption === 'item_title'): ?>
-            <h1><?php echo $item->link($item->displayTitle()); ?></h1>
+            <h2><?php echo $item->link($item->displayTitle()); ?></h2>
         <?php elseif ($showTitleOption === 'file_name'): ?>
-            <h1><?php echo $media->displayTitle(); ?></h1>
+            <h2><?php echo $media->displayTitle(); ?></h2>
         <?php endif; ?>
-    </div>
-    <?php endforeach; ?>
-    <div class="learn-more">
-        <?php
-        echo 'Testing this text';
-        ?>
+        <div class="learn-more">
             <button class="pure-button-primary button-xlarge"><?php echo $item->link("View full item"); ?></button>
         </div>
+    </div>
+    <?php endforeach; ?>
 </div>

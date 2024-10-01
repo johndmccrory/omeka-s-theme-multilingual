@@ -399,7 +399,8 @@ height: 40vh;
 .page .item-showcase .resource.item:not(:only-child) h2,
 .page .file .resource h2 {
   font-size: 1.5em;
-  margin: 1em 0;
+  margin: 1rem 0 0 0;
+  text-align: center;
 }
 
 .page .item.resource .caption {
@@ -407,7 +408,7 @@ height: 40vh;
   line-height: 1.5;
   max-width: 800px;
   margin: 0 auto;
-  padding: 1em;
+  padding: 0.5rem 0 0 0;
   text-align: left;
 }
 /*End Improving Media Embed and Transcriptions*/
@@ -1534,16 +1535,16 @@ header.wrapper {
 @media only screen and (min-width: 1200px) {
   .openseadragon,
   .seadragonbox {
-    height: 95vh!important;
+    height: 85vh!important;
     background: #000;
   }
 
   .medium-large .openseadragon {
-    height: 95vh!important;
+    height: 80vh!important;
   }
   
   .medium .openseadragon {
-    height: 90vh!important;
+    height: 75vh!important;
   }
 
   .item-showcase .iiif-storyboard-wide-container {
