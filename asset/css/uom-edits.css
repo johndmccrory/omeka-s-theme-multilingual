@@ -170,9 +170,11 @@ button.menu-toggle {
 #desktop-nav li.active > a {
   opacity: 1;
   font-weight: 600;
-  & :active {
-    font-weight: 600;
-  }
+}
+
+#top-nav li.active > a:active,
+#desktop-nav li.active > a:active {
+  font-weight: 600;
 }
 
 /*Remove language selector*/
@@ -1088,6 +1090,9 @@ header.wrapper {
   a.university-logo  img {
       margin: 24px 24px 24px 12px;
   }
+  .site-heading {
+    width: 290px;
+}
 }
 
 @media screen and (max-width: 640px) {
@@ -1883,3 +1888,48 @@ header.wrapper {
     text-decoration: underline;
 }
  /*End UoM Footer*/
+
+ /*Foundation Utility Classes*/
+.padding-vertical-1 {
+  padding: 1em 0;
+}
+.padding-horizontal-1 {
+  padding: 0 1rem 0 1rem;
+}
+.margin-vertical-1 {
+  margin: 1em 0 0 0;
+}
+.margin-bottom-1 {
+  margin: 0 0 1em 0;
+}
+
+/*Medium*/
+@media screen and (min-width: 641px) {
+}
+
+
+/*Large*/
+@media screen and (min-width: 1025px) {
+}
+.large-padding-vertical-2 {
+  padding: 2em 0;
+}
+.large-padding-horizontal-2 {
+  padding: 0 2rem;
+}
+.large-margin-vertical-2 {
+  margin: 2em 0;
+}
+.large-margin-bottom-2 {
+  margin: 0 0 2em 0;
+}
+
+/*Extra Large*/ 
+@media screen and (min-width: 1400px) {
+.xlarge-padding-horizontal-3 {
+    padding: 0 3em;
+  }
+.xlarge-padding-vertical-3 {
+  padding: 3em 0;
+}
+}
