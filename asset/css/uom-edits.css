@@ -258,11 +258,6 @@ button.menu-toggle {
   min-width: 25vw !important;
 }
 
-.left .media-render.iiif,
-.right .media-render.iiif {
-  margin: 0 0 12px 0;
-}
-
 .right, 
 .left {
   max-width: 50%;
@@ -399,7 +394,7 @@ height: 40vh;
 .page .item-showcase .resource.item:not(:only-child) h2,
 .page .file .resource h2 {
   font-size: 1.5em;
-  margin: 1rem 0 0 0;
+  margin: 1rem 0 0 1rem;
   text-align: center;
 }
 
@@ -481,7 +476,7 @@ order: 0;
 }
 
 .media-render.iiif {
-  margin: 0 1em;
+  margin: 0;
 }
 
 .learn-more {
@@ -1257,8 +1252,7 @@ header.wrapper {
     height: 70vh!important;
   }
   /*Allow openseadragon use in Media Embed*/
-.left.medium .openseadragon,
-.right.medium .openseadragon {
+.medium .openseadragon {
   height: 40vh!important;
 }
   /*Additional margin for media embed*/
@@ -2046,3 +2040,40 @@ grid-template-areas:
 .item.resource {
   width: 100%;
 }
+
+/*Embed media alongside HTML*/ 
+  /*Allow openseadragon use in Media Embed*/
+  .medium .openseadragon {
+    height: 40vh!important;
+  }
+
+  .resourceText .block-media:has(.layout-horizontal) {
+    width: 100%;
+    }
+    
+  .resourceText .block-media:has(.layout-vertical .openseadragon) {
+    width: 95vw;
+    margin: 0 auto;
+  }
+
+  .block-media.text-around-image {
+    display: block;
+    float: left;
+    width: 400px;
+    margin: 0 1rem 1rem 0;
+  }
+
+
+
+  .block-media.text-around-image.right {
+    float: right;
+    margin: 0 0 1rem 1rem;
+  }
+
+  .media-render.iiif {
+    width: 100%;
+  }
+
+  .media.file {
+    width: 100%;
+  }
