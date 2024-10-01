@@ -872,7 +872,7 @@ cite {
 /*Full width*/
 .full-width {
   width: 100vw;
-  margin-left: 50%;
+  margin-left: 50%!important;
   transform: translateX(-50%);
 }
 
@@ -1903,14 +1903,73 @@ header.wrapper {
   margin: 0 0 1em 0;
 }
 
+/*Testing CSS Grid horizontal and vertical blocks*/
+ /*Flex Option*/
+ .block-blockGroup.resourceText {
+  gap: 1em;
+  flex-direction: column;
+}
+
+.resourceText {
+padding: 0 1em;
+}
+
+.resourceText .block-media:has(.layout-horizontal) {
+width: 100%;
+}
+
+.resourceText .block-media:has(.layout-vertical .openseadragon) {
+  width: 95vw;
+  margin: 0 auto;
+}
+
+/*Grid Option*/
+.resourceTextGrid .block-heading {
+grid-area: header;
+}
+
+.resourceTextGrid .block-media {
+grid-area: media-block;
+width: 100%;
+}
+
+.resourceTextGrid .block-html {
+grid-area: text;
+align-self: center;
+}
+
+.resourceTextGrid {
+display: grid;
+gap: 1rem;
+grid-template-columns: 1fr;
+justify-items: center;
+grid-template-areas: 
+"header" 
+"media-block"
+"text";
+}
+
 /*Medium*/
 @media screen and (min-width: 641px) {
+  .resourceText .block-media:has(.layout-vertical .openseadragon) {
+    min-width: 80vw;
+}
+.resourceTextGrid:has(.layout-vertical) {
+  grid-template-columns: 1fr 12fr 1fr;
+  grid-template-areas:
+". header ."
+". media-block ."
+". text .";
+}
+.portrait .media-embed-block {
+  max-width: rem-calc(700);
+  margin: 0 auto; 
+}
 }
 
 
 /*Large*/
 @media screen and (min-width: 1025px) {
-}
 .large-padding-vertical-2 {
   padding: 2em 0;
 }
@@ -1923,6 +1982,51 @@ header.wrapper {
 .large-margin-bottom-2 {
   margin: 0 0 2em 0;
 }
+.block-blockGroup.resourceText:has(.layout-horizontal) {
+  flex-direction: row;
+}
+.resourceText .block-media:has(.layout-horizontal) {
+  width: 58.3333333333%;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+.resourceText .block-media:has(.layout-vertical .openseadragon) {
+  min-width: 50vw;
+  max-width: 700px;
+}
+.resourceText .block-html  {
+  min-width: 41.6666666667%;
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+.resourceTextGrid:has(.layout-horizontal) {
+  grid-template-columns: 3fr 2fr;
+  grid-template-areas: 
+  "header ." 
+  "media-block text" ;
+  }
+.resourceTextGrid.mediaRight:has(.layout-horizontal) {
+  grid-template-columns: 2fr 3fr;
+  grid-template-areas: 
+  "header ." 
+  "text media-block" ;
+  }
+  .resourceTextGrid:has(.layout-vertical) {
+    grid-template-columns: 1fr 8fr 1fr;
+  }   
+  .portrait.resourceTextGrid:has(.layout-horizontal) {
+  grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
+  grid-template-areas:
+  ". header . ."
+  ". media-block text .";
+}
+.layout-vertical.attachment-count-2 .resource-text-openseadragon .openseadragon {
+  height: calc(60vh - .75rem) !important;
+}
+.layout-vertical.attachment-count-3 .resource-text-openseadragon .openseadragon {
+  height: calc(45vh - .75rem) !important;
+} 
+}
 
 /*Extra Large*/ 
 @media screen and (min-width: 1400px) {
@@ -1932,4 +2036,12 @@ header.wrapper {
 .xlarge-padding-vertical-3 {
   padding: 3em 0;
 }
+.resourceTextGrid:has(.layout-vertical) {
+  grid-template-columns: 1fr 3fr 1fr;
+}
+}
+
+/*Fixes*/
+.item.resource {
+  width: 100%;
 }
