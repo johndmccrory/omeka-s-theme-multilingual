@@ -1942,16 +1942,16 @@ grid-template-areas:
 }
 
 /*Ensure Learn More button is below text for vertical Media blocks*/
-.resourceTextGrid:has(.layout-vertical) {
+.resourceTextGrid {
   row-gap: 0;
 } 
 
-.resourceTextGrid:has(.layout-vertical) .block-html p {
+.resourceTextGrid .block-html p {
   margin-bottom: 70px;
   margin-block-start: 0;
   }
 
-  .resourceTextGrid:has(.layout-vertical) .learn-more {
+  .resourceTextGrid .learn-more {
   justify-content: center;
   position: absolute;
   bottom: 0;
@@ -2000,6 +2000,15 @@ grid-template-areas:
   flex-grow: 1;
   flex-shrink: 0;
 }
+
+.resourceTextGrid:has(.layout-horizontal) .learn-more {
+  justify-content: center;
+  position: initial;
+  bottom: unset;
+  left: unset;
+  transform: initial;
+}
+
 .resourceText .block-media:has(.layout-vertical .openseadragon) {
   min-width: 50vw;
   max-width: 700px;
