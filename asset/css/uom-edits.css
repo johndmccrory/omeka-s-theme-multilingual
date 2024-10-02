@@ -722,7 +722,7 @@ height: 500px;
   padding: 1rem 2rem !important;
   align-items: center;
   justify-content: center;
-  background: #497D7E;
+  /*background: #497D7E;*/
 }
 
 .blockquote-container p {
@@ -735,7 +735,7 @@ blockquote {
   color: #fff;
   font-weight: 100;
   font-size: 2rem;
-  max-width: 600px;
+  max-width: 800px;
   line-height: 1.4;
   position: relative;
   margin: 5rem auto 4rem;
@@ -1462,9 +1462,6 @@ header.wrapper {
   height: 84.8vh;
 }
   /*Increase size of Blockquote*/
-  blockquote {
-    font-size: 2.5rem;
-  }
   .media-text.overlay {
     position: relative;
   }
@@ -1961,6 +1958,9 @@ grid-template-areas:
 
 /*Medium*/
 @media screen and (min-width: 641px) {
+  .medium-padding-vertical-2 {
+    padding: 2rem 0;
+  }
   .resourceText .block-media:has(.layout-vertical .openseadragon) {
     min-width: 80vw;
 }
@@ -1982,6 +1982,9 @@ grid-template-areas:
 @media screen and (min-width: 1025px) {
 .large-padding-vertical-2 {
   padding: 2em 0;
+}
+.large-padding-vertical-3 {
+  padding: 3rem 0;
 }
 .large-padding-horizontal-2 {
   padding: 0 2rem;
