@@ -1994,6 +1994,11 @@ grid-template-areas:
   flex-grow: 0;
   flex-shrink: 1;
 }
+
+.resourceTextGrid .block-html p {
+  margin: 0;
+  }
+
 .resourceTextGrid:has(.layout-horizontal) {
   grid-template-columns: 3fr 2fr;
   grid-template-areas: 
@@ -2008,7 +2013,19 @@ grid-template-areas:
   }
   .resourceTextGrid:has(.layout-vertical) {
     grid-template-columns: 1fr 8fr 1fr;
-  }   
+  }  
+  
+  .resourceTextGrid:has(.layout-vertical) {
+    row-gap: 0;
+  } 
+  
+  .block-blockGroup.resourceTextGrid:has(.layout-vertical) .learn-more {
+    grid-row: 6;
+  }
+
+  .layout-vertical.file.media-embed {
+    padding: 0;
+  }
   .portrait.resourceTextGrid:has(.layout-horizontal) {
   grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
   grid-template-areas:
@@ -2062,8 +2079,6 @@ grid-template-areas:
     width: 400px;
     margin: 0 1rem 1rem 0;
   }
-
-
 
   .block-media.text-around-image.right {
     float: right;
