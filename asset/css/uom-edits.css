@@ -1413,9 +1413,6 @@ header.wrapper {
   .media-text .learn-more {
     justify-content: flex-start;
   }
-  .learn-more {
-    justify-content: center;
- }
   .media-text .left, 
   .media-text .right {
     max-width: 50%;
@@ -1944,6 +1941,24 @@ grid-template-areas:
 "text";
 }
 
+/*Ensure Learn More button is below text for vertical Media blocks*/
+.resourceTextGrid:has(.layout-vertical) {
+  row-gap: 0;
+} 
+
+.resourceTextGrid:has(.layout-vertical) .block-html p {
+  margin-bottom: 70px;
+  margin-block-start: 0;
+  }
+
+  .resourceTextGrid:has(.layout-vertical) .learn-more {
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /*Medium*/
 @media screen and (min-width: 641px) {
   .resourceText .block-media:has(.layout-vertical .openseadragon) {
@@ -1995,10 +2010,6 @@ grid-template-areas:
   flex-shrink: 1;
 }
 
-.resourceTextGrid .block-html p {
-  margin: 0;
-  }
-
 .resourceTextGrid:has(.layout-horizontal) {
   grid-template-columns: 3fr 2fr;
   grid-template-areas: 
@@ -2015,14 +2026,6 @@ grid-template-areas:
     grid-template-columns: 1fr 8fr 1fr;
   }  
   
-  .resourceTextGrid:has(.layout-vertical) {
-    row-gap: 0;
-  } 
-  
-  .block-blockGroup.resourceTextGrid:has(.layout-vertical) .learn-more {
-    grid-row: 6;
-  }
-
   .layout-vertical.file.media-embed {
     padding: 0;
   }
