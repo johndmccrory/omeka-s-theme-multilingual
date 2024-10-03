@@ -2039,7 +2039,7 @@ grid-template-areas:
 /*Add class where Media caption is Text*/
 .resourceTextGrid:has(.layout-horizontal.file-caption-text) {
   grid-template-areas: 
-  "media-block text" ;
+  "media-embed-media text" ;
   }
 
 .resourceTextGrid.mediaRight:has(.layout-horizontal) {
@@ -2052,7 +2052,7 @@ grid-template-areas:
 /*Add class for Media caption as text*/ 
 .resourceTextGrid.mediaRight:has(.layout-horizontal.file-caption-text) {
   grid-template-areas: 
-  "text media-block" ;
+  "text media-embed-media" ;
   }
 
   .resourceTextGrid:has(.layout-vertical) {
