@@ -1403,7 +1403,7 @@ header.wrapper {
 
 @media only screen and (min-width: 1025px) {
   .media-render {
-      border-radius: 8px;
+      border-radius: 12px;
     }
 
   .media-text {
@@ -1927,6 +1927,10 @@ grid-area: text;
 align-self: center;
 }
 
+.resourceTextGrid .block-html h2 {
+  text-align: center;
+}
+
 .resourceTextGrid {
 display: grid;
 gap: 1rem;
@@ -2028,12 +2032,26 @@ grid-template-areas:
   "header ." 
   "media-block text" ;
   }
+
+/*Add class where Media caption is Text*/
+.resourceTextGrid:has(.layout-horizontal.file-caption-text) {
+  grid-template-areas: 
+  "media-block text" ;
+  }
+
 .resourceTextGrid.mediaRight:has(.layout-horizontal) {
   grid-template-columns: 2fr 3fr;
   grid-template-areas: 
   "header ." 
+  "media-block" ;
+  }
+
+/*Add class for Media caption as text*/ 
+.resourceTextGrid.mediaRight:has(.layout-horizontal.file-caption-text) {
+  grid-template-areas: 
   "text media-block" ;
   }
+
   .resourceTextGrid:has(.layout-vertical) {
     grid-template-columns: 1fr 8fr 1fr;
   }  
