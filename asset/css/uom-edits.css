@@ -1945,6 +1945,12 @@ grid-template-areas:
 "text";
 }
 
+.resourceTextGrid:has(.layout-vertical.file-caption-text) {
+  grid-template-areas: 
+  "media-embed-media"
+  "text";
+  }
+
 /*Ensure Learn More button is below text for vertical Media blocks*/
 .resourceTextGrid {
   row-gap: 0;
@@ -1978,6 +1984,13 @@ grid-template-areas:
 ". media-block ."
 ". text .";
 }
+
+.resourceTextGrid:has(.layout-vertical.file-caption-text) {
+  grid-template-areas: 
+  ". media-embed-media ."
+  ". text .";
+  }
+
 .portrait .media-embed-block {
   max-width: rem-calc(700);
   margin: 0 auto; 
