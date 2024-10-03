@@ -1719,7 +1719,6 @@ header.wrapper {
     color: #fff;
     font-family: "Open Sans";
     font-weight: 100;
-    font-size: large;
 }
 .footerContainer .fourcol.last,
 .footerContainer .sixcol.last {
@@ -1931,6 +1930,10 @@ align-self: center;
   text-align: center;
 }
 
+.resourceTextGrid .file-caption-text.media-embed {
+  grid-area: media-embed-media;
+}
+
 .resourceTextGrid {
 display: grid;
 gap: 1rem;
@@ -2055,6 +2058,12 @@ grid-template-areas:
   .resourceTextGrid:has(.layout-vertical) {
     grid-template-columns: 1fr 8fr 1fr;
   }  
+
+  .resourceTextGrid:has(.layout-vertical.file-caption-text) {
+    grid-template-areas: 
+    ". media-embed-media ."
+    ". text .";
+    }
   
   .layout-vertical.file.media-embed {
     padding: 0;
