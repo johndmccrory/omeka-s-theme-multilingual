@@ -23,7 +23,7 @@ $hyperlink = $this->plugin('hyperlink');
                         default:
                             throw new \InvalidArgumentException(sprintf('Invalid link type "%s"', $linkType));
                     }
-                    echo $hyperlink->raw($this->thumbnail($media, $thumbnailType), $url);
+                    echo $this->thumbnail($media, $thumbnailType);
                 } else {
                     echo $media->render([
                         'thumbnailType' => $thumbnailType,
@@ -36,7 +36,7 @@ $hyperlink = $this->plugin('hyperlink');
         </div>
         <div class="block-html padding-horizontal-1 large-padding-horizontal-2">
             <?php if ($showTitleOption === 'item_title'): ?>
-                <h2><?php echo $item->link($item->displayTitle()); ?></h2>
+                <h2><?php echo $item->displayTitle(); ?></h2>
             <?php elseif ($showTitleOption === 'file_name'): ?>
                 <h2><?php echo $media->displayTitle(); ?></h2>
             <?php endif; ?>
