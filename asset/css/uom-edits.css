@@ -267,6 +267,7 @@ button.menu-toggle {
 .media-render.youtube,
 .media-render.oembed {
   width: 100%;
+  border-radius: 12px;
 }
 
 /*HTML Media Render YouTube*/
@@ -1969,6 +1970,13 @@ grid-template-areas:
   transform: translate(-50%, -50%);
 }
 
+/*Add class where Media caption is Text*/
+.resourceTextGrid:has(.layout-horizontal.file-caption-text) {
+  grid-template-areas: 
+  "media-embed-media"
+  "text";
+  }
+
 /*Medium*/
 @media screen and (min-width: 641px) {
   .medium-padding-vertical-2 {
@@ -2146,4 +2154,9 @@ grid-template-areas:
 
   .media.file {
     width: 100%;
+  }
+
+  /*Centre img for non-iiif material*/ 
+  .media-embed .resource {
+    text-align: center;
   }
