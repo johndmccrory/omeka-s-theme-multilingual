@@ -268,6 +268,8 @@ button.menu-toggle {
 .media-render.oembed {
   width: 100%;
   border-radius: 12px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /*HTML Media Render YouTube*/
@@ -1340,6 +1342,10 @@ header.wrapper {
 }
 
 @media screen and (min-width: 1024px) {
+  .media-render.youtube,
+  .media-render.oembed {
+    max-width: 1000px;
+  }
   .item-show-section .mirador {
     height: 95vh;
   }
