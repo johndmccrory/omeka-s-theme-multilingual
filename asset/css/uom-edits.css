@@ -789,7 +789,7 @@ cite {
   margin: 0 auto;
 }
 
-.paragraph-text.dark {
+.paragraph-text.dark-background {
   padding-inline: 24px;
 }
 
@@ -881,24 +881,24 @@ cite {
 }
 
 /*Dark Background*/
-.dark {
+.dark-background {
   background-color: #1d1d1d;
 }
 
-.dark p {
+.dark-background p {
     color: #d7d7d7;
   }
 
-.dark p a {
+.dark-background p a {
   color: #ecb355;
 }
 
-.dark h2, 
-.dark h2 a,
-.dark h3, 
-.dark h3 a,
-.dark h4, 
-.dark h4 a{
+.dark-background h2, 
+.dark-background h2 a,
+.dark-background h3, 
+.dark-background h3 a,
+.dark-background h4, 
+.dark-background h4 a{
     color: #fff;
   }
 

@@ -20,7 +20,7 @@ $linkType = $siteSetting('attachment_link_type', 'item');
 $filterLocale = (bool) $this->siteSetting('filter_locale_values');
 $lang = $filterLocale ? $this->lang() : null;
 ?>
-<div class="media-text-title dark full-width">
+<div class="media-text-title dark-background full-width">
     <div class="grid-container">
         <?php if (!empty($heading)): ?>
             <h2 class="block"><?= $escape($heading) ?></h2>
