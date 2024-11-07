@@ -2198,14 +2198,18 @@ grid-template-areas:
 
 .asset.card {
   width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: .25rem;
+  background: #ececed;
 }
 
 .asset.card span.h3 {
     color: #000;
+    margin: 0.5rem
   }
 
-.asset.card span.card-divider {
-    margin-bottom: 0;
+  .assets .asset:not(:last-child) {
+    margin-bottom: unset;
   }
 
 @media screen and (min-width: 520px) {
