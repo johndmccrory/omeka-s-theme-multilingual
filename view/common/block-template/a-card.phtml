@@ -1,0 +1,33 @@
+<?php $escape = $this->plugin('escapeHtml'); ?>
+
+<?php
+// Count the number of attachments that have an 'asset'
+$assetCount = count(array_filter($attachments, function($attachment) {
+    return !empty($attachment['asset']);
+}));
+
+// Assign asset column class based on asset count
+$assetColumn = in_array($assetCount, [1, 2, 4]) ? 'asset-column-2' : 'asset-column-3';
+?>
+
+<div class="assets <?php echo $assetColumn; ?>">
+  <?php foreach ($attachments as $attachment): ?>
+    <?php $asset = $attachment['asset']; ?>
+    <div class="asset card">
+        <?php $assetImage = ($asset) ? $this->thumbnail($asset, 'square', ['class' => 'card-image']) : ''; ?>
+        <?php $page = (array_key_exists('page', $attachment)) ? $attachment['page'] : null; ?>
+        <?php if ($page): ?>
+            <a href="<?php echo $escape($page->siteUrl()); ?>">
+                <?php $altLinkTitle = ($attachment['alt_link_title'] !== '') ? $escape($attachment['alt_link_title']) : false; ?>
+                <?php echo $assetImage; ?>
+                <span class="h3 link-title card-divider"><?php echo ($altLinkTitle) ? $altLinkTitle : $escape($page->title()); ?></span>
+            </a>
+        <?php else: ?>
+            <?php echo $assetImage; ?>
+        <?php endif; ?>
+        <?php if ($attachment['caption'] !== ''): ?>
+        <div class="caption card-section"><?php echo $escape($attachment['caption']); ?></div>
+        <?php endif; ?>
+    </div>
+  <?php endforeach; ?>
+</div>

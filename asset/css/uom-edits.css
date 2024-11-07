@@ -2170,3 +2170,76 @@ grid-template-areas:
   .media-embed .resource {
     text-align: center;
   }
+
+  /*Asset Cards*/ 
+  .card img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /*Card hover colour change*/ 
+  .assets:has(.asset.card) .card img {
+    height: 12rem;
+  }
+.assets.asset-column-2:has(.asset.card) {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 1rem;
+  grid-template-columns: repeat(1, 100%);
+
+}
+
+.assets.asset-column-3:has(.asset.card) {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 1rem;
+  grid-template-columns: repeat(1, 100%);
+}
+
+.asset.card {
+  width: 100%;
+}
+
+.asset.card span.h3 {
+    color: #000;
+  }
+
+.asset.card span.card-divider {
+    margin-bottom: 0;
+  }
+
+@media screen and (min-width: 520px) {
+.assets.asset-column-2:has(.asset.card) {
+grid-template-columns: repeat(2, 48%);
+}
+.assets.asset-column-3:has(.asset.card) {
+grid-template-columns: repeat(2, 48%);
+}
+}
+
+@media screen and (min-width: 801px) {
+  .assets:has(.asset.card) .card img {
+height: 14rem;
+}
+}
+
+
+@media only screen and (min-width: 1025px) {
+.assets.asset-column-2:has(.asset.card) {
+gap: 2rem;
+}
+
+  .assets:has(.asset.card) .card img {
+height: 16rem;
+}
+.assets.asset-column-3:has(.asset.card) {
+  grid-template-columns: repeat(3, 32%);
+  gap: 2rem;
+}
+}
+
+@media only screen and (min-width: 1200px) {
+  .assets:has(.asset.card) .card img {
+height: 18rem;
+}
+}
