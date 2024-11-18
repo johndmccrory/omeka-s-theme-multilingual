@@ -1,11 +1,12 @@
 <?php
 $hyperlink = $this->plugin('hyperlink');
+$thumbnailType = $block->dataValue('thumbnail_type');
 ?>
 <div class="full-width resourceTextGrid padding-horizontal-1 large-padding-horizontal-2 xlarge-padding-horizontal-3 margin-vertical-1 large-margin-vertical-2">
     <div class="file file-caption-text media-embed <?php echo $this->escapeHtml(implode(' ', $classes)); ?>">
         <?php foreach($attachments as $attachment): ?>
         <?php $item = $attachment->item(); ?>
-        <div class="item resource">
+        <div class="item resource <?php echo $thumbnailType; ?>">
             <?php
             $media = $attachment->media() ?: $item->primaryMedia();
             if ($media):

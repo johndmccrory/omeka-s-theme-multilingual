@@ -2247,3 +2247,76 @@ height: 16rem;
 height: 18rem;
 }
 }
+
+/*Openseadragon*/ 
+.medium .openseadragon {
+  height: 60vh!important;
+}
+
+.medium-large .openseadragon {
+  height: 60vh!important;
+}
+
+.large .openseadragon {
+  height: 60vh!important;
+  @include breakpoint(large) {
+  height: 90vh!important;
+  }
+}
+
+/*Seadragonbox Styling*/ 
+.openseadragon {
+  height: 60vh!important;
+}
+.seadragonbox {
+  height: 60vh!important;
+}
+
+@media screen and (min-width: 801px) {
+  .medium .openseadragon {
+    height: 60vh!important;
+  }
+  .medium-large .openseadragon {
+    height: 75vh!important;
+  }
+  .large .openseadragon {
+    height: 75vh!important;
+  }
+  .medium .seadragonbox {
+    height: 60vh!important;
+  }
+  .medium-large .openseadragon {
+    height: 75vh!important;
+  }
+  .large .seadragonbox {
+    height: 75vh!important;
+  }
+}
+
+
+@media only screen and (min-width: 1025px) {
+.medium .openseadragon {
+  height: 60vh!important;
+}
+.medium-large .openseadragon {
+  height: 80vh;
+}
+.large .openseadragon {
+  height: 90vh!important;
+}
+.medium .seadragonbox {
+  height: 65vh!important;
+}
+.medium-large .seadragonbox {
+  height: 80vh!important;
+  }
+.large .seadragonbox {
+  height: 85vh!important;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .large .seadragonbox {
+    height: 90vh!important;
+    }
+}

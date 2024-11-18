@@ -1,10 +1,11 @@
 <?php
 $hyperlink = $this->plugin('hyperlink');
+$thumbnailType = $block->dataValue('thumbnail_type');
 ?>
 <div class="file media-embed <?php echo $this->escapeHtml(implode(' ', $classes)); ?>">
     <?php foreach($attachments as $attachment): ?>
     <?php $item = $attachment->item(); ?>
-    <div class="item resource">
+    <div class="item resource <?php echo $thumbnailType; ?>">
         <?php
         $media = $attachment->media() ?: $item->primaryMedia();
         if ($media):
