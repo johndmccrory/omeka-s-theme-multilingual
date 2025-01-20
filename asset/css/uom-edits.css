@@ -9,6 +9,13 @@ html {
 }
 
 /*Text*/
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 300;
+}
+
 h2 {
   line-height: 1.2;
 }
@@ -17,7 +24,7 @@ h1 a,
 h2 a,
 h2 a {
   color: #1d1d1d;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 /*Header*/
@@ -90,7 +97,8 @@ h1.site-title-heading {
 
 .site-title {
   vertical-align: middle;
-  margin-right: auto
+  margin-right: auto;
+  font-weight: 400;
 }
 
 .site-title img {
@@ -732,11 +740,11 @@ height: 500px;
 .blockquote-container p {
   /*margin-top: 48px;*/
   font-size: 1em;
-  color: #fff;
+  color: #343536;
 }
 
 blockquote {
-  color: #fff;
+  color: #343536;
   font-weight: 100;
   font-size: 2rem;
   max-width: 800px;
@@ -1714,7 +1722,7 @@ header.wrapper {
     font-size: 22px;
     color: #6b2c91;
     font-family: "Open Sans", sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 22px;
     text-decoration: none;
     padding: 0;
@@ -2319,4 +2327,14 @@ height: 18rem;
   .large .seadragonbox {
     height: 90vh!important;
     }
+}
+
+/*Remove bold title text from Assets*/ 
+.assets .link-title {
+  font-weight: 300;
+}
+
+/*No button option*/ 
+.no-button .learn-more {
+  display: none;
 }
