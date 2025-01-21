@@ -1354,6 +1354,9 @@ header.wrapper {
 }
 
 @media screen and (min-width: 1024px) {
+  .item-show-media .openseadragon {
+    height: 100vh !important;
+  }
   .media-render.youtube,
   .media-render.oembed {
     max-width: 1000px;
