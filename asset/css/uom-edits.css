@@ -17,6 +17,7 @@ h4 {
 }
 
 h2 {
+  font-size: 20px;
   line-height: 1.2;
 }
 
@@ -1142,6 +1143,9 @@ header.wrapper {
 }
 
 @media screen and (min-width: 641px) {
+  h2 {
+    font-size: 22px;
+  }
   h1.site-title-heading {
     font-size: 19px;
   }
@@ -1458,6 +1462,9 @@ header.wrapper {
 }
 
 @media only screen and (min-width: 1025px) {
+  h2 {
+    font-size: 27px;
+  }
   .media-render {
       border-radius: 12px;
     }
