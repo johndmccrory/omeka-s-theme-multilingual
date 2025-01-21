@@ -68,7 +68,7 @@ h2 a {
 h1.site-title-heading {
   line-height: inherit;
   padding: 0 24px;
-  font-size: 20px;
+  font-size: 18px;
   text-align: left;
   margin: 0;
 }
@@ -1143,7 +1143,7 @@ header.wrapper {
 
 @media screen and (min-width: 641px) {
   h1.site-title-heading {
-    font-size: 24px;
+    font-size: 19px;
   }
   .iiif-storyboard-wide-container {
     height: 82vh;/*30/6/24*/
@@ -1382,6 +1382,7 @@ header.wrapper {
 @media screen and (max-width: 1024px) {
   h1.site-title-heading {
       text-align: left;
+      font-size: 20px;
   }
 }
 
