@@ -1601,10 +1601,6 @@ header.wrapper {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
 }
-
-.item-showcase .openseadragon {
-  min-width: 70vw;
-}
 }
 
 @media screen and (min-width: 1300px) {
@@ -2267,17 +2263,19 @@ height: 18rem;
 
 .large .openseadragon {
   height: 60vh!important;
-  @include breakpoint(large) {
+}
+@media only screen and (min-width: 1200px) {
+  .large .openseadragon {
   height: 90vh!important;
   }
 }
 
 /*Seadragonbox Styling*/ 
 .openseadragon {
-  height: 60vh!important;
+  height: 40vh!important;
 }
 .seadragonbox {
-  height: 60vh!important;
+  height: 40vh!important;
 }
 
 @media screen and (min-width: 801px) {
