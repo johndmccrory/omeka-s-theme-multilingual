@@ -13,7 +13,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 h2 {
@@ -24,7 +24,7 @@ h1 a,
 h2 a,
 h2 a {
   color: #1d1d1d;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /*Header*/
@@ -389,6 +389,27 @@ height: 40vh;
 /*Mirador Header*/
 .mirador-viewer header {
   align-items: inherit;
+}
+
+/*Size Mirador Viewer*/ 
+.layout-horizontal .large .media-render iframe, 
+.block-oembed iframe {
+    max-width: 100% !important;
+    height: 60vh !important;
+}
+
+@media only screen and (min-width: 641px) {
+.layout-horizontal .large .media-render iframe, 
+.block-oembed iframe {
+    height: 70vh !important;
+}
+}
+
+@media only screen and (min-width: 1024px) {
+.layout-horizontal .large .media-render iframe, 
+.block-oembed iframe {
+    height: 90vh !important;
+}
 }
 
 .MuiIconButton-root {
@@ -910,6 +931,17 @@ cite {
 .dark-background h4 a{
     color: #fff;
   }
+
+/*Padding-vertical 1*/
+.padding-vertical-1 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.padding-vertical-2 {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
 
   /*Padding-vertical 3*/
   .padding-vertical-3 {
@@ -1722,7 +1754,7 @@ header.wrapper {
     font-size: 22px;
     color: #6b2c91;
     font-family: "Open Sans", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 22px;
     text-decoration: none;
     padding: 0;
@@ -1962,12 +1994,12 @@ align-self: center;
 }
 @media screen and (min-width: 601px) {
   .resourceTextGrid .block-html h2 {
-    margin: 18px 0 24px 0;
+    margin: 12px 0 24px 0;
   }
 }
 @media screen and (min-width: 1025px) {
   .resourceTextGrid .block-html h2 {
-    margin: 0 0 24px 0;
+    margin: 24px 0;
   }
 }
 
@@ -2437,7 +2469,7 @@ height: 18rem;
 
 /*Remove bold title text from Assets*/ 
 .assets .link-title {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /*No button option*/ 
