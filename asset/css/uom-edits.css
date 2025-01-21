@@ -70,7 +70,7 @@ h1.site-title-heading {
   padding: 0 24px;
   font-size: 18px;
   text-align: left;
-  margin: 0;
+  margin-bottom: 12px;
 }
 
 .break {
@@ -1382,7 +1382,7 @@ header.wrapper {
 @media screen and (max-width: 1024px) {
   h1.site-title-heading {
       text-align: left;
-      font-size: 20px;
+      font-size: 18px;
   }
 }
 
