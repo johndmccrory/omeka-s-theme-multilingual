@@ -1958,6 +1958,17 @@ align-self: center;
 
 .resourceTextGrid .block-html h2 {
   text-align: center;
+  margin: 6px 0 12px 0;
+}
+@media screen and (min-width: 601px) {
+  .resourceTextGrid .block-html h2 {
+    margin: 18px 0 24px 0;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .resourceTextGrid .block-html h2 {
+    margin: 0 0 24px 0;
+  }
 }
 
 .resourceTextGrid .file-caption-text.media-embed {
@@ -1975,11 +1986,30 @@ grid-template-areas:
 "text";
 }
 
+  /*Add wide option*/ 
+
+@media screen and (min-width: 1025px) {
+  .wide .resourceTextGrid:has(.layout-vertical),
+  .wide.resourceTextGrid:has(.layout-vertical) {
+      grid-template-columns: 1fr 10fr 1fr;
+    }
+  }
+  
+  
+  @media screen and (min-width: 1200px) {
+  .wide .resourceTextGrid:has(.layout-vertical),
+  .wide.resourceTextGrid:has(.layout-vertical) {
+      grid-template-columns: 1fr 12fr 1fr;
+    }
+  }
+
 .resourceTextGrid:has(.layout-vertical.file-caption-text) {
   grid-template-areas: 
   "media-embed-media"
   "text";
   }
+
+
 
 /*Ensure Learn More button is below text for vertical Media blocks*/
 .resourceTextGrid {
@@ -1991,7 +2021,8 @@ grid-template-areas:
   margin-block-start: 0;
   }
 
-  .resourceTextGrid .learn-more {
+ /*Removed Learn More Fixed Positioning
+ .resourceTextGrid .learn-more {
   justify-content: center;
   position: absolute;
   bottom: 0;
@@ -1999,12 +2030,74 @@ grid-template-areas:
   transform: translate(-50%, -50%);
 }
 
+.resourceTextGrid .file-caption-text .learn-more {
+  position: unset;
+  transform: none;
+}*/
+
 /*Add class where Media caption is Text*/
 .resourceTextGrid:has(.layout-horizontal.file-caption-text) {
   grid-template-areas: 
   "media-embed-media"
   "text";
   }
+
+/*Add a portrait class*/ 
+@media screen and (min-width: 1025px) {
+.portrait .resourceTextGrid:has(.layout-horizontal) {
+  grid-template-columns: 2fr 2fr;
+    grid-template-areas:
+    "header ."
+    "media-block text";
+  }
+  .portrait .resourceTextGrid:has(.layout-horizontal.file-caption-text) {
+    grid-template-areas: "media-embed-media text";
+}
+}
+
+@media screen and (min-width: 1200px) {
+.portrait .resourceTextGrid:has(.layout-horizontal) {
+  grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
+  grid-template-areas:
+  ". header . ."
+  ". media-block text .";
+}
+.portrait .resourceTextGrid:has(.layout-horizontal.file-caption-text) {
+  grid-template-areas: ". media-embed-media text .";
+}
+}
+
+
+/*Add a media right class*/ 
+@media screen and (min-width: 1025px) {
+  .media-right .resourceTextGrid:has(.layout-horizontal.file-caption-text) {
+      grid-template-areas: "text media-embed-media";
+  }
+}
+
+@media screen and (min-width: 1025px) {
+.portrait.media-right .resourceTextGrid:has(.layout-horizontal.file-caption-text) {
+  grid-template-columns: 2fr 2fr;
+  grid-template-areas: "text media-embed-media";
+}
+}
+
+@media screen and (min-width: 1200px) {
+.portrait.media-right .resourceTextGrid:has(.layout-horizontal.file-caption-text) {
+  grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
+  grid-template-areas: ". text media-embed-media .";
+}
+}
+
+/*Add option to place media to the right*/ 
+@media screen and (min-width: 1025px) {
+.media-right .resourceTextGrid:has(.layout-horizontal) {
+  grid-template-columns: 2fr 3fr;
+  grid-template-areas: 
+  "header ." 
+  "text media-block" ;
+  }
+}
 
 /*Medium*/
 @media screen and (min-width: 641px) {
