@@ -1355,7 +1355,8 @@ header.wrapper {
 
 @media screen and (min-width: 1024px) {
   .item-show-media .openseadragon {
-    height: 100vh !important;
+    height: 95vh !important;
+    background: #e5e5e5;
   }
   .media-render.youtube,
   .media-render.oembed {
@@ -1908,6 +1909,17 @@ header.wrapper {
 .margin-bottom-1 {
   margin: 0 0 1em 0;
 }
+
+/*No Margin top*/
+.no-margin-top {
+  margin-top: -1rem;
+} 
+@media screen and (min-width: 1025px) {
+.no-margin-top {
+  margin-top: -2rem;
+} 
+}
+
 
 /*Testing CSS Grid horizontal and vertical blocks*/
  /*Flex Option*/
