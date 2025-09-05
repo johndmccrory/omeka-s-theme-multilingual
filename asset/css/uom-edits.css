@@ -214,21 +214,22 @@ button.menu-toggle {
 /*Cookie Bar*/ 
 #cookie-bar {
   top: 10%!important;
-  width: 75%!important;
   color: #343536!important;
   text-align: left!important;
   position: fixed;
   right: 0;
   background: #fff!important;
-  max-width: rem-calc(650px);
-  border-radius: rem-calc(2.5px);
-  left: 1em;
+  max-width: 650px;
   margin: 0 auto;
-  font-size: rem-calc(14px);
   max-height: 90%;
   overflow-x: hidden;
   overflow-y: auto;
   box-shadow: 0 0 18px rgba(0, 0, 0, .2)!important;
+  background-color: #fff;
+  width: 90%!important;
+  border-radius: 2.5px;
+  left: 1em;
+  font-size: 14px;
 }
 
 #cookie-bar h2,
@@ -237,11 +238,11 @@ color: #343536;
 }
 
 h2#cookie-bar-title {
-  margin-top: 40px;
+  margin: 40px 30px 10px 30px !important;
   text-align: left;
   line-height: 1.5!important;
   margin-bottom: 0;
-  padding: rem-calc(0 0 10px 30px);
+  padding: 0 0 10px 30px;
   width: calc(100% - 90px);
   font-size: 20px;
   font-weight: 600;
@@ -259,7 +260,7 @@ p#cookie-bar-text {
   background: #6b2c91!important;
   margin: 7.5px 0 7.5px 30px;
   width: calc(100% - 60px);
-  padding: rem-calc(12px 10px);
+  padding: 12px 10px;
   text-align: center!important;
   font-weight: bold;
   font-size: 16.5px;
@@ -478,12 +479,12 @@ height: 40vh;
     height: 70vh !important;
 }
 #cookie-bar {
-      width: 60%;
+      width: 75%!important;
   }
 #cookie-bar a.cb-enable,
 #cookie-bar .cb-disable {
-  width: rem-calc(135px);
-  margin: rem-calc(15px 0 15px 30px);
+  width: 135px;
+  margin: 15px 0 15px 30px;
   }
 }
 
@@ -495,7 +496,7 @@ height: 40vh;
 
 @media only screen and (min-width: 1000px) {
 #cookie-bar a.cb-policy {
-    margin: rem-calc(15px 0 15px 30px);
+    margin: 15px 0 15px 30px;
 }
 }
 
@@ -2255,7 +2256,7 @@ grid-template-areas:
   }
 
 .portrait .media-embed-block {
-  max-width: rem-calc(700);
+  max-width: 700px;
   margin: 0 auto; 
 }
 }
