@@ -264,12 +264,12 @@ p#cookie-bar-text {
   text-align: center!important;
   font-weight: bold;
   font-size: 16.5px;
-  border-radius: 15;
+  border-radius: 15px;
 }
 
 #cookie-bar a.cb-enable:hover,
 #cookie-bar .cb-disable:hover {
-  background: darken(#6b2c91, 10%);
+  background: #5f2782!important;
 }
 
 #cookie-bar a.cb-policy {
