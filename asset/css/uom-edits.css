@@ -210,8 +210,7 @@ button.menu-toggle {
     padding: 2px;
 }
 
-/*Cookie Bar*/ 
-/*Cookie Bar*/ 
+/*EU Cookie Bar
 #cookie-bar {
   top: 10%!important;
   color: #343536!important;
@@ -283,6 +282,8 @@ p#cookie-bar-text {
   color: #6b2c91!important;
   text-decoration: underline;
 }
+
+/*End EU Cookie Bar styling*/
 
 /*Block Styling*/
 /*Item Showcase Openseadragon*/ 
