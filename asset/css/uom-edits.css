@@ -210,6 +210,81 @@ button.menu-toggle {
     padding: 2px;
 }
 
+/*EU Cookie Bar
+#cookie-bar {
+  top: 10%!important;
+  color: #343536!important;
+  text-align: left!important;
+  position: fixed;
+  right: 0;
+  background: #fff!important;
+  max-width: 650px;
+  margin: 0 auto;
+  max-height: 90%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-shadow: 0 0 18px rgba(0, 0, 0, .2)!important;
+  background-color: #fff;
+  width: 90%!important;
+  border-radius: 2.5px;
+  left: 1em;
+  font-size: 14px;
+}
+
+#cookie-bar h2,
+#cookie-bar p {
+color: #343536;
+}
+
+h2#cookie-bar-title {
+  margin: 40px 30px 10px 30px !important;
+  text-align: left;
+  line-height: 1.5!important;
+  margin-bottom: 0;
+  padding: 0 0 10px 30px;
+  width: calc(100% - 90px);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+p#cookie-bar-text {
+  font-size: 16.26px;
+  font-weight: 400;
+  line-height: 24.39px;
+  margin: 0 30px 10px 30px!important;
+}
+
+#cookie-bar a.cb-enable,
+#cookie-bar .cb-disable {
+  background: #6b2c91!important;
+  margin: 7.5px 0 7.5px 30px;
+  width: calc(100% - 60px);
+  padding: 12px 10px;
+  text-align: center!important;
+  font-weight: bold;
+  font-size: 16.5px;
+  border-radius: 15px;
+}
+
+#cookie-bar a.cb-enable:hover,
+#cookie-bar .cb-disable:hover {
+  background: #5f2782!important;
+}
+
+#cookie-bar a.cb-policy {
+  background: #fff!important;
+  margin: 7.5px 0 7.5px 30px;
+  min-width: 135px;
+  padding: 12px 0;
+  text-align: center!important;
+  font-weight: bold;
+  font-size: 16.5px;
+  color: #6b2c91!important;
+  text-decoration: underline;
+}
+
+/*End EU Cookie Bar styling*/
+
 /*Block Styling*/
 /*Item Showcase Openseadragon*/ 
 .openseadragon {
@@ -403,6 +478,26 @@ height: 40vh;
 .layout-horizontal .large .media-render iframe, 
 .block-oembed iframe {
     height: 70vh !important;
+}
+#cookie-bar {
+      width: 75%!important;
+  }
+#cookie-bar a.cb-enable,
+#cookie-bar .cb-disable {
+  width: 135px;
+  margin: 15px 0 15px 30px;
+  }
+}
+
+@media only screen and (min-width: 918px) {
+#cookie-bar a.cb-policy {
+    padding: 12px;
+}
+}
+
+@media only screen and (min-width: 1000px) {
+#cookie-bar a.cb-policy {
+    margin: 15px 0 15px 30px;
 }
 }
 
@@ -2162,7 +2257,7 @@ grid-template-areas:
   }
 
 .portrait .media-embed-block {
-  max-width: rem-calc(700);
+  max-width: 700px;
   margin: 0 auto; 
 }
 }
