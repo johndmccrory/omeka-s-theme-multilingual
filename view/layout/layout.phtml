@@ -42,15 +42,13 @@ $this->trigger('view.layout');
             <?php endif; ?>
             }
         </style>
-        <!-- OneTrust Cookies Consent Notice start for manchester.ac.uk -->
+        <!--OneTrust banner -->
         <script type="text/javascript" src="https://cdn.cookielaw.org/consent/f6c06aa6-cac4-4104-8b3d-70b088ddfff6/OtAutoBlock.js"></script>
         <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="f6c06aa6-cac4-4104-8b3d-70b088ddfff6"></script>
-        <script type="text/javascript" src="/asset/js/oneTrust.js"></script> 
-        <!-- OneTrust Cookies Consent Notice end for manchester.ac.uk -->
-        <!-- Google Tag Manager --> 
-        <script>
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-MTKP79D');
-        </script> 
+        <script src="<?= $this->assetUrl('js/oneTrust.js'); ?>"></script>
+        <!--End OneTrust banner -->
+        <!-- Google Tag Manager -->
+        <script src="<?= $this->assetUrl('js/googleTagManager.js'); ?>"></script>
         <!-- End Google Tag Manager -->
     </head>
 
