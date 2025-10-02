@@ -142,6 +142,10 @@ header .site-title img:hover {
   align-items: center;
 }
 
+.fa.fa-home:hover {
+  color: #6b2c90;
+}
+
 .fa-home:before {
   font-size: 22px;
 }
@@ -1678,6 +1682,10 @@ header.wrapper {
 }
 
 /*UoM Footer*/ 
+/*One Trust button*/ 
+button#ot-sdk-btn {
+  background: transparent;
+}
 .headerContainer,
 .row {
     max-width: 1140px;

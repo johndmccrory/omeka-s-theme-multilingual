@@ -68,7 +68,7 @@ $this->trigger('view.layout');
                 </div>
                 <?php if ($this->getHelperPluginManager()->has('languageSwitcher')) echo $this->languageSwitcher(); ?>
                 <button type="button" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-                    <nav id="top-nav" class="hide-for-desktop wrapper closed<?php if (!$headerDark): ?> nav-light<?php endif; ?>">
+                    <nav id="top-nav" class="wrapper closed hide-for-desktop wrapper closed<?php if (!$headerDark): ?> nav-light<?php endif; ?>">
                         <?= $site->publicNav()->menu()->renderMenu(null, [
                     'maxDepth' => $this->themeSetting('nav_depth') - 1
                     ]); ?>
@@ -104,7 +104,7 @@ $this->trigger('view.layout');
                     <a href="https://digitalexhibitions.manchester.ac.uk/s/home" aria-label="Home"><i class="fa fa-home" aria-hidden="true"></i></a>
                 <?php endif; ?>
             </div>
-            <div class="pure-u-sm-1 pure-u-lg-1-3">
+            <div>
                 <h1 class="site-title-heading">
                     <a href="<?php echo $site->url(); ?>" class="site-title">
                     <?php if ($this->themeSetting('logo')): ?>
@@ -115,7 +115,7 @@ $this->trigger('view.layout');
                     </a>
                 </h1>
             </div>  
-            <nav id="desktop-nav" class="pure-u-sm-1 pure-u-lg-2-3 wrapper closed<?php if (!$headerDark): ?> nav-light<?php endif; ?>">
+            <nav id="desktop-nav" class="pure-u-sm-1 pure-u-md-1 pure-u-lg-2-3 wrapper closed<?php if (!$headerDark): ?> nav-light<?php endif; ?>">
             <?= $site->publicNav()->menu()->renderMenu(null, [
                 'maxDepth' => $this->themeSetting('nav_depth') - 1
             ]); ?>
