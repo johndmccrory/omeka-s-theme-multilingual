@@ -877,9 +877,9 @@ cite {
     height: 60vh;
   }
   
-  .item-show-media .iiif_presentation {
+  /*.item-show-media .iiif_presentation {
     height: 60vh;
-  }
+  }*/
 
   .item-show-media img {
   width: 100%;
@@ -1337,9 +1337,9 @@ header.wrapper {
     line-height: 2;
   }
 
-  .item-show-media .iiif_presentation {
+  /*.item-show-media .iiif_presentation {
     height: 75vh;
-  }
+  }*/
 
   .item-show-title {
     display: inline-block;
