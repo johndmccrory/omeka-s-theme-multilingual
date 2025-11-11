@@ -71,7 +71,7 @@ h1.site-title-heading {
   padding: 0 24px;
   font-size: 18px;
   text-align: left;
-  margin-bottom: 12px;
+  /*margin-bottom: 12px;*/ 
 }
 
 .break {
@@ -97,7 +97,8 @@ h1.site-title-heading {
 }
 
 .site-title {
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
   margin-right: auto;
   font-weight: 400;
 }
@@ -347,7 +348,7 @@ height: 40vh;
 
 /*Change opacity of image banner dark-tint*/
 .image-banner .image-container::after {
-  opacity: 0.3;
+  opacity: 0!important;
 }
 
 /*Increase size of Media Embed IIIF manifests*/
@@ -693,10 +694,30 @@ button#reloadButton {
 
 /*Minimum height for Banner Image*/
 .image-banner .overlay-container {
-  min-height: clamp(350px, 35vh, 451px);
+  height: 350px;
   max-width: 1300px;
   margin: 0 auto;
   padding-inline: 24px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.image-banner .overlay-container > p {
+    margin-block: 0;
+}
+
+.tint-light .overlay-container h1,
+.tint-light .overlay-container p {
+    background: rgba(255, 255, 255, .7);
+    padding: .5rem;
+    color: #333;
+}
+
+.tint-dark .overlay-container h1,
+.tint-dark .overlay-container p {
+    background: rgba(51, 51, 51, .9);
+    padding: .5rem;
+    color: #fff;
 }
 
 .image-banner .image-container img {
@@ -758,10 +779,6 @@ max-width: unset;
 
 .image-banner.tint-dark .image-container::after, .call-to-action.scheme-dark .action-button {
 max-width: unset;
-}
-
-.image-banner .overlay-container {
-height: 500px;
 }
 
 /*Blockquote*/
@@ -1101,6 +1118,7 @@ header.wrapper {
 
   .image-banner .overlay-container > p {
   font-size: 1.5rem;
+  margin-block: 0!important;
   }
 
   .item-show-media  {
@@ -1362,6 +1380,10 @@ header.wrapper {
 }
 
 @media screen and (min-width: 800px) {
+  .image-banner .overlay-container {
+    height: 500px;
+    padding-bottom: 128px;
+    }
   .iiif-storyboard-wide-container {
     height: 83vh;
   }
