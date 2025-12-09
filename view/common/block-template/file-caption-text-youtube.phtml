@@ -1,0 +1,68 @@
+<?php
+$hyperlink = $this->plugin('hyperlink');
+$thumbnailType = $block->dataValue('thumbnail_type');
+?>
+<div class="full-width resourceTextGrid padding-horizontal-1 large-padding-horizontal-2 xlarge-padding-horizontal-3 margin-vertical-1 large-margin-vertical-2">
+    <div class="file file-caption-text media-embed <?php echo $this->escapeHtml(implode(' ', $classes)); ?>">
+        <?php foreach($attachments as $attachment): ?>
+            <?php
+                $item  = $attachment->item();
+                $media = $attachment->media() ?: $item->primaryMedia();
+
+                // Extract YouTube ID from Omeka’s YouTube ingester
+                $mediaData = $media->mediaData();
+                $youtubeId = $mediaData['id'] ?? '';
+            ?>
+            <div class="item resource <?php echo $thumbnailType; ?>">
+                <?php if ($youtubeId): ?>
+
+                <!-- OneTrust YouTube Placeholder -->
+                <div id="placeholder-<?php echo $media->id(); ?>" class="media-render youtube">
+                    <div class="ot-warning">   
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Pro v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d="M320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576zM320 384C302.3 384 288 398.3 288 416C288 433.7 302.3 448 320 448C337.7 448 352 433.7 352 416C352 398.3 337.7 384 320 384zM320 192C301.8 192 287.3 207.5 288.6 225.7L296 329.7C296.9 342.3 307.4 352 319.9 352C332.5 352 342.9 342.3 343.8 329.7L351.2 225.7C352.5 207.5 338.1 192 319.8 192z"/></svg>   
+                            <p>Video cannot be displayed as cookies are not enabled.</p>
+                            <button class="button-small pure-button button-seccondary pure-button-active"><a href="#" onclick="OneTrust.ToggleInfoDisplay(); return false;">Visit the Privacy preference centre</a></button>
+                    </div>
+
+                    <!-- Hide warning once C0004 is enabled -->
+                    <script type="text/plain" class="optanon-category-C0004">
+                        document.querySelector('#placeholder-<?php echo $media->id(); ?> .ot-warning')
+                                .style.display = "none";
+                    </script>
+
+                    <!-- OneTrust-blocked YouTube iframe -->
+                    <iframe
+                        class="optanon-category-C0004"
+                        data-src="https://www.youtube.com/embed/<?php echo $youtubeId; ?>"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+                <!-- OneTrust: update consent -->
+                <script src="<?= $this->assetUrl('js/oneTrustYoutubeEnable.js'); ?>"></script>
+
+            <?php else: ?>
+                <p>Error: No YouTube ID found for this media.</p>
+            <?php endif; ?>
+            </div>
+        </div>
+        <div class="block-html padding-horizontal-1 large-padding-horizontal-2">
+            <?php if ($showTitleOption === 'item_title'): ?>
+                <h2><?php echo $item->displayTitle(); ?></h2>
+            <?php elseif ($showTitleOption === 'file_name'): ?>
+                <h2><?php echo $media->displayTitle(); ?></h2>
+            <?php endif; ?>
+            <?php $caption = $attachment->caption(); ?>
+            <?php if ($caption): ?>
+                <div class="caption"><?php echo $caption; ?></div>
+            <?php endif; ?>
+            <div class="learn-more">
+                <button class="pure-button-primary button-xlarge"><?php echo $item->link("View full item"); ?></button>
+            </div>
+        </div>
+        <?php endforeach; ?>
+    </div>
+</div>

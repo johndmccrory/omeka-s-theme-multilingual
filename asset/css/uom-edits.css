@@ -1078,6 +1078,17 @@ margin-top: 0!important;
   border: 0;
 }
 
+/*OneTrust Cookie Banner*/ 
+/*OneTrust Cookie Banner Content*/ 
+iframe.optanon-category-C0004[data-src] {
+    display: none;
+}
+
+.ot-warning svg {
+  height: 400px;
+  fill: #b9b9b9;
+}
+
 @media screen and (min-width: 360px) {
   a.university-logo img {
    margin: 24px 12px 12px 0;
