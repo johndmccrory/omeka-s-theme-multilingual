@@ -42,13 +42,38 @@ h2 a {
   button.menu-toggle {
   order: 2;
   }
+
+  .header-top {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 1140px;
+  }
+
+  .header-row--top {
+    width: 100%;  
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .header-row--bottom {
+    width: 100%;  
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
   
   .site-heading {
     color: #6B2C91;
     text-decoration: none;
     padding: 0;
     display: flex;
-    flex-grow: 3;
+    flex: 0 0 100%;
     order: 3;
     width: 280px;
     margin: 0; 
@@ -86,15 +111,6 @@ h1.site-title-heading {
       font-size: 16px;
       color: #b1b2b4;
   }
-
-  .header-top {
-    display: flex;
-    margin: 0 auto;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 1140px;
-}
 
 .site-title {
   display: flex;
@@ -137,19 +153,24 @@ header .site-title img:hover {
 /*Navigation menus*/
 /*Add a home button*/ 
 /*Home Icon*/ 
-.home-icon {
-  margin-left: 24px;
-  display: flex;
+.pure-g .home-icon {
   align-items: center;
 }
 
-.fa.fa-home:hover {
+.home-icon {
+  display: flex;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+}
+
+/*.fa.fa-home:hover {
   color: #6b2c90;
 }
 
 .fa-home:before {
   font-size: 22px;
-}
+}*/
 
 /*Add desktop menu*/
 #desktop-nav>ul {
@@ -1189,9 +1210,14 @@ header.wrapper {
 }
 
 @media screen and (min-width: 641px) {
+  .header-row--top {
+  flex-wrap: unset;
+  }
+
   h2 {
     font-size: 22px;
   }
+
   h1.site-title-heading {
     font-size: 19px;
   }
@@ -1200,6 +1226,8 @@ header.wrapper {
 }
   .site-heading {
     order: 0;
+    flex: 0 1 auto; 
+    flex-grow: 3;
 }
   a.university-logo {
     flex-grow: 0;
