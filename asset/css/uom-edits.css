@@ -96,6 +96,15 @@ h1.site-title-heading {
     width: 1140px;
 }
 
+.header-row--top,
+.header-row--bottom {
+    width: 100%;  
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .site-title {
   display: flex;
   align-items: center;
@@ -137,19 +146,24 @@ header .site-title img:hover {
 /*Navigation menus*/
 /*Add a home button*/ 
 /*Home Icon*/ 
-.home-icon {
-  margin-left: 24px;
-  display: flex;
+.pure-g .home-icon {
   align-items: center;
 }
 
-.fa.fa-home:hover {
+.home-icon {
+  display: flex;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+}
+
+/*.fa.fa-home:hover {
   color: #6b2c90;
 }
 
 .fa-home:before {
   font-size: 22px;
-}
+}*/
 
 /*Add desktop menu*/
 #desktop-nav>ul {
