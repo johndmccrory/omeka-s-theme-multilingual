@@ -1224,11 +1224,11 @@ header.wrapper {
   .iiif-storyboard-wide-container {
     height: 82vh;/*30/6/24*/
 }
-  .site-heading {
+  /*.site-heading {
     order: 0;
     flex: 0 1 auto; 
     flex-grow: 3;
-}
+}*/
   a.university-logo {
     flex-grow: 0;
 }
